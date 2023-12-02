@@ -6,4 +6,14 @@ body {
 
 body {
   margin: 0;
+  font-family: Inter;
+}
+
+.cdk-overlay-pane {
+  div.mat-mdc-menu-panel {
+    max-width: none;
+    padding: 0 1rem;
+    transform: translateX(-50%) !important;
+    align-items: center;
+  }
 }

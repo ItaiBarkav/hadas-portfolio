@@ -1,6 +1,30 @@
 .header {
   display: flex;
-
   justify-content: center;
+  align-items: center;
+  height: 4.375rem;
   gap: 3rem;
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    cursor: pointer;
+
+    ::after {
+      content: "";
+      background: #7c59f6;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 100%;
+      visibility: hidden;
+      display: flex;
+      position: relative;
+      left: 50%;
+    }
+
+    :hover::after {
+      visibility: visible;
+    }
+  }
 }

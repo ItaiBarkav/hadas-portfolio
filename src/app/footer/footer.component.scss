@@ -1,5 +1,25 @@
 .footer {
   display: flex;
-
   justify-content: center;
+  align-items: center;
+  height: 5.25rem;
+  font-size: 1rem;
+  gap: 3.5rem;
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    .link {
+      color: #4f4f4f;
+    }
+
+    .underline {
+      text-decoration: none;
+    }
+
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
 }

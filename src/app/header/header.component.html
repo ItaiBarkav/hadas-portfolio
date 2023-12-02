@@ -1,10 +1,12 @@
 <div class="header">
-  <span> Work </span>
-  <span> About </span>
-  <button mat-button [matMenuTriggerFor]="menu">Content</button>
+  <span class="contact"><span>Work</span></span>
+  <span class="contact"><span>About</span></span>
+  <span class="contact" [matMenuTriggerFor]="menu">
+    <span>Contact</span>
+    <img src="../../assets/icons/down-arrow.svg" />
+  </span>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>Threat</button>
-    <button mat-menu-item>Pharm yarok</button>
+    <app-footer></app-footer>
   </mat-menu>
-  <span> Resume </span>
+  <span class="contact"><span>Resume</span></span>
 </div>
