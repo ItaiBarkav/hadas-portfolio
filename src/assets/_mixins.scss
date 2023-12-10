@@ -1,0 +1,25 @@
+@mixin left-border($color, $padding: 1rem) {
+  border-left: 4px var($color) solid;
+  padding-left: $padding;
+}
+
+@mixin chip($color) {
+  width: fit-content;
+  color: var($color);
+  background: var($color + "-background");
+  border-radius: 3.125rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+}
+
+@mixin paragraph {
+  @for $i from 0 through 4 {
+    $gapValue: $i * 0.5;
+
+    .paragraph-gap-#{$i} {
+      display: flex;
+      flex-direction: column;
+      gap: unquote($gapValue + "rem");
+    }
+  }
+}

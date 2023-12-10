@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 import { MaterialModule } from '../material.module';
 
@@ -10,4 +11,10 @@ import { MaterialModule } from '../material.module';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  url: string;
+
+  constructor(private router: Router) {
+    this.url = `${this.router.url}#footer`;
+  }
+}

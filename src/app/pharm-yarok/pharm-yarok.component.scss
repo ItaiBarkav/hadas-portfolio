@@ -1,183 +1,128 @@
+@import "../../styles.scss";
+
 .pharm-yarok {
   display: flex;
   flex-direction: column;
   gap: 8.25rem;
 
-  .image {
-    width: 100%;
+  .header {
+    @extend .paragraph-gap-0;
+
+    align-items: center;
+
+    .header {
+      position: absolute;
+      color: var(--card-background);
+
+      ::ng-deep .link {
+        color: var(--card-background);
+      }
+    }
+
+    .image {
+      width: 100%;
+    }
   }
 
   .overview {
-    display: flex;
-    flex-direction: column;
+    @extend .section;
+
     gap: 3rem;
-    width: 70rem;
-    align-self: center;
-
-    .paragraph {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      .header {
-        font-size: 1.75rem;
-        font-weight: 600;
-      }
-    }
   }
 
   .user-story {
-    display: flex;
+    @extend .section;
+
+    flex-direction: row;
     gap: 1.5rem;
-    max-width: 100rem;
-    align-self: center;
-
-    .story {
-      display: flex;
-      flex-direction: column;
-
-      .image {
-        width: 18.75rem;
-        height: 12.5rem;
-      }
-    }
+    padding: 4.875rem 10rem;
+    max-width: -webkit-fill-available;
+    background: var(--green-background);
   }
 
   .research {
-    display: flex;
-    flex-direction: column;
-    max-width: 70rem;
-    align-self: center;
-    gap: 1rem;
+    @extend .section;
 
-    .research {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    padding-right: 25rem;
+
+    .paragraph {
+      @extend .paragraph-gap-2;
+
       align-self: flex-start;
+    }
 
-      .header {
-        font-size: 1.75rem;
-        font-weight: 600;
+    .questions {
+      display: flex;
+      gap: 1.5rem;
+
+      .answer {
+        @include left-border(--blue, 0.5rem);
+      }
+
+      .filler::after {
+        content: "";
+        display: flex;
+        height: 2.5rem;
+        visibility: visible;
       }
     }
 
-    .cards {
+    .problems {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       gap: 1.5rem;
 
-      .questions {
-        display: flex;
-        gap: 1.5rem;
+      .content {
+        flex-direction: row;
+      }
+    }
 
-        .chip {
-          color: #6584e2;
-          background: #f3f6ff;
-          border-radius: 3.125rem;
-          padding: 0.25rem 0.5rem;
-        }
+    .card {
+      @extend .paragraph-gap-1;
 
-        .answer {
-          border-left: 4px #6584e2 solid;
-          padding-left: 0.5rem;
-        }
+      flex: 1;
+      border: 1px var(--border-color-second) solid;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      background: var(--card-background);
 
-        .filler::after {
-          content: "";
-          height: 2.5rem;
-          display: flex;
-          visibility: visible;
-        }
+      .chip-title-blue {
+        @include chip(--blue);
       }
 
-      .insight {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        .chip {
-          color: #5d9087;
-          background: #ebf8f5;
-          border-radius: 3.125rem;
-          padding: 0.25rem 0.5rem;
-        }
+      .chip-title-red {
+        @include chip(--red);
       }
 
-      .problems {
-        display: flex;
-        gap: 1.5rem;
-        width: 100%;
-
-        .chip {
-          color: #b26767;
-          background: #fff3f3;
-          border-radius: 3.125rem;
-          padding: 0.25rem 0.5rem;
-        }
-
-        .problem-content {
-          flex-direction: row !important;
-        }
+      .chip-title-green {
+        @include chip(--green);
       }
 
-      .bold {
-        font-weight: 500;
-      }
-
-      .mat-mdc-card {
-        border: 1px #e7e7e7 solid;
-        gap: 0.5rem;
-        max-width: 34.25rem;
-        flex: 1;
-
-        .mat-mdc-card-header {
-          font-size: 1rem;
-          font-weight: 500;
-        }
-
-        .mat-mdc-card-content {
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-        }
+      .content {
+        @extend .paragraph-gap-1;
       }
     }
   }
 
   .personas {
-    display: flex;
-    flex-direction: column;
+    @extend .section;
+
     gap: 1.5rem;
-    width: 70rem;
-    align-self: center;
-
-    .paragraph {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      .header {
-        font-size: 1.75rem;
-        font-weight: 600;
-      }
-    }
 
     .personas {
       display: flex;
       flex-direction: row;
+      width: min-content;
+      margin-left: -25rem;
 
       .persona {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        border: 1px #e2e2e2 solid;
+        @extend .paragraph-gap-2;
+
+        border: 1px var(--border-color-second) solid;
         border-radius: 0.5rem;
 
         .person-info {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
+          @extend .paragraph-gap-2;
+
           padding: 0 1.5rem 1.5rem 1.5rem;
 
           .person {
@@ -194,215 +139,82 @@
     }
   }
 
-  .solution {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 70rem;
-    align-self: center;
-
-    .header {
-      font-size: 1.75rem;
-      font-weight: 600;
-    }
-  }
-
   .wireframe {
-    display: flex;
-    flex-direction: column;
+    @extend .section;
+
     gap: 1.5rem;
-    width: 70rem;
-    align-self: center;
-
-    .paragraph {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      .headers {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
-        .semi-header {
-          font-size: 1.25rem;
-          font-weight: 500;
-        }
-
-        .header {
-          font-size: 1.75rem;
-          font-weight: 600;
-        }
-      }
-    }
 
     .images {
       display: flex;
-      align-self: center;
       gap: 5.625rem;
+      background: var(--wireframe-background);
+      margin-left: -25rem;
+      justify-content: center;
+      padding: 3rem 0;
 
       .image {
-        display: flex;
-        flex-direction: column;
+        @extend .paragraph-gap-2;
+
         align-items: center;
-        gap: 1rem;
         font-size: 1rem;
         font-weight: 500;
+        width: fit-content;
       }
     }
   }
 
-  .final-design {
-    display: flex;
-    gap: 4.5rem;
-    width: 70rem;
-    align-self: center;
+  .problem-solutions {
+    @extend .section;
 
-    .paragraph {
-      display: flex;
-      flex-direction: column;
+    flex-direction: row;
+    gap: 4.5rem;
+
+    .para {
+      @extend .paragraph-gap-2;
+
       gap: 1.5rem;
 
-      .headers {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+      .para {
+        @extend .paragraph-gap-2;
 
-        .semi-header {
-          font-size: 1.25rem;
-          font-weight: 500;
-        }
-
-        .header {
-          font-size: 1.75rem;
-          font-weight: 600;
-        }
+        width: max-content;
+        gap: 1rem;
       }
 
-      .content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding-left: 1rem;
+      .problem {
+        @include left-border(--red);
+      }
 
-        .para {
-          display: flex;
-          flex-direction: column;
-          padding-left: 1rem;
-          width: max-content;
-          gap: 1rem;
+      .solution {
+        @include left-border(--green);
 
-          .col {
-            display: flex;
-            flex-direction: column;
-          }
-        }
-
-        .problem {
-          border-left: 4px #b26767 solid;
-          padding-left: 1rem;
-        }
-
-        .solution {
-          border-left: 4px #5d9087 solid;
-          padding-left: 1rem;
-          align-self: flex-start;
-        }
-
-        .bold {
-          font-weight: 500;
-        }
+        align-self: flex-start;
       }
     }
 
     .images {
       display: flex;
       gap: 2.5rem;
-    }
-
-    span {
-      width: fit-content;
     }
   }
 
   .checkout {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 70rem;
-    align-self: center;
+    @extend .section;
 
-    .header {
-      font-size: 1.75rem;
-      font-weight: 600;
-    }
+    gap: 1.5rem;
 
     .images {
       display: flex;
       gap: 5rem;
-      align-self: center;
+      margin-left: -25rem;
+      background: var(--green);
+      padding: 5.25rem 16.75rem;
     }
   }
 
-  .order-tracking {
-    display: flex;
-    gap: 4.5rem;
-    width: 70rem;
-    align-self: center;
+  .sub-title {
+    @extend .sub-title;
 
-    .images {
-      display: flex;
-      gap: 2.5rem;
-    }
-
-    .paragraph {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-
-      .header {
-        font-size: 1.75rem;
-        font-weight: 600;
-      }
-
-      .content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        padding-left: 1rem;
-
-        .para {
-          display: flex;
-          flex-direction: column;
-          padding-left: 1rem;
-          width: max-content;
-          gap: 1rem;
-
-          .col {
-            display: flex;
-            flex-direction: column;
-          }
-        }
-
-        .problem {
-          border-left: 4px #b26767 solid;
-          padding-left: 1rem;
-        }
-
-        .solution {
-          border-left: 4px #5d9087 solid;
-          padding-left: 1rem;
-          align-self: flex-start;
-        }
-
-        .bold {
-          font-weight: 500;
-        }
-      }
-
-      span {
-        width: fit-content;
-      }
-    }
+    color: var(--gray-color);
   }
 }

@@ -4,6 +4,8 @@
   align-items: center;
   height: 4.375rem;
   gap: 3rem;
+  font-size: 0.875rem;
+  font-weight: 400;
 
   .contact {
     display: flex;
@@ -13,7 +15,8 @@
 
     ::after {
       content: "";
-      background: #7c59f6;
+      background: var(--header-hover);
+      opacity: 0.6;
       width: 0.5rem;
       height: 0.5rem;
       border-radius: 100%;

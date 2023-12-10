@@ -1,9 +1,12 @@
 <div class="pharm-yarok">
-  <img class="image" src="../../assets/pharmYarok/header.svg" />
+  <div class="header">
+    <app-header class="header"></app-header>
+    <img class="image" src="../../assets/pharmYarok/header.svg" />
+  </div>
 
   <div class="overview">
-    <div class="paragraph">
-      <span class="header">Overview</span>
+    <div class="paragraph-gap-2">
+      <span class="title">Overview</span>
       <span>
         Pharm Yarok sells medicinal cannabis mostly through phone and WhatsApp.
         <br />
@@ -11,8 +14,8 @@
         The target audience is Cannabis patients aged 20-45.
       </span>
     </div>
-    <div class="paragraph">
-      <span class="header">The challenge</span>
+    <div class="paragraph-gap-2">
+      <span class="title">The challenge</span>
       <span>
         Redesign the app to improve usability, make ordering easier and
         convenient for future purchases, <br />
@@ -22,39 +25,39 @@
   </div>
 
   <div class="user-story">
-    <div class="story">
-      <img class="image" src="../../assets/pharmYarok/userStory1.svg" />
+    <div class="paragraph-gap-2">
+      <img src="../../assets/pharmYarok/userStory1.svg" />
       <span
         >Avi is texting with the pharmacy's reps to get info on strains to
         buy.</span
       >
     </div>
-    <div class="story">
-      <img class="image" src="../../assets/pharmYarok/userStory2.svg" />
+    <div class="paragraph-gap-2">
+      <img src="../../assets/pharmYarok/userStory2.svg" />
       <span
         >Avi is disappointed by the lack of info, recommendations, and images.
       </span>
     </div>
-    <div class="story">
-      <img class="image" src="../../assets/pharmYarok/userStory3.svg" />
+    <div class="paragraph-gap-2">
+      <img src="../../assets/pharmYarok/userStory3.svg" />
       <span>Avi decides to search strains on the app.</span>
     </div>
-    <div class="story">
-      <img class="image" src="../../assets/pharmYarok/userStory4.svg" />
+    <div class="paragraph-gap-2">
+      <img src="../../assets/pharmYarok/userStory4.svg" />
       <span
         >Avi quickly finds the info and images he needed and places an
         order.</span
       >
     </div>
-    <div class="story">
-      <img class="image" src="../../assets/pharmYarok/userStory5.svg" />
+    <div class="paragraph-gap-2">
+      <img src="../../assets/pharmYarok/userStory5.svg" />
       <span>Avi got the order, and he's relieved to have his medicine.</span>
     </div>
   </div>
 
   <div class="research">
-    <div class="research">
-      <span class="header">Research</span>
+    <div class="paragraph">
+      <span class="title">Research</span>
       <span>
         I began the project by benchmarking similar apps to understand the
         features that users expect and identify areas for improvement. <br />
@@ -62,83 +65,84 @@
         strains.
       </span>
     </div>
-    <div class="cards">
+    <div class="paragraph-gap-3">
       <div class="questions">
-        <mat-card>
-          <mat-card-header><span class="chip">question</span></mat-card-header>
-          <mat-card-content>
-            <span class="bold"
+        <span class="card">
+          <span class="chip-title-blue">question</span>
+          <span class="content">
+            <span class="text-bold"
               >What helps decide which cannabis strain to buy?</span
             >
             <span class="answer filler"
-              >Knowing which cannabis strain is right for a specific condition,
-              and following the majority's choice.</span
+              >Knowing which cannabis strain is right for a specific <br />
+              condition, and following the majority's choice.</span
             >
-          </mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-header><span class="chip">question</span></mat-card-header>
-          <mat-card-content>
-            <span class="bold"
+          </span>
+        </span>
+        <span class="card">
+          <span class="chip-title-blue">question</span>
+          <span class="content">
+            <span class="text-bold"
               >What difficulties have you experienced trying to buy
               cannabis?</span
             >
             <span class="answer"
-              >“It's hard to make a decision”<br />
-              The pharmacy doesn't provide enough info on flavours, effects,
-              images, or reviews, making it impossible to make an informed
+              ><span class="text-bold">“It's hard to make a decision”</span
+              ><br />
+              The pharmacy doesn't provide enough info on flavours, effects,<br />
+              images, or reviews, making it impossible to make an informed<br />
               decision. You're left guessing what to get.</span
             >
-          </mat-card-content>
-        </mat-card>
+          </span>
+        </span>
       </div>
-      <mat-card class="insight">
-        <mat-card-header><span class="chip">Insight</span></mat-card-header>
+      <span class="card">
+        <span class="chip-title-green">Insight</span>
         <mat-card-content>
-          <span class="bold"
+          <span class="text-bold"
             >Patients search for medical cannabis in different ways.</span
-          >Some search by popularity, others by THC/CBD levels, while others
-          look for specific brands or price points.
+          ><br />Some search by popularity, others by THC/CBD levels, while
+          others look for specific brands or price points.
         </mat-card-content>
-      </mat-card>
+      </span>
       <div class="problems">
-        <mat-card>
-          <mat-card-header><span class="chip">Problem</span></mat-card-header>
-          <mat-card-content class="problem-content">
-            <span class="bold">Limited search:</span> The only supported way of
-            searching is by brand.
-          </mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-header><span class="chip">Problem</span></mat-card-header>
-          <mat-card-content class="problem-content">
-            <span class="bold">Missing cart:</span> Unclear what's added after
-            the products page.
-          </mat-card-content>
-        </mat-card>
+        <span class="card">
+          <span class="chip-title-red">Problem</span>
+          <span class="content">
+            <span class="text-bold">Limited search:</span> The only supported
+            way of searching is by brand.
+          </span>
+        </span>
+        <span class="card">
+          <span class="chip-title-red">Problem</span>
+          <span class="content">
+            <span class="text-bold">Missing cart:</span> Unclear what's added
+            after the products page.
+          </span>
+        </span>
       </div>
       <div class="problems">
-        <mat-card>
-          <mat-card-header><span class="chip">Problem</span></mat-card-header>
-          <mat-card-content class="problem-content">
-            <span class="bold">Missing sign up:</span> Users have to reupload
-            their cannabis license.
-          </mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-header><span class="chip">Problem</span></mat-card-header>
-          <mat-card-content class="problem-content">
-            <span class="bold">Lack of images:</span> Patients want to see what
-            they're buying.
-          </mat-card-content>
-        </mat-card>
+        <span class="card">
+          <span class="chip-title-red">Problem</span>
+          <span class="content">
+            <span class="text-bold">Missing sign up:</span> Users have to
+            reupload their cannabis license.
+          </span>
+        </span>
+        <span class="card">
+          <span class="chip-title-red">Problem</span>
+          <span class="content">
+            <span class="text-bold">Lack of images:</span> Patients want to see
+            what they're buying.
+          </span>
+        </span>
       </div>
     </div>
   </div>
 
   <div class="personas">
-    <div class="paragraph">
-      <span class="header">Personas</span>
+    <div class="paragraph-gap-2">
+      <span class="title">Personas</span>
       <span>
         Based on my research, I mapped 3 types of users to reflect on them when
         making decisions.
@@ -214,20 +218,22 @@
     </div>
   </div>
 
-  <div class="solution">
-    <span class="header">The solution</span>
-    <span>
-      The revamped app simplifies medicinal cannabis ordering by providing
-      patients with insightful treatment decisions <br />
-      and facilitating quick, effortless ordering.
-    </span>
+  <div class="section">
+    <div class="paragraph-gap-2">
+      <span class="title">The solution</span>
+      <span>
+        The revamped app simplifies medicinal cannabis ordering by providing
+        patients with insightful treatment decisions <br />
+        and facilitating quick, effortless ordering.
+      </span>
+    </div>
   </div>
 
   <div class="wireframe">
-    <div class="paragraph">
+    <div class="paragraph-gap-2">
       <div class="headers">
-        <span class="semi-header">Wireframes</span>
-        <span class="header"> The search page </span>
+        <span class="sub-title">Wireframes</span>
+        <span class="title"> The search page </span>
       </div>
       <span>
         To help users find the strains they're looking for easily, I categorized
@@ -249,47 +255,47 @@
     </div>
   </div>
 
-  <div class="final-design">
-    <div class="paragraph">
+  <div class="problem-solutions">
+    <div class="para">
       <div class="headers">
-        <span class="semi-header">Final design</span>
-        <span class="header">Adding products to the cart</span>
+        <span class="sub-title">Final design</span>
+        <span class="title">Adding products to the cart</span>
       </div>
-      <div class="content">
-        <span class="problem bold">The problems I addressed were:</span>
+      <div class="paragraph-gap-3">
+        <span class="problem text-bold">The problems I addressed were:</span>
         <span class="para">
           <span>
-            <span class="bold">Missing cart:</span> Unclear what's added after
-            the products page.
+            <span class="text-bold">Missing cart:</span> Unclear what's added
+            after the products page.
           </span>
           <span>
-            <span class="bold">Lack of images:</span> Patients want to see what
-            they're buying.
+            <span class="text-bold">Lack of images:</span> Patients want to see
+            what they're buying.
           </span>
         </span>
-        <span class="solution bold">The solutions:</span>
+        <span class="solution text-bold">The solutions:</span>
         <span class="para">
           <span>
-            <span class="bold">Adding a cart</span> to provide clarity & allow
-            users to leave <br />the process and return later without
+            <span class="text-bold">Adding a cart</span> to provide clarity &
+            allow users to leave <br />the process and return later without
             interruption.<br />
           </span>
-          <span class="col">
-            <span class="bold"> Making POP products more accessible </span> I
-            added a POP products section to the cart with <br />images and
+          <span class="paragraph-gap-0">
+            <span class="text-bold"> Making POP products more accessible </span>
+            I added a POP products section to the cart with <br />images and
             descriptions to boost sales.
           </span>
         </span>
       </div>
     </div>
     <div class="images">
-      <img src="../../assets/pharmYarok/final1.svg" />
       <img src="../../assets/pharmYarok/final2.svg" />
+      <img src="../../assets/pharmYarok/final1.svg" />
     </div>
   </div>
 
   <div class="checkout">
-    <span class="header">Checkout process</span>
+    <span class="title">Checkout process</span>
     <div class="images">
       <img src="../../assets/pharmYarok/checkout1.svg" />
       <img src="../../assets/pharmYarok/checkout2.svg" />
@@ -298,35 +304,35 @@
     </div>
   </div>
 
-  <div class="order-tracking">
+  <div class="problem-solutions">
     <div class="images">
       <img src="../../assets/pharmYarok/order1.svg" />
       <img src="../../assets/pharmYarok/order2.svg" />
     </div>
-    <div class="paragraph">
-      <span class="header">Order tracking</span>
-      <div class="content">
-        <span class="problem bold">The problem:</span>
+    <div class="para">
+      <span class="title">Order tracking</span>
+      <div class="paragraph-gap-3">
+        <span class="problem text-bold">The problem:</span>
         <span class="para">
-          <span class="bold"
+          <span class="text-bold"
             >Lack of delivery info leading to cancellations:</span
           >Patients would have to contact the pharmacy to get <br />delivery
           details, or await contact. most people would <br />get tired waiting
           and purchase someplace else.
         </span>
-        <span class="solution bold">The solutions:</span>
+        <span class="solution text-bold">The solutions:</span>
         <span class="para">
-          <span class="col">
-            <span class="bold"
+          <span class="paragraph-gap-0">
+            <span class="text-bold"
               >Providing clear feedback & setting expectations:</span
             >
             After placing an order, the success page helps inform <br />the
             patient about the timeline of the order.
           </span>
-          <span class="col">
-            <span class="bold">Allocating space for order tracking:</span>After
-            placing an order, the info, status and ETA will be <br />visible at
-            the top of the search page.
+          <span class="paragraph-gap-0">
+            <span class="text-bold">Allocating space for order tracking:</span
+            >After placing an order, the info, status and ETA will be
+            <br />visible at the top of the search page.
           </span>
         </span>
       </div>

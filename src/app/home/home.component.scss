@@ -1,13 +1,16 @@
+@import "../../styles.scss";
+
 .home {
-  display: flex;
-  flex-direction: column;
+  @extend .paragraph-gap-0;
+
+  width: 100%;
   align-items: center;
+  gap: 10rem;
 
   .header {
-    display: flex;
-    flex-direction: column;
+    @extend .paragraph-gap-3;
+
     align-items: center;
-    gap: 1.5rem;
 
     .photo {
       width: 8rem;
@@ -15,73 +18,95 @@
     }
 
     .intro {
-      display: flex;
-      flex-direction: column;
+      @extend .paragraph-gap-0;
+
       text-align: center;
       gap: 0.75rem;
 
       .header {
-        font-size: 5rem;
-        font-weight: 700;
-        background: linear-gradient(90deg, #3d87f6, #a53df6);
+        @extend .header;
+
+        background: linear-gradient(
+          90deg,
+          var(--title-gradient-start),
+          var(--title-gradient-end)
+        );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
-      .title {
-        font-size: 1.5rem;
-        color: #4f4f4f;
-        font-weight: 500;
-      }
-
       .sentence {
-        font-size: 1.5rem;
-        font-weight: 500;
+        @extend .sub-title;
+
+        color: var(--sub-title-color);
       }
     }
   }
 
   .projects {
-    display: flex;
-    flex-direction: column;
+    @extend .paragraph-gap-0;
+
     align-items: center;
     gap: 5rem;
+    margin: 0 22.5rem;
+
+    .project {
+      cursor: pointer;
+
+      :last-child {
+        display: none;
+      }
+
+      :first-child:hover {
+        display: none;
+
+        + :last-child {
+          display: inline;
+        }
+      }
+    }
   }
 
   .about {
     display: flex;
+    width: -webkit-fill-available;
+    background-image: url("../../assets/background.svg");
+    background-position: center;
     gap: 2.75rem;
-    background-image: radial-gradient(#9746f6, #5873f6, 0.5rem, transparent 0);
-    background-size: 2.5rem 2.5rem;
+    padding: 10.125rem 0;
+    justify-content: center;
 
-    .about-me {
-      max-width: 50rem;
-    }
+    .card {
+      @extend .paragraph-gap-3;
 
-    .fun-facts {
-      max-width: 35rem;
-    }
+      border: 2px var(--border-color-first) solid;
+      border-radius: 1.25rem;
+      padding: 3.5rem;
+      background: var(--card-background);
 
-    .mat-mdc-card {
-      border: 2px #e7e7e7 solid;
-      gap: 1.5rem;
-
-      .mat-mdc-card-header {
+      .title {
+        display: flex;
+        gap: 1rem;
         font-size: 2.5rem;
         font-weight: 700;
+      }
 
-        .stars {
-          margin-left: 1rem;
+      .content {
+        @extend .paragraph-gap-3;
+
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.75rem;
+
+        .bold {
+          font-weight: 600;
         }
       }
-
-      .mat-mdc-card-content {
-        display: flex;
-        flex-direction: column;
-        font-size: 1.125rem;
-        gap: 1.5rem;
-      }
     }
+  }
+
+  .footer {
+    width: 100%;
   }
 }

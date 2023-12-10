@@ -1,11 +1,11 @@
-<app-header></app-header>
-
 <div class="home">
+  <app-header></app-header>
+
   <div class="header">
     <img class="photo" src="../../assets/hadas.svg" />
     <div class="intro">
       <span class="header">Hi, I'm Hadas</span>
-      <span class="title">product designer</span>
+      <span class="sub-title">product designer</span>
       <span class="sentence"
         >I design systems that make a difference for the Israeli Navy</span
       >
@@ -13,43 +13,62 @@
   </div>
 
   <div class="projects">
-    <img src="../../assets/threat.svg" />
-    <img src="../../assets/pharmYarok.svg" />
+    <span (click)="goto('threats')" class="project">
+      <img src="../../assets/threat.svg" />
+      <img src="../../assets/threat-hover.svg" />
+    </span>
+    <span (click)="goto('pharm-yarok')" class="project">
+      <img src="../../assets/pharmYarok.svg" />
+      <img src="../../assets/pharmYarok-hover.svg" />
+    </span>
   </div>
 
   <div class="about">
-    <mat-card class="about-me">
-      <mat-card-header>About me</mat-card-header>
-      <mat-card-content>
+    <span class="card">
+      <span class="title">About me</span>
+      <span class="content">
         <span>
           I am a driven, passionate, and eager designer, with 3 years of
           experience.
         </span>
         <span>
-          <b>I currently work for the Israeli Navy</b> where I specialize in
-          complex systems which is a true passion of mine. I enjoy collaborating
-          with other designers and developers and learning from them.</span
+          <span class="bold">I currently work for the Israeli Navy</span> where
+          I specialize in complex systems <br />
+          which is a true passion of mine. I enjoy collaborating with other
+          designers <br />
+          and developers and learning from them.</span
         >
         <span
           >I'm also a 2nd year
-          <b> psychology student at the Open University.</b> The knowledge I
-          gain in my studies helps tremendously to understand human behavior and
-          its flaws and allows me to create better user experiences.</span
+          <span class="bold"> psychology student at the Open University.</span
+          ><br />
+          The knowledge I gain in my studies helps tremendously to understand
+          human <br />
+          behavior and its flaws and allows me to create better user
+          experiences.</span
         >
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="fun-facts">
-      <mat-card-header
+      </span>
+    </span>
+    <span class="card">
+      <span class="title"
         >Fun Facts <img class="stars" src="../../assets/icons/stars.svg"
-      /></mat-card-header>
-      <mat-card-content>
-        <span>Favorite food: Pancakes.</span>
-        <span>Hobbies: working out, baking & making textured art.</span>
-        <span>TV genres: sitcoms, fantasies and dramas. Currently</span>
-        <span>learning: Spanish.</span>
-      </mat-card-content>
-    </mat-card>
+      /></span>
+      <span class="content">
+        <span>Favorite food: <span class="text-bold">Pancakes.</span></span>
+        <span
+          >Hobbies:
+          <span class="text-bold"
+            >working out, baking & making textured art.</span
+          ></span
+        >
+        <span
+          >TV genres:
+          <span class="text-bold">sitcoms, fantasies and dramas.</span></span
+        >
+        <span>Currently learning: <span class="text-bold">Spanish.</span></span>
+      </span>
+    </span>
   </div>
-</div>
 
-<app-footer></app-footer>
+  <app-footer class="footer"></app-footer>
+</div>

@@ -1,12 +1,8 @@
 <div class="header">
   <span class="contact"><span>Work</span></span>
   <span class="contact"><span>About</span></span>
-  <span class="contact" [matMenuTriggerFor]="menu">
-    <span>Contact</span>
-    <img src="../../assets/icons/down-arrow.svg" />
-  </span>
-  <mat-menu #menu="matMenu">
-    <app-footer></app-footer>
-  </mat-menu>
+  <span class="contact"
+    ><a [href]="url" class="link underline">Contact</a></span
+  >
   <span class="contact"><span>Resume</span></span>
 </div>
