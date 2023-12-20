@@ -1,11 +1,11 @@
 <div class="home">
-  <app-header></app-header>
+  <app-header [selectedLink]="'home'" class="app-header"></app-header>
 
   <div class="header">
     <img class="photo" src="../../assets/hadas.svg" />
     <div class="intro">
       <span class="header">Hi, I'm Hadas</span>
-      <span class="sub-title">product designer</span>
+      <span class="sub-title">Product Designer</span>
       <span class="sentence"
         >I design systems that make a difference for the Israeli Navy</span
       >
@@ -23,10 +23,10 @@
     </span>
   </div>
 
-  <div class="about">
+  <div id="about" class="about">
     <span class="card">
       <span class="title">About me</span>
-      <span class="content">
+      <span class="content content-padding">
         <span>
           I am a driven, passionate, and eager designer, with 3 years of
           experience.
@@ -72,3 +72,5 @@
 
   <app-footer class="footer"></app-footer>
 </div>
+
+<app-scroll-to-top></app-scroll-to-top>

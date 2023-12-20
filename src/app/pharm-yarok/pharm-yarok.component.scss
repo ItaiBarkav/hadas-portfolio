@@ -8,7 +8,7 @@
   .header {
     @extend .paragraph-gap-0;
 
-    align-items: center;
+    width: 100%;
 
     .header {
       position: absolute;
@@ -38,12 +38,20 @@
     padding: 4.875rem 10rem;
     max-width: -webkit-fill-available;
     background: var(--green-background);
+
+    * {
+      width: 100%;
+    }
   }
 
   .research {
     @extend .section;
 
     padding-right: 25rem;
+
+    * {
+      line-height: 160%;
+    }
 
     .paragraph {
       @extend .paragraph-gap-2;
@@ -57,13 +65,6 @@
 
       .answer {
         @include left-border(--blue, 0.5rem);
-      }
-
-      .filler::after {
-        content: "";
-        display: flex;
-        height: 2.5rem;
-        visibility: visible;
       }
     }
 
@@ -107,11 +108,16 @@
     @extend .section;
 
     gap: 1.5rem;
+    width: fit-content;
+
+    * {
+      line-height: 160%;
+    }
 
     .personas {
       display: flex;
       flex-direction: row;
-      width: min-content;
+      width: 100%;
       margin-left: -25rem;
 
       .persona {
@@ -124,6 +130,7 @@
           @extend .paragraph-gap-2;
 
           padding: 0 1.5rem 1.5rem 1.5rem;
+          width: fit-content;
 
           .person {
             font-size: 1.5rem;
@@ -136,6 +143,10 @@
           }
         }
       }
+
+      * {
+        width: 100%;
+      }
     }
   }
 
@@ -143,6 +154,10 @@
     @extend .section;
 
     gap: 1.5rem;
+
+    .sub-title {
+      font-size: 1.25rem;
+    }
 
     .images {
       display: flex;
@@ -159,6 +174,28 @@
         font-size: 1rem;
         font-weight: 500;
         width: fit-content;
+
+        .scroll-image {
+          position: relative;
+
+          .frame {
+            position: relative;
+          }
+
+          .content {
+            position: absolute;
+            top: 0;
+            margin: 0.5rem 0 0.8rem 0.5rem;
+            overflow-y: auto;
+            border-radius: 1.25rem;
+            height: -webkit-fill-available;
+            width: 14.5rem;
+
+            img {
+              width: -webkit-fill-available;
+            }
+          }
+        }
       }
     }
   }
@@ -169,16 +206,29 @@
     flex-direction: row;
     gap: 4.5rem;
 
-    .para {
-      @extend .paragraph-gap-2;
+    * {
+      line-height: 160%;
+    }
 
-      gap: 1.5rem;
+    .sub-title {
+      font-size: 1.25rem;
+    }
+
+    .para {
+      @extend .paragraph-gap-3;
+
+      padding-left: 1.25rem;
 
       .para {
         @extend .paragraph-gap-2;
 
         width: max-content;
-        gap: 1rem;
+      }
+
+      .the-problem {
+        @extend .paragraph-gap-1;
+
+        padding-left: 1.25rem;
       }
 
       .problem {
@@ -195,6 +245,10 @@
     .images {
       display: flex;
       gap: 2.5rem;
+
+      * {
+        width: 100%;
+      }
     }
   }
 
@@ -209,6 +263,33 @@
       margin-left: -25rem;
       background: var(--green);
       padding: 5.25rem 16.75rem;
+
+      * {
+        width: 100%;
+        height: auto;
+      }
+
+      .scroll-image {
+        position: relative;
+
+        .frame {
+          position: relative;
+        }
+
+        .content {
+          position: absolute;
+          top: 0;
+          margin: 1.6rem 0 5rem 0.5rem;
+          overflow-y: auto;
+          border-radius: 1.25rem;
+          height: -webkit-fill-available;
+          width: 16.6rem;
+
+          img {
+            width: -webkit-fill-available;
+          }
+        }
+      }
     }
   }
 
@@ -216,5 +297,9 @@
     @extend .sub-title;
 
     color: var(--gray-color);
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }

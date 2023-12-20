@@ -1,9 +1,280 @@
-.paragraph {
+@import "../../styles.scss";
+
+.threats {
   display: flex;
   flex-direction: column;
-}
+  gap: 8.25rem;
+  background-color: var(--dark-background-first);
+  color: var(--dark-text-color);
 
-.story {
-  display: flex;
-  flex-direction: row;
+  .title {
+    color: var(--dark-title-color);
+  }
+
+  .header {
+    @extend .paragraph-gap-0;
+
+    width: 100%;
+
+    .header {
+      position: absolute;
+      color: var(--card-background);
+
+      ::ng-deep .link {
+        color: var(--card-background);
+      }
+    }
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  .overview {
+    @extend .section;
+
+    gap: 3rem;
+  }
+
+  .user-story {
+    @extend .section;
+    @extend .paragraph-gap-0;
+
+    padding: 5rem 0;
+    background: var(--dark-background-second);
+    align-items: center;
+
+    .stories {
+      display: flex;
+      flex-direction: row;
+      gap: 3rem;
+      padding: 4.875rem 10rem;
+      max-width: -webkit-fill-available;
+
+      * {
+        flex: 1;
+        width: 100%;
+        line-height: 160%;
+      }
+
+      ::ng-deep svg {
+        border-radius: 0.5rem;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .research {
+    @extend .section;
+
+    padding-right: 25rem;
+
+    .paragraph {
+      @extend .paragraph-gap-2;
+
+      align-self: flex-start;
+
+      .questions {
+        @extend .text-bold;
+
+        color: var(--dark-title-color);
+      }
+
+      .question {
+        @include left-border(--dark-blue, 0.5rem);
+      }
+    }
+  }
+
+  .personas-section {
+    @extend .section;
+
+    gap: 1.5rem;
+
+    .personas {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+
+      .persona {
+        @extend .paragraph-gap-2;
+
+        background-color: var(--dark-card-background);
+        border: 1px var(--dark-border) solid;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+
+        * {
+          line-height: 160%;
+        }
+
+        .header {
+          flex-direction: row;
+          gap: 1rem;
+
+          .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+        }
+
+        .content::after {
+          content: "";
+          display: flex;
+          height: 1.25rem;
+          visibility: visible;
+        }
+
+        .chip-title-blue {
+          @include chip(--dark-blue);
+        }
+
+        .chip-title-red {
+          @include chip(--dark-red);
+        }
+      }
+    }
+  }
+
+  .wireframe {
+    @extend .section;
+
+    gap: 5rem;
+    background-color: var(--dark-background-second);
+    padding: 5rem 0;
+    text-align: center;
+
+    .content {
+      @extend .paragraph-gap-3;
+
+      .header {
+        @extend .paragraph-gap-2;
+
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      .principles {
+        display: flex;
+        align-self: center;
+        gap: 1.5rem;
+
+        .principle {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+
+          &::after {
+            content: "";
+            background: var(--text-color);
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+
+    .images {
+      display: flex;
+      gap: 2rem;
+      align-self: center;
+
+      * {
+        width: 100%;
+      }
+    }
+  }
+
+  .problem-solutions {
+    @extend .section;
+
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+    gap: 4rem;
+
+    .para {
+      @extend .paragraph-gap-2;
+
+      gap: 1.5rem;
+      padding-left: 1.25rem;
+
+      * {
+        line-height: 160%;
+      }
+
+      .para {
+        @extend .paragraph-gap-2;
+
+        width: max-content;
+        gap: 1rem;
+
+        .colored-text {
+          @extend .text-bold;
+
+          color: var(--dark-title-color);
+        }
+
+        ul {
+          @extend .paragraph-gap-1;
+
+          margin: 0rem;
+        }
+      }
+
+      .problem {
+        @include left-border(--dark-red);
+
+        color: var(--dark-title-color);
+      }
+
+      .solution {
+        @include left-border(--dark-green);
+
+        align-self: flex-start;
+        color: var(--dark-title-color);
+      }
+    }
+
+    .images {
+      display: flex;
+      gap: 2.5rem;
+
+      * {
+        width: 100%;
+      }
+    }
+  }
+
+  .dashboard {
+    padding: 8.25rem 0;
+    background-color: var(--dark-background-second);
+  }
+
+  .usability-testing {
+    @extend .section;
+    @extend .paragraph-gap-3;
+
+    width: fit-content;
+
+    .cards {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .card {
+      @extend .paragraph-gap-2;
+
+      background-color: var(--dark-card-background);
+      border: 1px var(--dark-border) solid;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+
+      .chip-title {
+        @include chip(--dark-blue);
+
+        align-items: center;
+      }
+    }
+  }
 }

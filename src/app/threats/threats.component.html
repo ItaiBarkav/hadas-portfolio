@@ -1,46 +1,53 @@
-<div>
-  <img src="../../assets/threats/home.svg" />
+<div class="threats">
+  <div class="header">
+    <app-header class="header"></app-header>
+    <img class="image" src="../../assets/threats/home.svg" />
+  </div>
 
-  <div>
-    <div class="paragraph">
-      Overview
-      <span>
+  <div class="overview">
+    <div class="paragraph-gap-2">
+      <span class="title">Overview</span>
+      <span class="text">
         This project was done as part of an operational command and control
-        system used by the Israeli Navy. In order to protect classified navy
-        information, some details have been altered in this case study.
+        system used by the Israeli Navy.<br />
+        <span class="text-bold">
+          In order to protect classified navy information, some details have
+          been altered in this case study.
+        </span>
       </span>
     </div>
-    <div class="paragraph">
-      The challenge
-      <span>
+    <div class="paragraph-gap-2">
+      <span class="title">The challenge</span>
+      <span class="text">
         Each position holder on a ship has a different responsibility in a
-        threat situation. My goal was to improve how Navy ships access and
-        analyze potential threats While addressing each user’s needs.
+        threat situation.<br />
+        My goal was to improve how Navy ships access and analyze potential
+        threats while addressing each user's needs.
       </span>
     </div>
   </div>
 
-  <div>
-    The story goes like this...
-    <div class="story">
-      <div class="paragraph">
+  <div class="user-story">
+    <span class="title">The story goes like this...</span>
+    <div class="stories">
+      <div class="paragraph-gap-2">
         <img src="../../assets/threats/story1.svg" />
         <span>Oh no, There's a missile attack on the ship.</span>
       </div>
-      <div class="paragraph">
+      <div class="paragraph-gap-2">
         <img src="../../assets/threats/story2.svg" />
         <span
           >The controller's job is to group the same entities in the map, to
-          have a clear view.</span
-        >
+          have a clear view.
+        </span>
       </div>
-      <div class="paragraph">
-        <img src="../../assets/threats/story3.svg" />
+      <div class="paragraph-gap-2">
+        <ng-lottie [options]="story3"></ng-lottie>
         <span
           >The controller groups again and again and again and again...</span
         >
       </div>
-      <div class="paragraph">
+      <div class="paragraph-gap-2">
         <img src="../../assets/threats/story4.svg" />
         <span
           >Now that the map is clear, other position holders can intercept the
@@ -50,185 +57,255 @@
     </div>
   </div>
 
-  <div>
+  <div class="research">
     <div class="paragraph">
-      Research
-      <span>
+      <span class="title">Research</span>
+      <span class="text">
         To understand the navy's users needs, I visited a ship and conducted
-        interviews with each relevant position holder. My goals were to
-        understand the surrounding environment of each position holder and their
-        JTBD so that I could accommodate their different needs while making good
-        use of the their desk space.
+        interviews with each relevant position holder.<br />
+        My goals were to understand the surrounding environment of each position
+        holder and their JTBD so that I could <br />accommodate their different
+        needs while making good use of the their desk space.
       </span>
-      <span> Some of the questions I asked were: </span>
-      <span>Which actions are taken in a threat situation?</span>
-      <span>Which data is crucial to have?</span>
-      <span>What difficulties are there in the process?</span>
+      <span class="questions">Some of the questions I asked were:</span>
+      <span class="paragraph-gap-3">
+        <span class="question"
+          >Which actions are taken in a threat situation?</span
+        >
+        <span class="question">Which data is crucial to have?</span>
+        <span class="question"
+          >What difficulties are there in the process?</span
+        >
+      </span>
     </div>
-    <div>
-      Personas
-      <span
-        >Based on my research, I mapped 3 types of users, each one holds a
-        different role in the situation.</span
-      >
-      <div class="story">
-        <mat-card>
-          <mat-card-title
-            >Defence controller <img src="../../assets/threats/sergeant.svg"
-          /></mat-card-title>
-          <mat-card-content>
-            <span>
-              Responsible for alerting about potential threats and organizing
-              the targets.
-            </span>
-            <span> Needs </span>
-            <span>
-              Fast tools to perform quickly with a focus on map interaction.
-            </span>
-            <span> Pain Point </span>
-            <span>
-              The map area can be difficult to navigate and use when it's
-              crowded.
-            </span>
-          </mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title
-            >Defence officer <img src="../../assets/threats/lieutenant.svg"
-          /></mat-card-title>
-          <mat-card-content>
-            <span>Needs</span>
-            <span
-              >Fast scanning of data: They need a single source that
-              concentrates all relevant information.</span
-            >
-            <span>Pain Point</span>
-            <span
-              >Inconvenient consumption of data: the information is scattered in
-              the map and not concentrated in 1 place.</span
-            >
-          </mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title
-            >Commanding officer <img src="../../assets/threats/captain.svg"
-          /></mat-card-title>
-          <mat-card-content>
-            <span>Needs</span>
-            <span>Similar to defence officers.</span>
-            <span>Pain Point</span>
-            <span>Similar to defence officers.</span>
-          </mat-card-content>
-        </mat-card>
+  </div>
+
+  <div class="personas-section">
+    <div class="paragraph-gap-2">
+      <span class="title">Personas</span>
+      <span>
+        Based on my research, I mapped 3 types of users, each one holds a
+        different role in the situation.
+      </span>
+    </div>
+    <div class="personas">
+      <div class="persona">
+        <div class="paragraph-gap-1">
+          <span class="header">
+            <span class="title">Defence Controller</span>
+            <img src="../../assets/threats/sergeant.svg" />
+          </span>
+          <span>
+            Responsible for alerting about potential <br />threats and
+            organizing the targets.
+          </span>
+        </div>
+        <span class="paragraph-gap-1">
+          <span class="chip-title-blue">needs</span>
+          <span class="content"
+            >Fast tools to perform quickly with a <br />focus on map
+            interaction.</span
+          >
+        </span>
+        <span class="paragraph-gap-1">
+          <span class="chip-title-red">Pain Point</span>
+          The map area can be difficult to <br />navigate and use when it's
+          crowded.
+        </span>
+      </div>
+      <div class="persona">
+        <div class="paragraph-gap-1">
+          <span class="header">
+            <span class="title">Defence Officer</span>
+            <img src="../../assets/threats/lieutenant.svg" />
+          </span>
+          <span class="content"> They manage the entire defence process. </span>
+        </div>
+        <span class="paragraph-gap-1">
+          <span class="chip-title-blue">needs</span>
+          <span>
+            <span class="text-bold">Fast scanning of data:</span><br />They need
+            a single source that <br />
+            concentrates all relevant information.
+          </span>
+        </span>
+        <span class="paragraph-gap-1">
+          <span class="chip-title-red">Pain Point</span>
+          <span>
+            <span class="text-bold">Inconvenient consumption of data:</span> the
+            <br />information is scattered in the map and <br />not concentrated
+            in 1 place.
+          </span>
+        </span>
+      </div>
+      <div class="persona">
+        <div class="paragraph-gap-1">
+          <span class="header">
+            <span class="title">Commanding Officer</span>
+            <img src="../../assets/threats/captain.svg" />
+          </span>
+          <span>
+            They supervise and control all events <br />and transfer needed
+            information.
+          </span>
+        </div>
+        <span class="paragraph-gap-1">
+          <span class="chip-title-blue">needs</span>
+          <span class="content">
+            Similar to defence officers. <span class="content"></span>
+          </span>
+        </span>
+        <span class="paragraph-gap-1">
+          <span class="chip-title-red">Pain Point</span>
+          <span> Similar to defence officers. </span>
+        </span>
       </div>
     </div>
   </div>
 
-  <div>
-    Wireframing The Solutions
-    <span>
-      In order to optimize information concentration, bring scanning speeds up,
-      and reduce human error, I designed 2 solutions following these key
-      principles:
-    </span>
-    <div class="story">
-      <span>Make actions as quick as possible</span>
-      <span>Maintain contact with the map</span>
-      <span>The side panel can’t hide the map</span>
+  <div class="wireframe">
+    <div class="content">
+      <div class="header">
+        <span class="title">Wireframing The Solutions</span>
+        <span class="text">
+          In order to optimize information concentration, bring scanning speeds
+          up, and reduce human error, <br /><span class="text-bold">
+            I designed 2 solutions following these key principles:
+          </span>
+        </span>
+      </div>
+      <span class="principles">
+        <span class="text-bold principle"
+          >Make actions as quick as possible</span
+        >
+        <span class="text-bold principle">Maintain contact with the map</span>
+        <span class="text-bold"> The side panel can't hide the map </span>
+      </span>
     </div>
-    <div class="story">
-      <img src="../../assets/threats/wireframe1.svg" />
-      <img src="../../assets/threats/wireframe2.svg" />
-    </div>
-  </div>
-
-  <div class="story">
-    <div class="paragraph">
-      The Grouping Panel
-      <span>The problems I addressed were:</span>
-      <span
-        >Hard to group from the map: A controller has a difficult job when
-        threats are close together.</span
-      >
-      <span
-        >Manual grouping: This is the main task the controller has to do very
-        quickly, and the current process takes 30 - 50 seconds.</span
-      >
-      <span>The solutions:</span>
-      <span
-        >Minimizing the map: Once the side panel opens, the map narrows down so
-        that no content can be hidden.</span
-      >
-      <span>Grouping Panel:</span>
-      <span
-        >Suggestions - They save the controller time. Grouping from the panel
-        takes 3-10 seconds.</span
-      >
-      <span
-        >Alerts - Same as displayed in the dashboard, giving the controller
-        access to everything they need in one place.</span
-      >
-    </div>
-    <img src="../../assets/threats/grouping-panel.svg" />
-  </div>
-
-  <div class="story">
-    <img src="../../assets/threats/dashboard.svg" />
-    <div class="paragraph">
-      The Dashboard
-      <span>The problems I addressed were:</span>
-      <span
-        >Minimal area: The threat list area wasn’t large which made users have
-        to constantly scroll to view all the threats on the list.</span
-      >
-      <span
-        >Missing alerts: The old threat panel showed alerts on top of a threat,
-        and since most of the time they had to scroll to view the entire threat
-        list, incoming alerts were easy to miss.</span
-      >
-      <span>The solutions:</span>
-      <span
-        >Dashboard: I used a separate screen from the main system to display the
-        dashboard. Now the users can view the map and their data both at the
-        same time.</span
-      >
-      <span
-        >Alert Area: The dashboard was divided into 4 sections. The right one
-        provides space to alert users, and offer them choices about a given
-        threat.</span
-      >
+    <div class="images">
+      <div><img src="../../assets/threats/wireframe1.svg" /></div>
+      <div><img src="../../assets/threats/wireframe2.svg" /></div>
     </div>
   </div>
 
-  <div>
-    Usability Testing
-    <mat-card>
-      <mat-card-title>Goal</mat-card-title>
-      <mat-card-content
-        >To evaluate the usability of the features and measure how well they
-        help users fulfill their role in a threat situation.</mat-card-content
-      >
-    </mat-card>
-    <mat-card>
-      <mat-card-title>Method</mat-card-title>
-      <mat-card-content
-        >5 ship defense controllers were tested, whose performance was measured
-        based on their completion times.</mat-card-content
-      >
-    </mat-card>
-    <mat-card>
-      <mat-card-title>Results</mat-card-title>
-      <mat-card-content
+  <div class="problem-solutions">
+    <div class="para">
+      <div class="headers">
+        <span class="title">The Grouping Panel </span>
+      </div>
+      <div class="paragraph-gap-3">
+        <span class="problem text-bold">The problems I addressed were:</span>
+        <span class="para">
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Hard to group from the map:</span>A
+            controller has a difficult job when threats are close together.
+          </span>
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Manual grouping:</span>This is the main
+            task the controller has to do very quickly, and <br />the current
+            process takes 30 - 50 seconds.
+          </span>
+        </span>
+        <span class="solution text-bold">The solutions:</span>
+        <span class="para">
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Minimizing the map:</span>
+            Once the side panel opens, the map narrows down so that no <br />
+            content can be hidden.
+          </span>
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Grouping panel:</span>
+            <ul>
+              <li>
+                <span class="colored-text">Suggestions -</span> They save the
+                controller time. Grouping <br />from the panel takes 3-10
+                seconds.
+              </li>
+              <li>
+                <span class="colored-text">Alerts -</span> Same as displayed in
+                the dashboard, giving the <br />controller access to everything
+                they need in one place.
+              </li>
+            </ul>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="images">
+      <img src="../../assets/threats/grouping-panel.svg " />
+    </div>
+  </div>
+
+  <div class="problem-solutions dashboard">
+    <div class="images">
+      <img src="../../assets/threats/dashboard.svg  " />
+    </div>
+    <div class="para">
+      <span class="title">The Dashboard</span>
+      <div class="paragraph-gap-3">
+        <span class="problem text-bold">The problems I addressed were:</span>
+        <span class="para">
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Minimal area:</span>The threat list area
+            wasn't large which made users have to <br />constantly scroll to
+            view all the threats on the list.
+          </span>
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Missing alerts:</span>The old threat
+            panel showed alerts on top of a threat, and <br />since most of the
+            time they had to scroll to view the entire <br />threat list,
+            incoming alerts were easy to miss.
+          </span>
+        </span>
+        <span class="solution text-bold">The solutions:</span>
+        <span class="para">
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Dashboard:</span>
+            I used a separate screen from the main system to display the <br />
+            dashboard. Now the users can view the map and their data <br />both
+            at the same time.
+          </span>
+          <span class="paragraph-gap-1">
+            <span class="colored-text">Alert Area:</span>The dashboard was
+            divided into 4 sections. <br />The right one provides space to alert
+            users, and offer them <br />choices about a given threat.
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="usability-testing">
+    <span class="title">Usability Testing</span>
+    <div class="cards">
+      <span class="card">
+        <span class="chip-title">Goal</span>
+        <span class="text"
+          >Evaluating the usability of the features and measure how well
+          <br />they help users fulfill their role in a threat situation.</span
+        >
+      </span>
+      <span class="card">
+        <span class="chip-title">Method</span>
+        <span class="text"
+          >5 ship defense controllers were tested, whose performance was
+          <br />measured based on their completion times.</span
+        >
+      </span>
+    </div>
+    <span class="card">
+      <span class="chip-title">Results</span>
+      <span class="text"
         >Overall, the usability testing results were positive, with only one
-        minor usability issue detected: Participants had difficulty
-        distinguishing suggested groups from existing groups. The issue was
-        fixed by providing different colors and visual
-        indicators.</mat-card-content
+        minor usability issue detected: <br />Participants had difficulty
+        distinguishing suggested groups from existing groups. <br />The issue
+        was fixed by providing different colors and visual indicators.</span
       >
-    </mat-card>
+    </span>
   </div>
 
-  <img src="../../assets/threats/overview.svg" />
+  <img src="../../assets/threats/overview.png" />
 </div>
 
 <app-footer></app-footer>
+<app-scroll-to-top></app-scroll-to-top>

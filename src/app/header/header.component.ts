@@ -1,20 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { FooterComponent } from '../footer/footer.component';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MaterialModule } from '../material.module';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MaterialModule, FooterComponent],
+  imports: [CommonModule, MaterialModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  url: string;
+  homeUrl = '/';
+  aboutUrl = '#about';
+  @Input() selectedLink: string | null = null;
 
-  constructor(private router: Router) {
-    this.url = `${this.router.url}#footer`;
+  updateSelectedLink(selectedLink: string): void {
+    this.selectedLink = selectedLink;
   }
 }

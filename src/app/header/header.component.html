@@ -1,8 +1,31 @@
 <div class="header">
-  <span class="contact"><span>Work</span></span>
-  <span class="contact"><span>About</span></span>
-  <span class="contact"
-    ><a [href]="url" class="link underline">Contact</a></span
-  >
-  <span class="contact"><span>Resume</span></span>
+  <div class="logo">
+    <a
+      [href]="homeUrl"
+      class="link underline"
+      (click)="updateSelectedLink('home')"
+      >HY</a
+    >
+  </div>
+  <div class="links">
+    <a
+      [href]="homeUrl"
+      class="link underline"
+      [class.selected-link]="selectedLink === 'home'"
+      (click)="updateSelectedLink('home')"
+      >Home</a
+    >
+    <a
+      [href]="aboutUrl"
+      class="link underline"
+      [class.selected-link]="selectedLink === 'aboutMe'"
+      (click)="updateSelectedLink('aboutMe')"
+      >About Me</a
+    >
+    <span
+      [class.selected-link]="selectedLink === 'resume'"
+      (click)="updateSelectedLink('resume')"
+      >Resume</span
+    >
+  </div>
 </div>

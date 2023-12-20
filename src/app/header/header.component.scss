@@ -1,33 +1,31 @@
+@import "../../styles.scss";
+
 .header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4.375rem;
-  gap: 3rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1rem 5rem;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 500;
 
-  .contact {
+  .logo {
     display: flex;
-    flex-direction: row;
-    align-items: start;
-    cursor: pointer;
+    float: left;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
 
-    ::after {
-      content: "";
-      background: var(--header-hover);
-      opacity: 0.6;
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 100%;
-      visibility: hidden;
-      display: flex;
-      position: relative;
-      left: 50%;
+  .links {
+    display: flex;
+    gap: 3rem;
+    float: right;
+
+    .selected-link {
+      font-weight: 700;
     }
 
-    :hover::after {
-      visibility: visible;
+    :hover {
+      text-decoration: underline;
     }
   }
 }

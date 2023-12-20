@@ -22,9 +22,15 @@ body {
   }
 }
 
+.app-header {
+  width: 100%;
+}
+
 .title {
   font-size: 1.75rem;
   font-weight: 600;
+  line-height: 130%;
+  text-transform: capitalize;
 }
 
 .headers {
@@ -49,11 +55,13 @@ body {
 .header {
   font-size: 5rem;
   font-weight: 700;
+  line-height: 130%;
 }
 
 .sub-title {
   font-size: 1.5rem;
   font-weight: 500;
+  line-height: 160%;
 }
 
 .link {
@@ -62,6 +70,10 @@ body {
 
 .underline {
   text-decoration: none;
+}
+
+.text {
+  line-height: 160%;
 }
 
 @include paragraph();
