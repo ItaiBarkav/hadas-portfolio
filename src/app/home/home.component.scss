@@ -55,15 +55,19 @@
     .project {
       cursor: pointer;
 
-      :last-child {
-        display: none;
+      .threats {
+        content: url("../../assets//threat.svg");
+
+        &:hover {
+          content: url("../../assets/threat-hover.svg");
+        }
       }
 
-      :first-child:hover {
-        display: none;
+      .pharm-yarok {
+        content: url("../../assets//pharmYarok.svg");
 
-        + :last-child {
-          display: inline;
+        &:hover {
+          content: url("../../assets/pharmYarok-hover.svg");
         }
       }
     }
