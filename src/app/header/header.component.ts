@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MaterialModule } from '../material.module';
 
 @Component({
@@ -8,7 +8,6 @@ import { MaterialModule } from '../material.module';
   imports: [CommonModule, MaterialModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
   homeUrl = '/';

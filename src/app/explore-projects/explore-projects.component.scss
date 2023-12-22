@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 .explore {
   display: flex;
   justify-content: center;
@@ -11,6 +13,7 @@
     cursor: pointer;
     height: fit-content;
     align-items: center;
+    font-weight: 500;
   }
 
   .paragraph-gap-3 {
@@ -24,10 +27,12 @@
         background-color: var(--card-background);
         border: 1px solid var(--border-color-first);
         border-radius: 0.5rem;
-        padding: 0.5rem 4.125rem;
+        padding: 0.8rem;
+        width: 11.375rem;
+        font-family: Inter;
+        color: var(--text-color);
         font-size: 1rem;
-        font-weight: 600;
-        color: var(--font-color);
+        font-weight: 500;
         cursor: pointer;
 
         &:hover {

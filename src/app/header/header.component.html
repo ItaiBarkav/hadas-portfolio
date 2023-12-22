@@ -22,10 +22,12 @@
       (click)="updateSelectedLink('aboutMe')"
       >About Me</a
     >
-    <span
+    <a
+      [href]="'../../assets/Hadas Yosef CV.pdf'"
+      target="_blank"
+      class="link underline"
       [class.selected-link]="selectedLink === 'resume'"
-      (click)="updateSelectedLink('resume')"
-      >Resume</span
+      >Resume</a
     >
   </div>
 </div>
