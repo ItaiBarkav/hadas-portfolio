@@ -1,0 +1,39 @@
+.explore {
+  display: flex;
+  justify-content: center;
+  margin: 3.5rem 0;
+
+  .back-to-home {
+    position: absolute;
+    display: flex;
+    gap: 0.5rem;
+    left: 13.75rem;
+    cursor: pointer;
+    height: fit-content;
+    align-items: center;
+  }
+
+  .paragraph-gap-3 {
+    align-items: center;
+
+    .navigation {
+      display: flex;
+      gap: 1.5rem;
+
+      .navigate {
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color-first);
+        border-radius: 0.5rem;
+        padding: 0.5rem 4.125rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--font-color);
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.12);
+        }
+      }
+    }
+  }
+}

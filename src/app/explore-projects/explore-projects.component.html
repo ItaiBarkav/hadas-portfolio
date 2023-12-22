@@ -1,0 +1,17 @@
+<div class="explore">
+  <div class="back-to-home" (click)="goTo('/')">
+    <img src="../../assets/icons/left-arrow.svg" />
+    <span>Back to home page</span>
+  </div>
+  <div class="paragraph-gap-3">
+    <span class="sub-title">Explore Other Projects</span>
+    <div class="navigation">
+      <button class="navigate" (click)="goTo(firstProject)">
+        {{ firstProject | projectName }}
+      </button>
+      <button class="navigate" (click)="goTo(secondProject)">
+        {{ secondProject | projectName }}
+      </button>
+    </div>
+  </div>
+</div>
