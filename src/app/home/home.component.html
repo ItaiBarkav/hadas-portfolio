@@ -1,7 +1,7 @@
 <div class="home">
-  <app-header [selectedLink]="'home'" class="app-header"></app-header>
+  <app-header [selectedLink]="'home'" class="full-width"></app-header>
 
-  <div class="header">
+  <div class="hadas">
     <img class="photo" src="../../assets/hadas.svg" />
     <div class="intro">
       <span class="header">Hi, I'm Hadas</span>
@@ -13,12 +13,8 @@
   </div>
 
   <div class="projects">
-    <span (click)="goto('threats')" class="project">
-      <img class="threats" />
-    </span>
-    <span (click)="goto('pharm-yarok')" class="project">
-      <img class="pharm-yarok" />
-    </span>
+    <img (click)="goto('threats')" class="threats" />
+    <img (click)="goto('pharm-yarok')" class="pharm-yarok" />
   </div>
 
   <div id="about" class="about">
@@ -68,7 +64,7 @@
     </span>
   </div>
 
-  <app-footer class="footer"></app-footer>
+  <app-footer class="full-width"></app-footer>
 </div>
 
 <app-scroll-to-top></app-scroll-to-top>

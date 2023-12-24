@@ -13,8 +13,13 @@ export class HeaderComponent {
   homeUrl = '/';
   aboutUrl = '#about';
   @Input() selectedLink: string | null = null;
+  _toggleMenu = false;
 
   updateSelectedLink(selectedLink: string): void {
     this.selectedLink = selectedLink;
+  }
+
+  toggleMenu(): void {
+    this._toggleMenu = !this._toggleMenu;
   }
 }

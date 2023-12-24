@@ -31,3 +31,35 @@
     >
   </div>
 </div>
+
+<div class="header-mobile">
+  <img (click)="toggleMenu()" src="../../assets/icons/menu.svg" />
+  <div class="menu" [ngClass]="_toggleMenu ? 'show' : 'hide'">
+    <img
+      class="close"
+      (click)="toggleMenu()"
+      src="../../assets/icons/close.svg"
+    />
+    <a
+      [href]="homeUrl"
+      class="link underline"
+      [class.selected-link]="selectedLink === 'home'"
+      (click)="updateSelectedLink('home')"
+      >Home</a
+    >
+    <a
+      [href]="aboutUrl"
+      class="link underline"
+      [class.selected-link]="selectedLink === 'aboutMe'"
+      (click)="updateSelectedLink('aboutMe')"
+      >About Me</a
+    >
+    <a
+      [href]="'../../assets/Hadas Yosef CV.pdf'"
+      target="_blank"
+      class="link underline"
+      [class.selected-link]="selectedLink === 'resume'"
+      >Resume</a
+    >
+  </div>
+</div>

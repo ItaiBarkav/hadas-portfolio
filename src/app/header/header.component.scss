@@ -29,3 +29,48 @@
     }
   }
 }
+
+.header-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: none;
+  }
+
+  .header-mobile {
+    display: flex;
+    justify-content: right;
+
+    .menu {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      background: var(--card-background);
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      .close {
+        position: absolute;
+        right: 0;
+        padding-right: 1rem;
+      }
+
+      .link {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 160%;
+      }
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: flex;
+    }
+  }
+}

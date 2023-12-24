@@ -249,6 +249,28 @@
       * {
         width: 100%;
       }
+
+      .scroll-image {
+        position: relative;
+
+        .frame {
+          position: relative;
+        }
+
+        .content {
+          position: absolute;
+          top: 0;
+          margin: 2.3rem 0 5rem 0.5rem;
+          overflow-y: auto;
+          border-radius: 1.25rem;
+          height: -webkit-fill-available;
+          width: 16.6rem;
+
+          img {
+            width: -webkit-fill-available;
+          }
+        }
+      }
     }
   }
 
@@ -279,7 +301,7 @@
         .content {
           position: absolute;
           top: 0;
-          margin: 1.6rem 0 5rem 0.5rem;
+          margin: 2.3rem 0 5rem 0.5rem;
           overflow-y: auto;
           border-radius: 1.25rem;
           height: -webkit-fill-available;

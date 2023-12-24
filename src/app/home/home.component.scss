@@ -3,11 +3,10 @@
 .home {
   @extend .paragraph-gap-0;
 
-  width: 100%;
   align-items: center;
   gap: 10rem;
 
-  .header {
+  .hadas {
     @extend .paragraph-gap-3;
 
     align-items: center;
@@ -50,49 +49,49 @@
 
     align-items: center;
     gap: 5rem;
-    margin: 0 22.5rem;
 
-    .project {
+    .threats {
+      width: 100%;
+      height: auto;
       cursor: pointer;
+      content: url("../../assets/threat.svg");
 
-      .threats {
-        content: url("../../assets//threat.svg");
-
-        &:hover {
-          content: url("../../assets/threat-hover.svg");
-        }
-      }
-
-      .pharm-yarok {
-        content: url("../../assets//pharmYarok.svg");
-
-        &:hover {
-          content: url("../../assets/pharmYarok-hover.svg");
-        }
+      &:hover {
+        content: url("../../assets/threat-hover.svg");
       }
     }
 
-    * {
+    .pharm-yarok {
       width: 100%;
+      height: auto;
+      cursor: pointer;
+      content: url("../../assets/pharmYarok.svg");
+
+      &:hover {
+        content: url("../../assets/pharmYarok-hover.svg");
+      }
     }
   }
 
   .about {
     display: flex;
-    width: -webkit-fill-available;
+    width: 100%;
     background-image: url("../../assets/background.svg");
     background-position: center;
     gap: 3.5rem;
     padding: 10.125rem 0;
     justify-content: center;
+    flex-wrap: wrap;
 
     .card {
       @extend .paragraph-gap-3;
 
+      max-width: fit-content;
       border: 2px var(--border-color-first) solid;
       border-radius: 1.25rem;
       padding: 3.5rem;
       background: var(--card-background);
+      flex: 1 1 auto;
 
       .title {
         display: flex;
@@ -118,8 +117,60 @@
       }
     }
   }
+}
 
-  .footer {
-    width: 100%;
+@media (max-width: 600px) {
+  .home {
+    gap: 4rem;
+    padding: 1rem 1rem 0 1rem;
+
+    .hadas {
+      margin-top: -4rem;
+
+      .intro {
+        .header {
+          font-size: 2.5rem;
+        }
+
+        .sub-title {
+          font-size: 1.25rem;
+        }
+
+        .sentence {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .projects {
+      gap: 2rem;
+
+      .threats {
+        content: url("../../assets/threat-mobile.svg");
+      }
+
+      .pharm-yarok {
+        content: url("../../assets/pharmYarok-mobile.svg");
+      }
+    }
+
+    .about {
+      gap: 2rem;
+      padding: 0;
+      background-image: none;
+
+      .card {
+        padding: 2rem;
+        max-width: none;
+
+        .title {
+          font-size: 1.25rem;
+        }
+
+        .content {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }

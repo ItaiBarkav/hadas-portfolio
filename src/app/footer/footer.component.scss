@@ -4,11 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5.25rem;
+  padding: 2rem 0;
   font-size: 1rem;
   font-weight: 500;
   gap: 3.5rem;
   border-top: 1px var(--border-color-first) solid;
+  flex-wrap: wrap;
 
   .info {
     display: flex;
