@@ -13,8 +13,7 @@
 
   .header {
     @extend .paragraph-gap-0;
-
-    width: 100%;
+    @extend .full-width;
 
     .header {
       position: absolute;
@@ -43,6 +42,7 @@
     padding: 5rem 0;
     background: var(--dark-background-second);
     align-items: center;
+    width: 100%;
 
     .stories {
       display: flex;
@@ -54,6 +54,7 @@
       * {
         flex: 1;
         width: 100%;
+        height: fit-content;
         line-height: 160%;
       }
 
@@ -65,9 +66,7 @@
   }
 
   .research {
-    @extend .section;
-
-    padding-right: 25rem;
+    margin-bottom: 8.25rem;
 
     .paragraph {
       @extend .paragraph-gap-2;
@@ -143,6 +142,7 @@
     background-color: var(--dark-background-second);
     padding: 5rem 0;
     text-align: center;
+    width: 100%;
 
     .content {
       @extend .paragraph-gap-3;
@@ -192,6 +192,7 @@
     justify-content: center;
     padding-left: 0;
     gap: 4rem;
+    width: 100%;
 
     .para {
       @extend .paragraph-gap-2;

@@ -7,8 +7,7 @@
 
   .header {
     @extend .paragraph-gap-0;
-
-    width: 100%;
+    @extend .full-width;
 
     .header {
       position: absolute;
@@ -36,18 +35,17 @@
     flex-direction: row;
     gap: 1.5rem;
     padding: 4.875rem 10rem;
-    max-width: -webkit-fill-available;
     background: var(--green-background);
 
     * {
       width: 100%;
+      flex: 1 1 auto;
+      height: fit-content;
     }
   }
 
   .research {
     @extend .section;
-
-    padding-right: 25rem;
 
     * {
       line-height: 160%;
@@ -80,7 +78,7 @@
     .card {
       @extend .paragraph-gap-1;
 
-      flex: 1;
+      flex: 1 1 auto;
       border: 1px var(--border-color-second) solid;
       border-radius: 0.5rem;
       padding: 1rem;
@@ -118,7 +116,6 @@
       display: flex;
       flex-direction: row;
       width: 100%;
-      margin-left: -25rem;
 
       .persona {
         @extend .paragraph-gap-2;
@@ -150,20 +147,30 @@
     }
   }
 
+  .sections {
+    @extend .section;
+    gap: 8.25rem;
+
+    .intro {
+      @extend .paragraph-gap-2;
+      align-self: center;
+
+      .sub-title {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
   .wireframe {
     @extend .section;
 
-    gap: 1.5rem;
-
-    .sub-title {
-      font-size: 1.25rem;
-    }
+    width: 100%;
+    margin-top: -6.75rem;
 
     .images {
       display: flex;
       gap: 5.625rem;
       background: var(--wireframe-background);
-      margin-left: -25rem;
       justify-content: center;
       padding: 3rem 0;
 
@@ -260,11 +267,12 @@
         .content {
           position: absolute;
           top: 0;
-          margin: 2.3rem 0 5rem 0.5rem;
+          margin: 2.3rem 0.5rem 5rem 0.5rem;
           overflow-y: auto;
           border-radius: 1.25rem;
           height: -webkit-fill-available;
-          width: 16.6rem;
+          width: -webkit-fill-available;
+          max-width: 16.6rem;
 
           img {
             width: -webkit-fill-available;
@@ -279,16 +287,24 @@
 
     gap: 1.5rem;
 
+    .title::before {
+      content: "";
+      display: inline-block;
+      width: 22%;
+      max-width: 27rem;
+      visibility: visible;
+    }
+
     .images {
       display: flex;
       gap: 5rem;
-      margin-left: -25rem;
       background: var(--green);
       padding: 5.25rem 16.75rem;
+      width: fit-content;
+      max-width: 100%;
 
       * {
-        width: 100%;
-        height: auto;
+        max-width: 100%;
       }
 
       .scroll-image {
@@ -301,11 +317,12 @@
         .content {
           position: absolute;
           top: 0;
-          margin: 2.3rem 0 5rem 0.5rem;
+          margin: 2.3rem 0.5rem 5rem 0.5rem;
           overflow-y: auto;
           border-radius: 1.25rem;
           height: -webkit-fill-available;
-          width: 16.6rem;
+          width: -webkit-fill-available;
+          max-width: 16.6rem;
 
           img {
             width: -webkit-fill-available;

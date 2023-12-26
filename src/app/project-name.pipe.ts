@@ -11,8 +11,8 @@ export class ProjectNamePipe implements PipeTransform {
         return 'Threats';
       case 'pharm-yarok':
         return 'Pharm Yarok';
-      case 'preset':
-        return 'Preset';
+      case 'profiles':
+        return 'Profiles';
       default:
         return '';
     }
