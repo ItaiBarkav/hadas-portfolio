@@ -45,7 +45,7 @@
       class="link underline"
       [class.selected-link]="selectedLink === 'home'"
       (click)="updateSelectedLink('home')"
-      >Home</a
+      >Case Studies</a
     >
     <a
       [href]="aboutUrl"
@@ -59,7 +59,10 @@
       target="_blank"
       class="link underline"
       [class.selected-link]="selectedLink === 'resume'"
-      >Resume</a
+      >CV</a
     >
+    <div class="contact">
+      <app-footer></app-footer>
+    </div>
   </div>
 </div>

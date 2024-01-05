@@ -50,11 +50,13 @@
       background: var(--card-background);
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
+      padding: 3rem 0;
 
       .close {
         position: absolute;
         right: 0;
+        top: 0;
         padding-right: 1rem;
       }
 
@@ -62,6 +64,28 @@
         font-size: 1rem;
         font-weight: 500;
         line-height: 160%;
+        padding: 1rem 1.5rem;
+      }
+
+      .selected-link {
+        font-weight: 700;
+      }
+
+      .contact {
+        margin: 0 4rem;
+        border: 1px solid var(--border-color-first);
+        border-radius: 0.5rem;
+
+        ::ng-deep.footer {
+          gap: 2rem;
+          padding: 1.5rem;
+          border-top: none;
+          justify-content: left;
+
+          .link {
+            font-size: 0.875rem;
+          }
+        }
       }
     }
 

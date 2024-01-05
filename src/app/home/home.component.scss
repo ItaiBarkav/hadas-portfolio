@@ -6,6 +6,14 @@
   align-items: center;
   gap: 10rem;
 
+  .mobile-padding {
+    @extend .paragraph-gap-0;
+
+    gap: 10rem;
+    align-items: center;
+    width: 100%;
+  }
+
   .hadas {
     @extend .paragraph-gap-3;
 
@@ -88,7 +96,7 @@
 
       max-width: fit-content;
       border: 2px var(--border-color-first) solid;
-      border-radius: 1.25rem;
+      border-radius: 0.5rem;
       padding: 3.5rem;
       background: var(--card-background);
       flex: 1 1 auto;
@@ -117,16 +125,25 @@
       }
     }
   }
+
+  .back-to-top {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 600px) {
   .home {
     gap: 4rem;
-    padding: 1rem 1rem 0 1rem;
+
+    .mobile-padding {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      padding: 2.5rem 1rem 0 1rem;
+      width: auto;
+    }
 
     .hadas {
-      margin-top: -4rem;
-
       .intro {
         .header {
           font-size: 2.5rem;
@@ -155,22 +172,63 @@
     }
 
     .about {
-      gap: 2rem;
+      gap: 1rem;
       padding: 0;
       background-image: none;
 
       .card {
         padding: 2rem;
         max-width: none;
+        border-width: 1px;
 
         .title {
           font-size: 1.25rem;
+          gap: 0.5rem;
+
+          .stars {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
         }
 
         .content {
           font-size: 1rem;
+          gap: 1rem;
+        }
+
+        .content-padding {
+          padding: 0;
         }
       }
     }
+
+    .full-width {
+      .back-to-top {
+        visibility: visible;
+        cursor: pointer;
+        gap: 0.5rem;
+        display: flex;
+        padding: 0.5rem;
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        background-color: var(--accent-background);
+
+        .top-arrow {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+
+      ::ng-deep.footer {
+        justify-content: left;
+        padding: 2rem 4.5rem;
+      }
+    }
+  }
+
+  .scroll-to-top {
+    visibility: hidden;
   }
 }

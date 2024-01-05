@@ -23,4 +23,8 @@ export class HomeComponent {
   goto(path: string): void {
     this.router.navigateByUrl(`/${path}`);
   }
+
+  backToTop(): void {
+    window.scrollTo({ top: 0 });
+  }
 }
