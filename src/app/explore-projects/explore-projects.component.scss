@@ -42,3 +42,20 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .explore {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+
+    .back-to-home {
+      position: unset;
+      align-self: center;
+    }
+
+    .navigation {
+      width: 100%;
+    }
+  }
+}

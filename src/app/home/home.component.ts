@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { BackToTopComponent } from '../back-to-top/back-to-top.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { MaterialModule } from '../material.module';
@@ -13,6 +14,7 @@ import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
     MaterialModule,
     FooterComponent,
     ScrollToTopComponent,
+    BackToTopComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -22,9 +24,5 @@ export class HomeComponent {
 
   goto(path: string): void {
     this.router.navigateByUrl(`/${path}`);
-  }
-
-  backToTop(): void {
-    window.scrollTo({ top: 0 });
   }
 }

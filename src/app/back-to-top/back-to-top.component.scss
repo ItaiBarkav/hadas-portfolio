@@ -1,0 +1,24 @@
+@import "../../styles.scss";
+
+.back-to-top {
+  visibility: hidden;
+  cursor: pointer;
+  gap: 0.5rem;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  background-color: var(--accent-background);
+
+  .top-arrow {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    visibility: visible;
+  }
+}

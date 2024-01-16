@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LottieModule } from 'ngx-lottie';
 import { AnimationOptions } from 'ngx-lottie/lib/symbols';
+import { BackToTopComponent } from '../back-to-top/back-to-top.component';
 import { ExploreProjectsComponent } from '../explore-projects/explore-projects.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
@@ -19,6 +20,7 @@ import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
     ScrollToTopComponent,
     LottieModule,
     ExploreProjectsComponent,
+    BackToTopComponent,
   ],
   templateUrl: './threats.component.html',
   styleUrl: './threats.component.scss',

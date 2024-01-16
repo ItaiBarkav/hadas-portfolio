@@ -7,6 +7,10 @@
   background-color: var(--dark-background-first);
   color: var(--dark-text-color);
 
+  ::ng-deep.link {
+    color: var(--dark-text-color);
+  }
+
   .title {
     color: var(--dark-title-color);
   }
@@ -17,11 +21,6 @@
 
     .header {
       position: absolute;
-      color: var(--card-background);
-
-      ::ng-deep .link {
-        color: var(--card-background);
-      }
     }
 
     .image {
@@ -65,71 +64,74 @@
     }
   }
 
-  .research {
-    margin-bottom: 8.25rem;
-
-    .paragraph {
-      @extend .paragraph-gap-2;
-
-      align-self: flex-start;
-
-      .questions {
-        @extend .text-bold;
-
-        color: var(--dark-title-color);
-      }
-
-      .question {
-        @include left-border(--dark-blue, 0.5rem);
-      }
-    }
-  }
-
-  .personas-section {
+  .research-personas {
     @extend .section;
+    gap: 8.25rem;
 
-    gap: 1.5rem;
-
-    .personas {
-      display: flex;
-      flex-direction: row;
-      gap: 1.5rem;
-
-      .persona {
+    .research {
+      .paragraph {
         @extend .paragraph-gap-2;
 
-        background-color: var(--dark-card-background);
-        border: 1px var(--dark-border) solid;
-        border-radius: 0.5rem;
-        padding: 1.5rem;
+        align-self: flex-start;
 
-        * {
-          line-height: 160%;
+        .questions {
+          @extend .text-bold;
+
+          color: var(--dark-title-color);
         }
 
-        .header {
-          flex-direction: row;
-          gap: 1rem;
+        .question {
+          @include left-border(--dark-blue, 0.5rem);
+        }
+      }
+    }
 
-          .title {
-            font-size: 1.5rem;
-            font-weight: 600;
+    .personas-section {
+      @extend .section;
+
+      gap: 1.5rem;
+
+      .personas {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+
+        .persona {
+          @extend .paragraph-gap-2;
+
+          background-color: var(--dark-card-background);
+          border: 1px var(--dark-border) solid;
+          border-radius: 0.5rem;
+          padding: 1.5rem;
+
+          * {
+            line-height: 160%;
           }
-        }
 
-        .content::after {
-          content: "";
-          display: flex;
-          height: 1.25rem;
-          visibility: visible;
-        }
+          .header {
+            flex-direction: row;
+            gap: 1rem;
 
-        .chip-title-blue {
-          @include chip(--dark-blue);
-        }
+            .title {
+              font-size: 1.5rem;
+              font-weight: 600;
+            }
+          }
 
-        .chip-title-red {
-          @include chip(--dark-red);
+          .content::after {
+            content: "";
+            display: flex;
+            height: 1.25rem;
+            visibility: visible;
+          }
+
+          .chip-title-blue {
+            @include chip(--dark-blue);
+          }
+
+          .chip-title-red {
+            @include chip(--dark-red);
+          }
         }
       }
     }
@@ -153,10 +155,12 @@
         font-size: 1rem;
         font-weight: 400;
       }
+
       .principles {
         display: flex;
         align-self: center;
         gap: 1.5rem;
+        flex-wrap: wrap;
 
         .principle {
           display: flex;
@@ -191,49 +195,58 @@
     flex-direction: row;
     justify-content: center;
     padding-left: 0;
-    gap: 4rem;
     width: 100%;
 
-    .para {
-      @extend .paragraph-gap-2;
+    .show-mobile-header {
+      display: none;
+    }
 
-      gap: 1.5rem;
-      padding-left: 1.25rem;
-
-      * {
-        line-height: 160%;
-      }
+    .mobile-order {
+      display: flex;
+      gap: 4rem;
 
       .para {
         @extend .paragraph-gap-2;
 
-        width: max-content;
-        gap: 1rem;
+        gap: 1.5rem;
+        padding-left: 1.25rem;
+        direction: ltr;
 
-        .colored-text {
-          @extend .text-bold;
+        * {
+          line-height: 160%;
+        }
+
+        .para {
+          @extend .paragraph-gap-2;
+
+          width: max-content;
+          gap: 1rem;
+
+          .colored-text {
+            @extend .text-bold;
+
+            color: var(--dark-title-color);
+          }
+
+          ul {
+            @extend .paragraph-gap-1;
+
+            margin: 0rem;
+          }
+        }
+
+        .problem {
+          @include left-border(--dark-red);
 
           color: var(--dark-title-color);
         }
 
-        ul {
-          @extend .paragraph-gap-1;
+        .solution {
+          @include left-border(--dark-green);
 
-          margin: 0rem;
+          align-self: flex-start;
+          color: var(--dark-title-color);
         }
-      }
-
-      .problem {
-        @include left-border(--dark-red);
-
-        color: var(--dark-title-color);
-      }
-
-      .solution {
-        @include left-border(--dark-green);
-
-        align-self: flex-start;
-        color: var(--dark-title-color);
       }
     }
 
@@ -248,6 +261,7 @@
   }
 
   .dashboard {
+    direction: rtl;
     padding: 8.25rem 0;
     background-color: var(--dark-background-second);
   }
@@ -261,6 +275,7 @@
     .cards {
       display: flex;
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .card {
@@ -276,6 +291,86 @@
 
         align-items: center;
       }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .threats {
+    gap: 4rem;
+
+    ::ng-deep.link {
+      color: var(--text-color);
+    }
+
+    .research-personas {
+      gap: 4rem;
+    }
+
+    .wireframe {
+      width: auto;
+      padding: 2.5rem 1.5rem;
+      text-align: left;
+      gap: 2.5rem;
+
+      .principles {
+        .principle {
+          direction: rtl;
+        }
+
+        :last-child {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          direction: rtl;
+
+          &::after {
+            content: "";
+            background: var(--text-color);
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 100%;
+          }
+        }
+      }
+
+      .images {
+        flex-wrap: wrap;
+      }
+    }
+
+    .problem-solutions {
+      padding: 0 1.5rem;
+      width: auto;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      .show-mobile-header {
+        display: flex;
+      }
+
+      .hide-mobile-header {
+        display: none;
+      }
+
+      .mobile-order {
+        flex-direction: column-reverse;
+        gap: 2.5rem;
+
+        .para {
+          padding-left: 0;
+
+          .para {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    .dashboard {
+      padding: 2.5rem 1.5rem;
+      flex-direction: column;
+      direction: ltr;
     }
   }
 }

@@ -125,21 +125,17 @@
       }
     }
   }
-
-  .back-to-top {
-    visibility: hidden;
-  }
 }
 
 @media (max-width: 600px) {
   .home {
-    gap: 4rem;
+    gap: 3rem;
 
     .mobile-padding {
       display: flex;
       flex-direction: column;
-      gap: 4rem;
-      padding: 2.5rem 1rem 0 1rem;
+      gap: 2rem;
+      padding: 1rem;
       width: auto;
     }
 
@@ -172,12 +168,12 @@
     }
 
     .about {
-      gap: 1rem;
+      gap: 2rem;
       padding: 0;
       background-image: none;
 
       .card {
-        padding: 2rem;
+        padding: 1.5rem;
         max-width: none;
         border-width: 1px;
 
@@ -201,34 +197,5 @@
         }
       }
     }
-
-    .full-width {
-      .back-to-top {
-        visibility: visible;
-        cursor: pointer;
-        gap: 0.5rem;
-        display: flex;
-        padding: 0.5rem;
-        width: 100%;
-        justify-content: center;
-        align-self: center;
-        align-items: center;
-        background-color: var(--accent-background);
-
-        .top-arrow {
-          height: 1.5rem;
-          width: 1.5rem;
-        }
-      }
-
-      ::ng-deep.footer {
-        justify-content: left;
-        padding: 2rem 4.5rem;
-      }
-    }
-  }
-
-  .scroll-to-top {
-    visibility: hidden;
   }
 }
