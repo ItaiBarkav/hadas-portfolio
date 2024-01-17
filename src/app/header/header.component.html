@@ -33,7 +33,11 @@
 </div>
 
 <div class="header-mobile">
-  <img (click)="toggleMenu()" src="../../assets/icons/menu.svg" />
+  <img
+    class="menu-btn"
+    (click)="toggleMenu()"
+    src="../../assets/icons/menu.svg"
+  />
   <div class="menu" [ngClass]="_toggleMenu ? 'show' : 'hide'">
     <img
       class="close"

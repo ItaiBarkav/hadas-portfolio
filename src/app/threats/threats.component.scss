@@ -303,6 +303,12 @@
       color: var(--text-color);
     }
 
+    ::ng-deep.menu-btn,
+    ::ng-deep.close {
+      display: flex;
+      padding: 1.5rem;
+    }
+
     .research-personas {
       gap: 4rem;
     }
