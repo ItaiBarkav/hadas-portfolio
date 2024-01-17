@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { BackToTopComponent } from '../back-to-top/back-to-top.component';
 import { ExploreProjectsComponent } from '../explore-projects/explore-projects.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
@@ -16,6 +17,7 @@ import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
     FooterComponent,
     ScrollToTopComponent,
     ExploreProjectsComponent,
+    BackToTopComponent,
   ],
   templateUrl: './pharm-yarok.component.html',
   styleUrl: './pharm-yarok.component.scss',
