@@ -43,6 +43,10 @@
     display: flex;
     justify-content: right;
 
+    .menu-btn {
+      content: url("../../assets/icons/menu.svg");
+    }
+
     .menu {
       width: 100%;
       position: absolute;

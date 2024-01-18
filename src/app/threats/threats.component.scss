@@ -25,6 +25,7 @@
 
     .image {
       width: 100%;
+      content: url("../../assets/threats/home.svg");
     }
   }
 
@@ -293,6 +294,10 @@
       }
     }
   }
+
+  .overview-img {
+    content: url("../../assets/threats/overview.png");
+  }
 }
 
 @media (max-width: 600px) {
@@ -307,6 +312,16 @@
     ::ng-deep.close {
       display: flex;
       padding: 1.5rem;
+    }
+
+    .header {
+      ::ng-deep.menu-btn {
+        content: url("../../assets/icons/menu-light.svg");
+      }
+
+      .image {
+        content: url("../../assets/threats/home-mobile.png");
+      }
     }
 
     .research-personas {
@@ -377,6 +392,10 @@
       padding: 2.5rem 1.5rem;
       flex-direction: column;
       direction: ltr;
+    }
+
+    .overview-img {
+      content: url("../../assets/threats/overview-mobile.png");
     }
   }
 }

@@ -20,6 +20,7 @@
 
     .image {
       width: 100%;
+      content: url("../../assets/pharmYarok/header.svg");
     }
   }
 
@@ -354,6 +355,10 @@
     }
   }
 
+  .overview-img {
+    content: url("../../assets/pharmYarok/overview.png");
+  }
+
   .sub-title {
     @extend .sub-title;
 
@@ -374,6 +379,14 @@
         ::ng-deep.link {
           color: var(--text-color);
         }
+
+        ::ng-deep.menu-btn {
+          content: url("../../assets/icons/menu-light.svg");
+        }
+      }
+
+      .image {
+        content: url("../../assets/pharmYarok/header-mobile.svg");
       }
     }
 
@@ -482,6 +495,10 @@
           border-radius: 0.35rem;
         }
       }
+    }
+
+    .overview-img {
+      content: url("../../assets/pharmYarok/overview-mobile.png");
     }
   }
 }
