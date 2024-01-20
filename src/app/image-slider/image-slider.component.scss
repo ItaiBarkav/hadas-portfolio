@@ -1,0 +1,33 @@
+@import "../../styles.scss";
+
+.image-slider {
+  @extend .paragraph-gap-5;
+
+  align-items: center;
+
+  .image {
+    @extend .paragraph-gap-2;
+
+    align-items: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+
+    .dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 100%;
+      background-color: var(--dot-color);
+    }
+
+    .selected-dot {
+      background-color: var(--selected-dot-color);
+    }
+  }
+}

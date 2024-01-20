@@ -410,6 +410,20 @@
       font-size: 1rem;
     }
 
+    .user-story {
+      padding: 2.5rem 1.5rem;
+      gap: 2.5rem;
+      width: -webkit-fill-available;
+
+      ::ng-deep.dot {
+        background-color: var(--border-color-first) !important;
+      }
+
+      ::ng-deep.selected-dot {
+        background-color: var(--selected-dot-color-py) !important;
+      }
+    }
+
     .wireframe {
       margin-top: 0;
       padding: 0;

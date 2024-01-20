@@ -27,7 +27,12 @@
     </div>
   </div>
 
-  <!-- <div class="user-story">
+  <div class="user-story show-on-mobile">
+    <span class="title">The story goes like this...</span>
+    <app-image-slider [images]="stories"></app-image-slider>
+  </div>
+
+  <div class="user-story hide-on-mobile">
     <span class="title">The story goes like this...</span>
     <div class="stories">
       <div class="paragraph-gap-2">
@@ -55,7 +60,7 @@
         >
       </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="research-personas">
     <div class="research">
@@ -218,7 +223,8 @@
           <span class="para">
             <span class="paragraph-gap-1">
               <span class="colored-text">Minimizing the map:</span>
-              Once the side panel opens, the map narrows down so that no <br />
+              Once the side panel opens, the map narrows down so that no
+              <br />
               content can be hidden.
             </span>
             <span class="paragraph-gap-1">

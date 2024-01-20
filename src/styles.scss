@@ -76,6 +76,14 @@ body {
   line-height: 160%;
 }
 
+.show-on-mobile {
+  display: none !important;
+}
+
+.hide-on-mobile {
+  display: flex !important;
+}
+
 @include paragraph();
 
 @media (max-width: 600px) {
@@ -85,5 +93,13 @@ body {
 
   .section {
     padding: 0 1.5rem;
+  }
+
+  .show-on-mobile {
+    display: flex !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
   }
 }

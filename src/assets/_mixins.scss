@@ -17,7 +17,7 @@
 }
 
 @mixin paragraph {
-  @for $i from 0 through 4 {
+  @for $i from 0 through 6 {
     $gapValue: $i * 0.5;
 
     .paragraph-gap-#{$i} {
