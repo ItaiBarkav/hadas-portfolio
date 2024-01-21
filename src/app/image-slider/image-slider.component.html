@@ -1,7 +1,7 @@
 <div class="image-slider">
   <div class="image">
-    @for (item of images; track item.path; let index = $index) { @if(index
-    ==currentIndex) { @if(item?.isLottie) {
+    @for (item of images; track item.path; let index = $index) { @if(index ===
+    currentIndex) { @if(item?.isLottie) {
     <ng-lottie (click)="next()" [options]="{ path: item.path }"></ng-lottie>
     } @else {
     <img src="{{ item.path }}" (click)="next()" />

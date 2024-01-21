@@ -1,22 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { LottieModule } from 'ngx-lottie';
-import { Image } from './types';
+import { Persona } from './types';
 
 @Component({
-  selector: 'app-image-slider',
+  selector: 'app-personas',
   standalone: true,
-  imports: [CommonModule, LottieModule],
-  templateUrl: './image-slider.component.html',
-  styleUrl: './image-slider.component.scss',
+  imports: [CommonModule],
+  templateUrl: './personas.component.html',
+  styleUrl: './personas.component.scss',
 })
-export class ImageSliderComponent {
-  @Input() images: Image[] = [];
+export class PersonasComponent {
+  @Input() personas: Persona[] = [];
 
   currentIndex = 0;
 
   next(): void {
-    if (this.currentIndex + 1 === this.images.length) {
+    if (this.currentIndex + 1 === this.personas.length) {
       this.currentIndex = 0;
       return;
     }
@@ -26,7 +25,7 @@ export class ImageSliderComponent {
 
   prev(): void {
     if (this.currentIndex - 1 < 0) {
-      this.currentIndex = this.images.length - 1;
+      this.currentIndex = this.personas.length - 1;
       return;
     }
 

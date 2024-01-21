@@ -1,0 +1,33 @@
+<div class="personas">
+  @for (person of personas; track person.header; let index = $index) { @if(index
+  === currentIndex) {
+  <div class="persona">
+    <div><img src="{{ person.image }}" /></div>
+    <div class="person-info">
+      <span class="person">{{ person.header }}</span>
+      <span>
+        {{ person.info }}
+      </span>
+      <span
+        ><span class="bold">Needs & expectations:</span> <br />{{
+          person.needs
+        }}
+      </span>
+      <span><span class="bold">Goals:</span> {{ person.goals }} </span>
+      <span
+        ><span class="bold">Frustrations:</span> <br />{{ person.frustrations }}
+      </span>
+    </div>
+  </div>
+  } }
+
+  <div class="dots">
+    @for (item of personas; track item.header; let index = $index) {
+    <span
+      (click)="goToStory(index)"
+      class="dot"
+      [class.selected-dot]="currentIndex === index"
+    ></span>
+    }
+  </div>
+</div>

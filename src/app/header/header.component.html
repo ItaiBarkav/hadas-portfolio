@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header hide-on-mobile">
   <div class="logo">
     <a
       [href]="homeUrl"
@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<div class="header-mobile">
+<div class="header-mobile show-on-mobile">
   <img class="menu-btn" (click)="toggleMenu()" />
   <div class="menu" [ngClass]="_toggleMenu ? 'show' : 'hide'">
     <img

@@ -94,7 +94,12 @@
           different role in the situation.
         </span>
       </div>
-      <!-- <div class="personas">
+
+      <div class="personas show-on-mobile">
+        <app-personas [personas]="personas"></app-personas>
+      </div>
+
+      <div class="personas hide-on-mobile">
         <div class="persona">
           <div class="paragraph-gap-1">
             <span class="header">
@@ -168,7 +173,7 @@
             <span> Similar to defence officers. </span>
           </span>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 
@@ -198,12 +203,12 @@
   </div>
 
   <div class="problem-solutions">
-    <div class="headers show-mobile-header">
+    <div class="headers show-on-mobile">
       <span class="title">The Grouping Panel</span>
     </div>
     <div class="mobile-order">
       <div class="para">
-        <div class="headers hide-mobile-header">
+        <div class="headers hide-on-mobile">
           <span class="title">The Grouping Panel</span>
         </div>
         <div class="paragraph-gap-3">
@@ -252,12 +257,12 @@
   </div>
 
   <div class="problem-solutions dashboard">
-    <div class="headers show-mobile-header">
+    <div class="headers show-on-mobile">
       <span class="title">The Dashboard</span>
     </div>
     <div class="mobile-order">
       <div class="para">
-        <div class="headers hide-mobile-header">
+        <div class="headers hide-on-mobile">
           <span class="title">The Dashboard</span>
         </div>
         <div class="paragraph-gap-3">

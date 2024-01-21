@@ -8,6 +8,8 @@ import { ImageSliderComponent } from '../image-slider/image-slider.component';
 import { Image } from '../image-slider/types';
 import { MaterialModule } from '../material.module';
 import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
+import { PersonasComponent } from './personas/personas.component';
+import { Persona } from './personas/types';
 
 @Component({
   selector: 'app-pharm-yarok',
@@ -21,6 +23,7 @@ import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
     ExploreProjectsComponent,
     BackToTopComponent,
     ImageSliderComponent,
+    PersonasComponent,
   ],
   templateUrl: './pharm-yarok.component.html',
   styleUrl: './pharm-yarok.component.scss',
@@ -46,6 +49,33 @@ export class PharmYarokComponent {
     {
       path: '../../assets/pharmYarok/userStory5.svg',
       text: "Avi got the order, and he's relieved to have his medicine.",
+    },
+  ];
+
+  personas: Persona[] = [
+    {
+      header: 'Leisure buyer',
+      image: '../../assets/pharmYarok/person1.svg',
+      info: 'They smoke for fun, and like trying popular strains with high THC levels.',
+      needs: 'Fast delivery and freebies.',
+      goals: 'being among the firsts to try new strains.',
+      frustrations: 'Waiting for the delivery.',
+    },
+    {
+      header: 'Carrier',
+      image: '../../assets/pharmYarok/person2.svg',
+      info: "The carrier handles someone else's orders, since they're not able to.",
+      needs: 'making the same order every month quickly.',
+      goals: 'having the same strains to keep a therapeutic sequence.',
+      frustrations: 'when the usual order is out of stock.',
+    },
+    {
+      header: 'Outlet buyer',
+      image: '../../assets/pharmYarok/person3.svg',
+      info: "They're patients for many years, and usually reorder the same strains.",
+      needs: 'Getting affordable treatment.',
+      goals: 'Keeping a therapeutic sequence.',
+      frustrations: " there's no variety of discounted strains.",
     },
   ];
 }

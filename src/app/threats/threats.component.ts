@@ -10,6 +10,8 @@ import { ImageSliderComponent } from '../image-slider/image-slider.component';
 import { Image } from '../image-slider/types';
 import { MaterialModule } from '../material.module';
 import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
+import { PersonasComponent } from './personas/personas.component';
+import { Persona } from './personas/types';
 
 @Component({
   selector: 'app-threats',
@@ -24,6 +26,7 @@ import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
     ExploreProjectsComponent,
     BackToTopComponent,
     ImageSliderComponent,
+    PersonasComponent,
   ],
   templateUrl: './threats.component.html',
   styleUrl: './threats.component.scss',
@@ -50,6 +53,33 @@ export class ThreatsComponent {
     {
       path: '../../assets/threats/story4.svg',
       text: 'Now that the map is clear, other position holders can intercept the threat.',
+    },
+  ];
+
+  personas: Persona[] = [
+    {
+      header: 'Defence Controller',
+      image: '../../assets/threats/sergeant.svg',
+      info: 'Responsible for alerting about potential threats and organizing the targets.',
+      needs: 'Fast tools to perform quickly with a focus on map interaction.',
+      painPoint:
+        "The map area can be difficult to navigate and use when it's crowded.",
+    },
+    {
+      header: 'Defence Officer',
+      image: '../../assets/threats/lieutenant.svg',
+      info: 'They manage the entire defence process.',
+      needs:
+        'Fast scanning of data: They need a single source that concentrates all relevant information.',
+      painPoint:
+        'Inconvenient consumption of data: the information is scattered in the map and not concentrated in 1 place.',
+    },
+    {
+      header: 'Commanding Officer',
+      image: '../../assets/threats/captain.svg',
+      info: 'They supervise and control all events and transfer needed information.',
+      needs: 'Similar to defence officers.',
+      painPoint: 'Similar to defence officers.',
     },
   ];
 }

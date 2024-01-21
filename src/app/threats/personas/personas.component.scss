@@ -1,0 +1,62 @@
+@import "../../../styles.scss";
+
+.personas {
+  @extend .paragraph-gap-3;
+
+  align-items: center;
+
+  .persona {
+    @extend .paragraph-gap-3;
+
+    background-color: var(--dark-card-background);
+    border: 1px var(--dark-border) solid;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+
+    * {
+      line-height: 160%;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      .title {
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+
+    .content::after {
+      content: "";
+      display: flex;
+      height: 1.25rem;
+      visibility: visible;
+    }
+
+    .chip-title-blue {
+      @include chip(--dark-blue);
+    }
+
+    .chip-title-red {
+      @include chip(--dark-red);
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+
+    .dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 100%;
+      background-color: var(--dot-color);
+    }
+
+    .selected-dot {
+      background-color: var(--selected-dot-color);
+    }
+  }
+}

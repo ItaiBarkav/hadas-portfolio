@@ -198,10 +198,6 @@
     padding-left: 0;
     width: 100%;
 
-    .show-mobile-header {
-      display: none;
-    }
-
     .mobile-order {
       display: flex;
       gap: 4rem;
@@ -332,6 +328,10 @@
 
     .research-personas {
       gap: 4rem;
+
+      .personas-section {
+        padding: 0;
+      }
     }
 
     .wireframe {
@@ -371,14 +371,6 @@
       width: auto;
       flex-direction: column;
       gap: 2.5rem;
-
-      .show-mobile-header {
-        display: flex;
-      }
-
-      .hide-mobile-header {
-        display: none;
-      }
 
       .mobile-order {
         flex-direction: column-reverse;
