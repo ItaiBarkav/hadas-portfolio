@@ -5,38 +5,34 @@
 
   align-items: center;
 
-  .image {
-    @extend .paragraph-gap-2;
-
-    align-items: center;
-
-    img {
-      max-width: 100%;
-    }
-  }
-
-  .text {
-    height: 2.5rem;
-  }
-
-  ::ng-deep svg {
-    border-radius: 0.5rem;
-    vertical-align: top;
-  }
-
-  .dots {
-    display: flex;
-    gap: 0.5rem;
-
-    .dot {
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 100%;
-      background-color: var(--dot-color);
+  swiper-container {
+    width: 100%;
+    &::part(pagination) {
+      display: flex;
+      gap: 0.5rem;
+      position: static;
+      padding-top: 2.5rem;
+      justify-content: center;
     }
 
-    .selected-dot {
-      background-color: var(--selected-dot-color);
+    swiper-slide {
+      @extend .paragraph-gap-2;
+
+      align-items: center;
+      width: 100% !important;
+
+      img {
+        width: 100%;
+      }
+
+      .text {
+        height: 2.5rem;
+      }
+
+      ::ng-deep svg {
+        border-radius: 0.5rem;
+        vertical-align: top;
+      }
     }
   }
 }

@@ -1,23 +1,11 @@
 <div class="image-slider">
-  <div class="image">
-    @for (item of images; track item.path; let index = $index) { @if(index ===
-    currentIndex) { @if(item?.isLottie) {
-    <ng-lottie (click)="next()" [options]="{ path: item.path }"></ng-lottie>
-    } @else {
-    <img src="{{ item.path }}" (click)="next()" />
-    }
-    <span class="text">{{ item.text }}</span>
-    <button (click)="prev()">Prev</button>
-    } }
-  </div>
-
-  <div class="dots">
-    @for (item of images; track item.path; let index = $index) {
-    <span
-      (click)="goToStory(index)"
-      class="dot"
-      [class.selected-dot]="currentIndex === index"
-    ></span>
-    }
-  </div>
+  <swiper-container pagination="true" pagination-clickable="true">
+    @for (item of images; track item.path; let index = $index) {<swiper-slide>
+      @if(item?.isLottie) {
+      <ng-lottie [options]="{ path: item.path }"></ng-lottie>
+      } @else { <img src="{{ item.path }}" />
+      }
+      <span class="text">{{ item.text }}</span> </swiper-slide
+    >}
+  </swiper-container>
 </div>

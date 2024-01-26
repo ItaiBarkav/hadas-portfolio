@@ -71,6 +71,7 @@
 
   .research-personas {
     @extend .section;
+
     gap: 8.25rem;
 
     .research {
@@ -306,6 +307,11 @@
 }
 
 @media (max-width: 600px) {
+  :host {
+    --swiper-pagination-bullet-inactive-color: var(--dot-color);
+    --swiper-pagination-color: var(--selected-dot-color);
+  }
+
   .threats {
     gap: 4rem;
 
@@ -341,6 +347,7 @@
 
     .research-personas {
       gap: 4rem;
+      width: -webkit-fill-available;
 
       * {
         line-height: 160%;
@@ -348,6 +355,11 @@
 
       .personas-section {
         padding: 0;
+        width: -webkit-fill-available;
+
+        .personas-slider {
+          width: 100%;
+        }
       }
     }
 

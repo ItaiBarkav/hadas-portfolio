@@ -5,47 +5,46 @@
 
   align-items: center;
 
-  .persona {
-    @extend .paragraph-gap-2;
+  swiper-container {
+    width: 100%;
 
-    border: 1px var(--border-color-second) solid;
-    border-radius: 0.5rem;
-
-    img {
-      width: 100%;
+    &::part(pagination) {
+      display: flex;
+      gap: 0.5rem;
+      position: static;
+      padding-top: 2.5rem;
+      justify-content: center;
     }
 
-    .person-info {
-      @extend .paragraph-gap-2;
+    swiper-slide {
+      .persona {
+        @extend .paragraph-gap-2;
 
-      padding: 0 1.5rem 1.5rem 1.5rem;
-      width: fit-content;
+        border: 1px var(--border-color-second) solid;
+        border-radius: 0.5rem;
+        height: 31.5rem;
 
-      .person {
-        font-size: 1.5rem;
-        font-weight: 600;
+        img {
+          width: 100%;
+        }
+
+        .person-info {
+          @extend .paragraph-gap-2;
+
+          padding: 0 1.5rem 1.5rem 1.5rem;
+          width: fit-content;
+
+          .person {
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+
+          .bold {
+            font-size: 1.125rem;
+            font-weight: 600;
+          }
+        }
       }
-
-      .bold {
-        font-size: 1.125rem;
-        font-weight: 600;
-      }
-    }
-  }
-
-  .dots {
-    display: flex;
-    gap: 0.5rem;
-
-    .dot {
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 100%;
-      background-color: var(--dot-color);
-    }
-
-    .selected-dot {
-      background-color: var(--selected-dot-color);
     }
   }
 }

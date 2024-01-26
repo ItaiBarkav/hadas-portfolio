@@ -40,7 +40,7 @@
 
     * {
       width: 100%;
-      flex: 1 1 auto;
+      flex: 1;
       height: fit-content;
     }
   }
@@ -366,6 +366,11 @@
 }
 
 @media (max-width: 600px) {
+  :host {
+    --swiper-pagination-bullet-inactive-color: var(--border-color-first);
+    --swiper-pagination-color: var(--selected-dot-color-py);
+  }
+
   .pharm-yarok {
     gap: 4rem;
 
@@ -393,14 +398,6 @@
       padding: 1.5rem;
     }
 
-    ::ng-deep.dot {
-      background-color: var(--border-color-first) !important;
-    }
-
-    ::ng-deep.selected-dot {
-      background-color: var(--selected-dot-color-py) !important;
-    }
-
     .research {
       .problems {
         .card {
@@ -423,6 +420,7 @@
 
     .personas {
       padding: 0 1.5rem;
+      width: -webkit-fill-available;
 
       .personas {
         padding: 0;
