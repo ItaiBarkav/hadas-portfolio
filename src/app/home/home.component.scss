@@ -125,6 +125,10 @@
       }
     }
   }
+
+  .hide-on-mobile {
+    display: inline-block !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -173,7 +177,8 @@
       background-image: none;
 
       .card {
-        padding: 1.5rem;
+        padding: 1rem;
+        gap: 1rem;
         max-width: none;
         border-width: 1px;
 
@@ -190,6 +195,10 @@
         .content {
           font-size: 1rem;
           gap: 1rem;
+
+          .hide-on-mobile {
+            display: none !important;
+          }
         }
 
         .content-padding {
@@ -197,5 +206,9 @@
         }
       }
     }
+  }
+
+  .show-on-mobile {
+    display: inline-block !important;
   }
 }

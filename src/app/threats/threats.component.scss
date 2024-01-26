@@ -33,6 +33,10 @@
     @extend .section;
 
     gap: 3rem;
+
+    .text-bold {
+      font-weight: 600;
+    }
   }
 
   .user-story {
@@ -98,12 +102,13 @@
         gap: 1.5rem;
 
         .persona {
-          @extend .paragraph-gap-2;
+          @extend .paragraph-gap-3;
 
           background-color: var(--dark-card-background);
           border: 1px var(--dark-border) solid;
           border-radius: 0.5rem;
           padding: 1.5rem;
+          flex: 1;
 
           * {
             line-height: 160%;
@@ -122,7 +127,7 @@
           .content::after {
             content: "";
             display: flex;
-            height: 1.25rem;
+            height: 1.6rem;
             visibility: visible;
           }
 
@@ -288,6 +293,10 @@
 
         align-items: center;
       }
+
+      .text-bold {
+        font-weight: 600;
+      }
     }
   }
 
@@ -311,12 +320,16 @@
     }
 
     .header {
-      ::ng-deep.menu-btn {
-        content: url("../../assets/icons/menu-light.svg");
-      }
+      .header {
+        height: 100%;
 
-      .image {
-        content: url("../../assets/threats/home-mobile.png");
+        ::ng-deep.menu-btn {
+          content: url("../../assets/icons/menu-light.svg");
+        }
+
+        .image {
+          content: url("../../assets/threats/home-mobile.png");
+        }
       }
     }
 
@@ -328,6 +341,10 @@
 
     .research-personas {
       gap: 4rem;
+
+      * {
+        line-height: 160%;
+      }
 
       .personas-section {
         padding: 0;

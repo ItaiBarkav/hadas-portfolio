@@ -15,6 +15,15 @@
     }
   }
 
+  .text {
+    height: 2.5rem;
+  }
+
+  ::ng-deep svg {
+    border-radius: 0.5rem;
+    vertical-align: top;
+  }
+
   .dots {
     display: flex;
     gap: 0.5rem;
