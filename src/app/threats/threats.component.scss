@@ -284,12 +284,9 @@
     @extend .section;
     @extend .paragraph-gap-3;
 
-    width: fit-content;
-
     .cards {
       display: flex;
       gap: 1.5rem;
-      flex-wrap: wrap;
     }
 
     .card {
@@ -299,6 +296,7 @@
       border: 1px var(--dark-border) solid;
       border-radius: 0.5rem;
       padding: 1.5rem;
+      width: -webkit-fill-available;
 
       .chip-title {
         @include chip(--dark-blue);
@@ -347,10 +345,10 @@
         ::ng-deep.menu-btn {
           content: url("../../assets/icons/menu-light.svg");
         }
+      }
 
-        .image {
-          content: url("../../assets/threats/home-mobile.png");
-        }
+      .image {
+        content: url("../../assets/threats/home-mobile.png");
       }
     }
 
@@ -434,6 +432,12 @@
       padding: 2.5rem 1.5rem;
       flex-direction: column;
       direction: ltr;
+    }
+
+    .usability-testing {
+      .cards {
+        flex-wrap: wrap;
+      }
     }
 
     .overview-img {

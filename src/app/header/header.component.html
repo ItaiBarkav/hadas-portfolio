@@ -40,29 +40,31 @@
       (click)="toggleMenu()"
       src="../../assets/icons/close.svg"
     />
-    <a
-      [href]="homeUrl"
-      class="link underline"
-      [class.selected-link]="selectedLink === 'home'"
-      (click)="updateSelectedLink('home')"
-      >Case Studies</a
-    >
-    <a
-      [href]="aboutUrl"
-      class="link underline"
-      [class.selected-link]="selectedLink === 'aboutMe'"
-      (click)="updateSelectedLink('aboutMe')"
-      >About Me</a
-    >
-    <a
-      [href]="'../../assets/Hadas Yosef CV.pdf'"
-      target="_blank"
-      class="link underline"
-      [class.selected-link]="selectedLink === 'resume'"
-      >CV</a
-    >
-    <div class="contact">
-      <app-footer></app-footer>
+    <div class="menu-position">
+      <a
+        [href]="homeUrl"
+        class="link underline"
+        [class.selected-link]="selectedLink === 'home'"
+        (click)="updateSelectedLink('home')"
+        >Case Studies</a
+      >
+      <a
+        [href]="aboutUrl"
+        class="link underline"
+        [class.selected-link]="selectedLink === 'aboutMe'"
+        (click)="updateSelectedLink('aboutMe')"
+        >About Me</a
+      >
+      <a
+        [href]="'../../assets/Hadas Yosef CV.pdf'"
+        target="_blank"
+        class="link underline"
+        [class.selected-link]="selectedLink === 'resume'"
+        >CV</a
+      >
+      <div class="contact">
+        <app-footer></app-footer>
+      </div>
     </div>
   </div>
 </div>

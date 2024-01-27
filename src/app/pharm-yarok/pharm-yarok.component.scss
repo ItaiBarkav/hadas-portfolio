@@ -70,10 +70,6 @@
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
-
-      .answer {
-        @include left-border(--blue, 0.5rem);
-      }
     }
 
     .problems {
@@ -439,6 +435,8 @@
     }
 
     .sections {
+      gap: 4rem;
+
       .sub-title {
         font-size: 1rem;
       }
