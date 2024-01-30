@@ -64,6 +64,11 @@
       cursor: pointer;
       content: url("../../assets/threat.svg");
 
+      &::after {
+        content: url("../../assets/threat-hover.svg");
+        visibility: hidden;
+      }
+
       &:hover {
         content: url("../../assets/threat-hover.svg");
       }
@@ -74,6 +79,11 @@
       height: auto;
       cursor: pointer;
       content: url("../../assets/pharmYarok.svg");
+
+      &::after {
+        content: url("../../assets/pharmYarok-hover.svg");
+        visibility: hidden;
+      }
 
       &:hover {
         content: url("../../assets/pharmYarok-hover.svg");

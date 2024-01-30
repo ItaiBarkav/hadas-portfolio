@@ -8,6 +8,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { ImageSliderComponent } from '../image-slider/image-slider.component';
 import { Image } from '../image-slider/types';
+import { LoadingComponent } from '../loading/loading.component';
 import { MaterialModule } from '../material.module';
 import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
 import { PersonasComponent } from './personas/personas.component';
@@ -27,6 +28,7 @@ import { Persona } from './personas/types';
     BackToTopComponent,
     ImageSliderComponent,
     PersonasComponent,
+    LoadingComponent,
   ],
   templateUrl: './threats.component.html',
   styleUrl: './threats.component.scss',

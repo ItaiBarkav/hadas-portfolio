@@ -33,7 +33,7 @@
 
     .image {
       width: 100%;
-      content: url("../../assets/threats/home.svg");
+      content: url("../../assets/threats/home.png");
     }
   }
 
@@ -323,6 +323,10 @@
       gap: 2rem;
     }
   }
+}
+
+::ng-deep.loading {
+  background-color: var(--dark-background-first) !important;
 }
 
 @media (max-width: 600px) {

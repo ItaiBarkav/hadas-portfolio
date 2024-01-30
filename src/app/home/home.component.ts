@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BackToTopComponent } from '../back-to-top/back-to-top.component';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
+import { LoadingComponent } from '../loading/loading.component';
 import { MaterialModule } from '../material.module';
 import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
 
@@ -15,6 +16,7 @@ import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
     FooterComponent,
     ScrollToTopComponent,
     BackToTopComponent,
+    LoadingComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
