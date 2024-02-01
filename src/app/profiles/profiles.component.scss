@@ -1,0 +1,11 @@
+@import "../../styles.scss";
+
+.profiles {
+  background-color: var(--dark-background-first);
+  color: var(--dark-text-color);
+}
+
+@media (max-width: 600px) {
+  .profiles {
+  }
+}

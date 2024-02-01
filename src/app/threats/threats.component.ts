@@ -27,8 +27,8 @@ import { Persona } from './personas/types';
   ],
 })
 export class ThreatsComponent {
-  headerImg = '../../assets/threats/home.png';
-  mobileHeaderImg = '../../assets/threats/home-mobile.png';
+  headerImg = '../../assets/threats/header.png';
+  mobileHeaderImg = '../../assets/threats/header-mobile.png';
   story3: AnimationOptions = {
     path: '../../assets/threats/story3.json',
   };
