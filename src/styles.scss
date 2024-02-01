@@ -12,6 +12,7 @@ body {
   margin: 0;
   font-family: Inter-Medium;
   color: var(--text-color);
+  line-height: 160%;
 }
 
 .cdk-overlay-pane {
@@ -62,7 +63,6 @@ body {
 .sub-title {
   font-size: 1.5rem;
   font-weight: 500;
-  line-height: 160%;
 }
 
 .underline {
@@ -72,10 +72,6 @@ body {
 
 .link {
   color: var(--text-color);
-}
-
-.text {
-  line-height: 160%;
 }
 
 .show-on-mobile {
