@@ -2,15 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LottieModule } from 'ngx-lottie';
 import { AnimationOptions } from 'ngx-lottie/lib/symbols';
-import { BackToTopComponent } from '../back-to-top/back-to-top.component';
-import { ExploreProjectsComponent } from '../explore-projects/explore-projects.component';
-import { FooterComponent } from '../footer/footer.component';
-import { HeaderComponent } from '../header/header.component';
+import { AbstractCaseComponent } from '../case/abstract-case/abstract-case.component';
+import { CaseHeaderComponent } from '../case/case-header/case-header.component';
 import { ImageSliderComponent } from '../image-slider/image-slider.component';
 import { Image } from '../image-slider/types';
-import { LoadingComponent } from '../loading/loading.component';
-import { MaterialModule } from '../material.module';
-import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
 import { PersonasComponent } from './personas/personas.component';
 import { Persona } from './personas/types';
 
@@ -19,25 +14,24 @@ import { Persona } from './personas/types';
   standalone: true,
   imports: [
     CommonModule,
-    MaterialModule,
-    HeaderComponent,
-    FooterComponent,
-    ScrollToTopComponent,
+    AbstractCaseComponent,
+    CaseHeaderComponent,
     LottieModule,
-    ExploreProjectsComponent,
-    BackToTopComponent,
     ImageSliderComponent,
     PersonasComponent,
-    LoadingComponent,
   ],
   templateUrl: './threats.component.html',
-  styleUrl: './threats.component.scss',
+  styleUrls: [
+    './threats.component.scss',
+    '../case/abstract-case/abstract-case.component.scss',
+  ],
 })
 export class ThreatsComponent {
+  headerImg = '../../assets/threats/home.png';
+  mobileHeaderImg = '../../assets/threats/home-mobile.png';
   story3: AnimationOptions = {
     path: '../../assets/threats/story3.json',
   };
-
   stories: Image[] = [
     {
       path: '../../assets/threats/story1.svg',
@@ -57,7 +51,6 @@ export class ThreatsComponent {
       text: 'Now that the map is clear, other position holders can intercept the threat.',
     },
   ];
-
   personas: Persona[] = [
     {
       header: 'Defence Controller',

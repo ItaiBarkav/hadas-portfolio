@@ -1,86 +1,81 @@
-@defer {
-<div class="home">
-  <div class="mobile-padding">
-    <app-header [selectedLink]="'home'" class="full-width"></app-header>
-    <div class="hadas">
-      <img class="photo" src="../../assets/hadas.svg" />
-      <div class="intro">
-        <span class="header">Hi, I'm Hadas</span>
+<app-abstract-case>
+  <div class="home">
+    <div class="mobile-padding">
+      <app-header [selectedLink]="'home'" class="full-width"></app-header>
+      <div class="hadas">
+        <img class="photo" src="../../assets/hadas.svg" />
+        <div class="intro">
+          <span class="header">Hi, I'm Hadas</span>
 
-        <span class="sub-title">Product Designer</span>
-        <span class="sentence"
-          >I design systems that make a difference for the Israeli Navy</span
-        >
+          <span class="sub-title">Product Designer</span>
+          <span class="sentence"
+            >I design systems that make a difference for the Israeli Navy</span
+          >
+        </div>
+      </div>
+      <div class="projects">
+        <img (click)="goto('threats')" class="threats" />
+        <img (click)="goto('pharm-yarok')" class="pharm-yarok" />
+      </div>
+      <div id="about" class="about">
+        <span class="card">
+          <span class="title">About me</span>
+          <span class="content content-padding">
+            <span>
+              I am a driven, passionate, and eager designer, with 3 years of
+              experience.
+            </span>
+            <span class="hide-on-mobile">
+              <span class="bold">I currently work for the Israeli Navy</span>
+              where I specialize in complex systems <br />
+              which is a true passion of mine. I enjoy collaborating with other
+              designers <br />
+              and developers and learning from them.</span
+            >
+            <span class="show-on-mobile">
+              <span class="bold">I currently work for the Israeli Navy</span>
+              where I specialize in complex systems which is a true passion of
+              mine.<br />
+              I enjoy collaborating with other designers and developers and
+              learning from them.</span
+            >
+            <span
+              >I'm also a 2nd year
+              <span class="bold">
+                psychology student at the Open University.</span
+              ><br />
+              The knowledge I gain in my studies helps tremendously to
+              understand human <br class="hide-on-mobile" />
+              behavior and its flaws and allows me to create better user
+              experiences.</span
+            >
+          </span>
+        </span>
+        <span class="card">
+          <span class="title"
+            >Fun Facts <img class="stars" src="../../assets/icons/stars.svg"
+          /></span>
+          <span class="content">
+            <span>Favorite food: <span class="text-bold">Pancakes.</span></span>
+            <span
+              >Hobbies:
+              <span class="text-bold"
+                >working out, baking & making textured art.</span
+              ></span
+            >
+            <span
+              >TV genres:
+              <span class="text-bold"
+                >sitcoms, fantasies and dramas.</span
+              ></span
+            >
+            <span
+              >Currently learning: <span class="text-bold">Spanish.</span></span
+            >
+          </span>
+        </span>
       </div>
     </div>
-    <div class="projects">
-      <img (click)="goto('threats')" class="threats" />
-      <img (click)="goto('pharm-yarok')" class="pharm-yarok" />
-    </div>
-    <div id="about" class="about">
-      <span class="card">
-        <span class="title">About me</span>
-        <span class="content content-padding">
-          <span>
-            I am a driven, passionate, and eager designer, with 3 years of
-            experience.
-          </span>
-          <span class="hide-on-mobile">
-            <span class="bold">I currently work for the Israeli Navy</span>
-            where I specialize in complex systems <br />
-            which is a true passion of mine. I enjoy collaborating with other
-            designers <br />
-            and developers and learning from them.</span
-          >
-          <span class="show-on-mobile">
-            <span class="bold">I currently work for the Israeli Navy</span>
-            where I specialize in complex systems which is a true passion of
-            mine.<br />
-            I enjoy collaborating with other designers and developers and
-            learning from them.</span
-          >
-          <span
-            >I'm also a 2nd year
-            <span class="bold"> psychology student at the Open University.</span
-            ><br />
-            The knowledge I gain in my studies helps tremendously to understand
-            human <br class="hide-on-mobile" />
-            behavior and its flaws and allows me to create better user
-            experiences.</span
-          >
-        </span>
-      </span>
-      <span class="card">
-        <span class="title"
-          >Fun Facts <img class="stars" src="../../assets/icons/stars.svg"
-        /></span>
-        <span class="content">
-          <span>Favorite food: <span class="text-bold">Pancakes.</span></span>
-          <span
-            >Hobbies:
-            <span class="text-bold"
-              >working out, baking & making textured art.</span
-            ></span
-          >
-          <span
-            >TV genres:
-            <span class="text-bold">sitcoms, fantasies and dramas.</span></span
-          >
-          <span
-            >Currently learning: <span class="text-bold">Spanish.</span></span
-          >
-        </span>
-      </span>
-    </div>
+    <div></div>
   </div>
-
-  <div class="full-width paragraph-gap-0">
-    <app-back-to-top></app-back-to-top>
-    <app-footer #footer></app-footer>
-  </div>
-</div>
-
-<app-scroll-to-top></app-scroll-to-top>
-} @placeholder {
-<app-loading></app-loading>
-}
+</app-abstract-case>

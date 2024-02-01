@@ -65,12 +65,13 @@ body {
   line-height: 160%;
 }
 
-.link {
+.underline {
+  text-decoration: none;
   color: var(--text-color);
 }
 
-.underline {
-  text-decoration: none;
+.link {
+  color: var(--text-color);
 }
 
 .text {

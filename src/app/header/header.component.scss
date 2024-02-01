@@ -8,6 +8,10 @@
   font-size: 0.875rem;
   font-weight: 500;
 
+  .link {
+    color: var(--card-background);
+  }
+
   .logo {
     display: flex;
     float: left;
@@ -36,7 +40,7 @@
     justify-content: right;
 
     .menu-btn {
-      content: url("../../assets/icons/menu.svg");
+      content: url("../../assets/icons/menu-light.svg");
     }
 
     .menu {

@@ -1,14 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { BackToTopComponent } from '../back-to-top/back-to-top.component';
-import { ExploreProjectsComponent } from '../explore-projects/explore-projects.component';
-import { FooterComponent } from '../footer/footer.component';
-import { HeaderComponent } from '../header/header.component';
+import { AbstractCaseComponent } from '../case/abstract-case/abstract-case.component';
+import { CaseHeaderComponent } from '../case/case-header/case-header.component';
 import { ImageSliderComponent } from '../image-slider/image-slider.component';
 import { Image } from '../image-slider/types';
-import { LoadingComponent } from '../loading/loading.component';
-import { MaterialModule } from '../material.module';
-import { ScrollToTopComponent } from '../scroll-to-top/scroll-to-top.component';
 import { PersonasComponent } from './personas/personas.component';
 import { Persona } from './personas/types';
 
@@ -17,20 +12,20 @@ import { Persona } from './personas/types';
   standalone: true,
   imports: [
     CommonModule,
-    MaterialModule,
-    HeaderComponent,
-    FooterComponent,
-    ScrollToTopComponent,
-    ExploreProjectsComponent,
-    BackToTopComponent,
+    AbstractCaseComponent,
+    CaseHeaderComponent,
     ImageSliderComponent,
     PersonasComponent,
-    LoadingComponent,
   ],
   templateUrl: './pharm-yarok.component.html',
-  styleUrl: './pharm-yarok.component.scss',
+  styleUrls: [
+    './pharm-yarok.component.scss',
+    '../case/abstract-case/abstract-case.component.scss',
+  ],
 })
 export class PharmYarokComponent {
+  headerImg = '../../assets/pharmYarok/header.svg';
+  mobileHeaderImg = '../../assets/pharmYarok/header-mobile.svg';
   stories: Image[] = [
     {
       path: '../../assets/pharmYarok/userStory1.svg',

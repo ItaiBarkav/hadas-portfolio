@@ -1,421 +1,420 @@
-@defer {
-<div class="pharm-yarok">
-  <div class="header">
-    <app-header class="header"></app-header>
-    <img class="image" />
-  </div>
+<app-abstract-case [firstProject]="'profiles'" [secondProject]="'threats'">
+  <div class="pharm-yarok">
+    <app-case-header
+      class="case-header"
+      [headerImg]="headerImg"
+      [mobileHeaderImg]="mobileHeaderImg"
+    ></app-case-header>
 
-  <div class="overview">
-    <div class="paragraph-gap-2">
-      <span class="title">Overview</span>
-      <span class="text">
-        Pharm Yarok sells medicinal cannabis mostly through phone and WhatsApp.
-        <br />
-        Their app is outdated and inefficient. <br />
-        The target audience is Cannabis patients aged 20-45.
-      </span>
+    <div class="overview">
+      <div class="paragraph-gap-2">
+        <span class="title">Overview</span>
+        <span class="text">
+          Pharm Yarok sells medicinal cannabis mostly through phone and
+          WhatsApp.
+          <br />
+          Their app is outdated and inefficient. <br />
+          The target audience is Cannabis patients aged 20-45.
+        </span>
+      </div>
+      <div class="paragraph-gap-2">
+        <span class="title">The challenge</span>
+        <span class="text">
+          Redesign the app to improve usability, make ordering easier and
+          convenient for future purchases, <br class="hide-on-mobile" />
+          to encourage users to purchase on the app.
+        </span>
+      </div>
     </div>
-    <div class="paragraph-gap-2">
-      <span class="title">The challenge</span>
-      <span class="text">
-        Redesign the app to improve usability, make ordering easier and
-        convenient for future purchases, <br class="hide-on-mobile" />
-        to encourage users to purchase on the app.
-      </span>
-    </div>
-  </div>
 
-  <div class="user-story show-on-mobile">
-    <app-image-slider [images]="stories"></app-image-slider>
-  </div>
+    <div class="user-story show-on-mobile">
+      <app-image-slider [images]="stories"></app-image-slider>
+    </div>
 
-  <div class="user-story hide-on-mobile">
-    <div class="paragraph-gap-2">
-      <img src="../../assets/pharmYarok/userStory1.svg" />
-      <span class="text"
-        >Avi is texting with the pharmacy's reps to get info on strains to
-        buy.</span
-      >
+    <div class="user-story hide-on-mobile">
+      <div class="paragraph-gap-2">
+        <img src="../../assets/pharmYarok/userStory1.svg" />
+        <span class="text"
+          >Avi is texting with the pharmacy's reps to get info on strains to
+          buy.</span
+        >
+      </div>
+      <div class="paragraph-gap-2">
+        <img src="../../assets/pharmYarok/userStory2.svg" />
+        <span class="text"
+          >Avi is disappointed by the lack of info, recommendations, and images.
+        </span>
+      </div>
+      <div class="paragraph-gap-2">
+        <img src="../../assets/pharmYarok/userStory3.svg" />
+        <span class="text">Avi decides to search strains on the app.</span>
+      </div>
+      <div class="paragraph-gap-2">
+        <img src="../../assets/pharmYarok/userStory4.svg" />
+        <span class="text"
+          >Avi quickly finds the info and images he needed and places an
+          order.</span
+        >
+      </div>
+      <div class="paragraph-gap-2">
+        <img src="../../assets/pharmYarok/userStory5.svg" />
+        <span class="text"
+          >Avi got the order, and he's relieved to have his medicine.</span
+        >
+      </div>
     </div>
-    <div class="paragraph-gap-2">
-      <img src="../../assets/pharmYarok/userStory2.svg" />
-      <span class="text"
-        >Avi is disappointed by the lack of info, recommendations, and images.
-      </span>
-    </div>
-    <div class="paragraph-gap-2">
-      <img src="../../assets/pharmYarok/userStory3.svg" />
-      <span class="text">Avi decides to search strains on the app.</span>
-    </div>
-    <div class="paragraph-gap-2">
-      <img src="../../assets/pharmYarok/userStory4.svg" />
-      <span class="text"
-        >Avi quickly finds the info and images he needed and places an
-        order.</span
-      >
-    </div>
-    <div class="paragraph-gap-2">
-      <img src="../../assets/pharmYarok/userStory5.svg" />
-      <span class="text"
-        >Avi got the order, and he's relieved to have his medicine.</span
-      >
-    </div>
-  </div>
 
-  <div class="research">
-    <div class="paragraph">
-      <span class="title">Research</span>
-      <span class="text">
-        I began the project by benchmarking similar apps to understand the
-        features that users expect and identify areas for improvement. <br />
-        I then conducted user interviews to understand how people pick their
-        strains.
-      </span>
-    </div>
-    <div class="paragraph-gap-3">
-      <div class="questions">
+    <div class="research">
+      <div class="paragraph">
+        <span class="title">Research</span>
+        <span class="text">
+          I began the project by benchmarking similar apps to understand the
+          features that users expect and identify areas for improvement. <br />
+          I then conducted user interviews to understand how people pick their
+          strains.
+        </span>
+      </div>
+      <div class="paragraph-gap-3">
+        <div class="questions">
+          <span class="card">
+            <span class="chip-title-blue">question</span>
+            <span class="content">
+              <span class="text-bold"
+                >What helps decide which cannabis strain to buy?</span
+              >
+              Knowing which cannabis strain is right for a specific
+              <br class="hide-on-mobile" />
+              condition, and following the majority's choice.
+            </span>
+          </span>
+          <span class="card">
+            <span class="chip-title-blue">question</span>
+            <span class="content">
+              <span class="text-bold"
+                >What difficulties have you experienced trying to buy
+                cannabis?</span
+              >
+              <span class="text-bold">“It's hard to make a decision”</span>
+              The pharmacy doesn't provide enough info on flavours, effects,<br
+                class="hide-on-mobile"
+              />
+              images, or reviews, making it impossible to make an informed<br
+                class="hide-on-mobile"
+              />
+              decision. You're left guessing what to get.</span
+            >
+          </span>
+        </div>
         <span class="card">
-          <span class="chip-title-blue">question</span>
-          <span class="content">
+          <span class="chip-title-green">Insight</span>
+          <span class="content no-gap">
             <span class="text-bold"
-              >What helps decide which cannabis strain to buy?</span
-            >
-            Knowing which cannabis strain is right for a specific
-            <br class="hide-on-mobile" />
-            condition, and following the majority's choice.
+              >Patients search for medical cannabis in different ways.</span
+            >Some search by popularity, others by THC/CBD levels, while others
+            look for specific brands or price points.
           </span>
         </span>
-        <span class="card">
-          <span class="chip-title-blue">question</span>
-          <span class="content">
-            <span class="text-bold"
-              >What difficulties have you experienced trying to buy
-              cannabis?</span
-            >
-            <span class="text-bold">“It's hard to make a decision”</span>
-            The pharmacy doesn't provide enough info on flavours, effects,<br
-              class="hide-on-mobile"
-            />
-            images, or reviews, making it impossible to make an informed<br
-              class="hide-on-mobile"
-            />
-            decision. You're left guessing what to get.</span
-          >
-        </span>
-      </div>
-      <span class="card">
-        <span class="chip-title-green">Insight</span>
-        <mat-card-content>
-          <span class="text-bold"
-            >Patients search for medical cannabis in different ways.</span
-          ><br />Some search by popularity, others by THC/CBD levels, while
-          others look for specific brands or price points.
-        </mat-card-content>
-      </span>
-      <div class="problems">
-        <span class="card">
-          <span class="chip-title-red">Problem</span>
-          <span class="content">
-            <span class="text-bold">Limited search: </span>The only supported
-            way of searching is by brand.
+        <div class="problems">
+          <span class="card">
+            <span class="chip-title-red">Problem</span>
+            <span class="content">
+              <span class="text-bold">Limited search: </span>The only supported
+              way of searching is by brand.
+            </span>
           </span>
-        </span>
-        <span class="card">
-          <span class="chip-title-red">Problem</span>
-          <span class="content">
-            <span class="text-bold">Missing cart: </span> Unclear what's added
-            after the products page.
+          <span class="card">
+            <span class="chip-title-red">Problem</span>
+            <span class="content">
+              <span class="text-bold">Missing cart: </span> Unclear what's added
+              after the products page.
+            </span>
           </span>
-        </span>
-      </div>
-      <div class="problems">
-        <span class="card">
-          <span class="chip-title-red">Problem</span>
-          <span class="content">
-            <span class="text-bold">Missing sign up: </span> Users have to
-            reupload their cannabis license.
+        </div>
+        <div class="problems">
+          <span class="card">
+            <span class="chip-title-red">Problem</span>
+            <span class="content">
+              <span class="text-bold">Missing sign up: </span> Users have to
+              reupload their cannabis license.
+            </span>
           </span>
-        </span>
-        <span class="card">
-          <span class="chip-title-red">Problem</span>
-          <span class="content">
-            <span class="text-bold">Lack of images: </span> Patients want to see
-            what they're buying.
+          <span class="card">
+            <span class="chip-title-red">Problem</span>
+            <span class="content">
+              <span class="text-bold">Lack of images: </span> Patients want to
+              see what they're buying.
+            </span>
           </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="personas">
+      <div class="paragraph-gap-2">
+        <span class="title">Personas</span>
+        <span>
+          Based on my research, I mapped 3 types of users to reflect on them
+          when making decisions.
         </span>
-      </div>
-    </div>
-  </div>
 
-  <div class="personas">
-    <div class="paragraph-gap-2">
-      <span class="title">Personas</span>
-      <span>
-        Based on my research, I mapped 3 types of users to reflect on them when
-        making decisions.
-      </span>
-
-      <div class="personas show-on-mobile">
-        <app-personas [personas]="personas"></app-personas>
-      </div>
-
-      <div class="personas hide-on-mobile">
-        <div class="persona">
-          <div><img src="../../assets/pharmYarok/person1.svg" /></div>
-          <div class="person-info">
-            <span class="person">Leisure buyer</span>
-            <span>
-              They smoke for fun, and like trying <br />popular strains with
-              high THC levels.
-            </span>
-            <span
-              ><span class="bold">Needs & expectations:</span> <br />Fast
-              delivery and freebies.
-            </span>
-            <span
-              ><span class="bold">Goals:</span> being among the firsts to try
-              <br />
-              new strains.
-            </span>
-            <span
-              ><span class="bold">Frustrations:</span> <br />Waiting for the
-              delivery.
-            </span>
-          </div>
+        <div class="personas show-on-mobile">
+          <app-personas [personas]="personas"></app-personas>
         </div>
-        <div class="persona">
-          <div><img src="../../assets/pharmYarok/person2.svg" /></div>
-          <div class="person-info">
-            <span class="person">Carrier</span>
-            <span>
-              The carrier handles someone else's <br />
-              orders, since they're not able to.
-            </span>
-            <span>
-              <span class="bold">Needs & expectations:</span> making the
-              <br />same order every month quickly.
-            </span>
-            <span
-              ><span class="bold">Goals:</span> having the same strains to keep
-              <br />
-              a therapeutic sequence.
-            </span>
-            <span
-              ><span class="bold">Frustrations:</span> when the usual order is
-              <br />
-              out of stock.
-            </span>
-          </div>
-        </div>
-        <div class="persona">
-          <div><img src="../../assets/pharmYarok/person3.svg" /></div>
-          <div class="person-info">
-            <span class="person">Outlet buyer</span>
-            <span>
-              They're patients for many years, and <br />
-              usually reorder the same strains.
-            </span>
-            <span
-              ><span class="bold">Needs & expectations:</span> <br />Getting
-              affordable treatment.
-            </span>
-            <span
-              ><span class="bold">Goals:</span> <br />Keeping a therapeutic
-              sequence.</span
-            >
-            <span
-              ><span class="bold">Frustrations:</span> there's no variety of
-              <br />
-              discounted strains.
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="sections">
-    <div class="paragraph-gap-2">
-      <span class="title">The solution</span>
-      <span class="text">
-        The revamped app simplifies medicinal cannabis ordering by providing
-        patients with insightful treatment decisions <br />
-        and facilitates quick, effortless ordering.
-      </span>
-    </div>
-
-    <div class="paragraph-gap-2">
-      <div class="headers">
-        <span class="sub-title">Wireframes</span>
-        <span class="title"> The search page </span>
-      </div>
-      <span class="text">
-        To help users find the strains they're looking for easily, I categorized
-        the products according to the most common factors that
-        <br class="hide-on-mobile" />patients consider when choosing a strain:
-        dose, newness, brand, popularity, and discounted price.
-      </span>
-    </div>
-  </div>
-
-  <div class="wireframe">
-    <div class="images">
-      <div class="image">
-        <img src="../../assets/pharmYarok/wireframe-old.svg" />
-        <span>Old</span>
-      </div>
-      <img src="../../assets/icons/right-arrow.svg" />
-      <div class="image">
-        <div class="scroll-image">
-          <img class="frame" src="../../assets/pharmYarok/wireframe.svg" />
-          <div class="content">
-            <img src="../../assets/pharmYarok/wireframe-new.svg" />
-          </div>
-        </div>
-        <span>New</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="problem-solutions">
-    <div class="headers show-on-mobile">
-      <span class="sub-title">Final design</span>
-      <span class="title">Adding products to the cart</span>
-    </div>
-    <div class="mobile-order">
-      <div class="para">
-        <div class="headers hide-on-mobile">
-          <span class="sub-title">Final design</span>
-          <span class="title">Adding products to the cart</span>
-        </div>
-        <div class="paragraph-gap-3">
-          <div class="paragraph-gap-2">
-            <span class="problem text-bold">The problems I addressed:</span>
-            <span class="para">
-              <span class="paragraph-gap-1">
-                <span class="text-bold">Missing cart:</span> Unclear what's
-                added after the products page.
+        <div class="personas hide-on-mobile">
+          <div class="persona">
+            <div><img src="../../assets/pharmYarok/person1.svg" /></div>
+            <div class="person-info">
+              <span class="person">Leisure buyer</span>
+              <span>
+                They smoke for fun, and like trying <br />popular strains with
+                high THC levels.
               </span>
-              <span class="paragraph-gap-1">
-                <span class="text-bold">Lack of images:</span> Patients want to
-                see what they're buying.
+              <span
+                ><span class="bold">Needs & expectations:</span> <br />Fast
+                delivery and freebies.
               </span>
-            </span>
+              <span
+                ><span class="bold">Goals:</span> being among the firsts to try
+                <br />
+                new strains.
+              </span>
+              <span
+                ><span class="bold">Frustrations:</span> <br />Waiting for the
+                delivery.
+              </span>
+            </div>
           </div>
-          <div class="paragraph-gap-2">
-            <span class="solution text-bold">The solutions:</span>
-            <span class="para">
-              <span class="paragraph-gap-1">
-                <span class="text-bold">Adding a cart:</span> to provide clarity
-                & allow users to leave <br />the process and return later
-                without interruption.<br />
+          <div class="persona">
+            <div><img src="../../assets/pharmYarok/person2.svg" /></div>
+            <div class="person-info">
+              <span class="person">Carrier</span>
+              <span>
+                The carrier handles someone else's <br />
+                orders, since they're not able to.
               </span>
-              <span class="paragraph-gap-1">
-                <span class="text-bold">
-                  Making POP products more accessible:
-                </span>
-                I added a POP products section to the cart with
-                <br class="hide-on-mobile" />images and descriptions to boost
-                sales.
+              <span>
+                <span class="bold">Needs & expectations:</span> making the
+                <br />same order every month quickly.
               </span>
-            </span>
+              <span
+                ><span class="bold">Goals:</span> having the same strains to
+                keep
+                <br />
+                a therapeutic sequence.
+              </span>
+              <span
+                ><span class="bold">Frustrations:</span> when the usual order is
+                <br />
+                out of stock.
+              </span>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="images">
-        <div><img src="../../assets/pharmYarok/final2.svg" /></div>
-        <div><img src="../../assets/pharmYarok/final1.svg" /></div>
-      </div>
-    </div>
-  </div>
-
-  <span class="title checkout-title hide-on-mobile">Checkout process</span>
-  <div class="checkout">
-    <span class="title show-on-mobile">Checkout process</span>
-    <div class="images">
-      <div><img src="../../assets/pharmYarok/checkout1.svg" /></div>
-      <div><img src="../../assets/pharmYarok/checkout2.svg" /></div>
-      <div>
-        <div class="scroll-image">
-          <img class="frame" src="../../assets/pharmYarok/checkout-frame.svg" />
-          <div class="content">
-            <img src="../../assets/pharmYarok/checkout3.svg" />
-          </div>
-        </div>
-      </div>
-      <div><img src="../../assets/pharmYarok/checkout4.svg" /></div>
-    </div>
-  </div>
-
-  <div class="problem-solutions order-tracking">
-    <div class="headers show-on-mobile">
-      <span class="title">Order tracking</span>
-    </div>
-    <div class="mobile-order">
-      <div class="para">
-        <div class="headers hide-on-mobile">
-          <span class="title">Order tracking</span>
-        </div>
-        <div class="paragraph-gap-3">
-          <div class="paragraph-gap-2">
-            <span class="problem text-bold">The problem I addressed:</span>
-            <span class="para">
-              <span class="paragraph-gap-1">
-                <span class="text-bold"
-                  >Lack of delivery info leading to cancellations:</span
-                >Patients would have to contact the pharmacy to get
-                <br class="hide-on-mobile" />delivery details, or await contact.
-                most people would <br class="hide-on-mobile" />get tired waiting
-                and purchase someplace else.
+          <div class="persona">
+            <div><img src="../../assets/pharmYarok/person3.svg" /></div>
+            <div class="person-info">
+              <span class="person">Outlet buyer</span>
+              <span>
+                They're patients for many years, and <br />
+                usually reorder the same strains.
               </span>
-            </span>
-          </div>
-          <div class="paragraph-gap-2">
-            <span class="solution text-bold">The solutions:</span>
-            <span class="para">
-              <span class="paragraph-gap-1">
-                <span class="text-bold"
-                  >Providing clear feedback & setting expectations:</span
-                >
-                After placing an order, the success page helps inform
-                <br class="hide-on-mobile" />the patient about the timeline of
-                the order.
+              <span
+                ><span class="bold">Needs & expectations:</span> <br />Getting
+                affordable treatment.
               </span>
-              <span class="paragraph-gap-1">
-                <span class="text-bold"
-                  >Allocating space for order tracking:</span
-                >After placing an order, the info, status and ETA will be
-                <br class="hide-on-mobile" />visible at the top of the search
-                page.
+              <span
+                ><span class="bold">Goals:</span> <br />Keeping a therapeutic
+                sequence.</span
+              >
+              <span
+                ><span class="bold">Frustrations:</span> there's no variety of
+                <br />
+                discounted strains.
               </span>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="images">
-        <div><img src="../../assets/pharmYarok/order1.svg" /></div>
-        <div>
-          <div class="scroll-image">
-            <img class="frame" src="../../assets/pharmYarok/order-frame.png" />
-            <div class="content">
-              <img src="../../assets/pharmYarok/order2.svg" />
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="sections">
+      <div class="paragraph-gap-2">
+        <span class="title">The solution</span>
+        <span class="text">
+          The revamped app simplifies medicinal cannabis ordering by providing
+          patients with insightful treatment decisions <br />
+          and facilitates quick, effortless ordering.
+        </span>
+      </div>
+
+      <div class="paragraph-gap-2">
+        <div class="headers">
+          <span class="sub-title">Wireframes</span>
+          <span class="title"> The search page </span>
+        </div>
+        <span class="text">
+          To help users find the strains they're looking for easily, I
+          categorized the products according to the most common factors that
+          <br class="hide-on-mobile" />patients consider when choosing a strain:
+          dose, newness, brand, popularity, and discounted price.
+        </span>
+      </div>
+    </div>
+
+    <div class="wireframe">
+      <div class="images">
+        <div class="image">
+          <img src="../../assets/pharmYarok/wireframe-old.svg" />
+          <span>Old</span>
+        </div>
+        <img src="../../assets/icons/right-arrow.svg" />
+        <div class="image">
+          <div class="scroll-image">
+            <img class="frame" src="../../assets/pharmYarok/wireframe.svg" />
+            <div class="content">
+              <img src="../../assets/pharmYarok/wireframe-new.svg" />
+            </div>
+          </div>
+          <span>New</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="problem-solutions">
+      <div class="headers show-on-mobile">
+        <span class="sub-title">Final design</span>
+        <span class="title">Adding products to the cart</span>
+      </div>
+      <div class="mobile-order">
+        <div class="para">
+          <div class="headers hide-on-mobile">
+            <span class="sub-title">Final design</span>
+            <span class="title">Adding products to the cart</span>
+          </div>
+          <div class="paragraph-gap-3">
+            <div class="paragraph-gap-2">
+              <span class="problem text-bold">The problems I addressed:</span>
+              <span class="para">
+                <span class="paragraph-gap-1">
+                  <span class="text-bold">Missing cart:</span> Unclear what's
+                  added after the products page.
+                </span>
+                <span class="paragraph-gap-1">
+                  <span class="text-bold">Lack of images:</span> Patients want
+                  to see what they're buying.
+                </span>
+              </span>
+            </div>
+            <div class="paragraph-gap-2">
+              <span class="solution text-bold">The solutions:</span>
+              <span class="para">
+                <span class="paragraph-gap-1">
+                  <span class="text-bold">Adding a cart:</span> to provide
+                  clarity & allow users to leave <br />the process and return
+                  later without interruption.<br />
+                </span>
+                <span class="paragraph-gap-1">
+                  <span class="text-bold">
+                    Making POP products more accessible:
+                  </span>
+                  I added a POP products section to the cart with
+                  <br class="hide-on-mobile" />images and descriptions to boost
+                  sales.
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="images">
+          <div><img src="../../assets/pharmYarok/final2.svg" /></div>
+          <div><img src="../../assets/pharmYarok/final1.svg" /></div>
+        </div>
+      </div>
+    </div>
+
+    <span class="title checkout-title hide-on-mobile">Checkout process</span>
+    <div class="checkout">
+      <span class="title show-on-mobile">Checkout process</span>
+      <div class="images">
+        <div><img src="../../assets/pharmYarok/checkout1.svg" /></div>
+        <div><img src="../../assets/pharmYarok/checkout2.svg" /></div>
+        <div>
+          <div class="scroll-image">
+            <img
+              class="frame"
+              src="../../assets/pharmYarok/checkout-frame.svg"
+            />
+            <div class="content">
+              <img src="../../assets/pharmYarok/checkout3.svg" />
+            </div>
+          </div>
+        </div>
+        <div><img src="../../assets/pharmYarok/checkout4.svg" /></div>
+      </div>
+    </div>
+
+    <div class="problem-solutions order-tracking">
+      <div class="headers show-on-mobile">
+        <span class="title">Order tracking</span>
+      </div>
+      <div class="mobile-order">
+        <div class="para">
+          <div class="headers hide-on-mobile">
+            <span class="title">Order tracking</span>
+          </div>
+          <div class="paragraph-gap-3">
+            <div class="paragraph-gap-2">
+              <span class="problem text-bold">The problem I addressed:</span>
+              <span class="para">
+                <span class="paragraph-gap-1">
+                  <span class="text-bold"
+                    >Lack of delivery info leading to cancellations:</span
+                  >Patients would have to contact the pharmacy to get
+                  <br class="hide-on-mobile" />delivery details, or await
+                  contact. most people would <br class="hide-on-mobile" />get
+                  tired waiting and purchase someplace else.
+                </span>
+              </span>
+            </div>
+            <div class="paragraph-gap-2">
+              <span class="solution text-bold">The solutions:</span>
+              <span class="para">
+                <span class="paragraph-gap-1">
+                  <span class="text-bold"
+                    >Providing clear feedback & setting expectations:</span
+                  >
+                  After placing an order, the success page helps inform
+                  <br class="hide-on-mobile" />the patient about the timeline of
+                  the order.
+                </span>
+                <span class="paragraph-gap-1">
+                  <span class="text-bold"
+                    >Allocating space for order tracking:</span
+                  >After placing an order, the info, status and ETA will be
+                  <br class="hide-on-mobile" />visible at the top of the search
+                  page.
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="images">
+          <div><img src="../../assets/pharmYarok/order1.svg" /></div>
+          <div>
+            <div class="scroll-image">
+              <img
+                class="frame"
+                src="../../assets/pharmYarok/order-frame.png"
+              />
+              <div class="content">
+                <img src="../../assets/pharmYarok/order2.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img class="overview-img" />
   </div>
-
-  <img class="overview-img" />
-</div>
-
-<app-back-to-top></app-back-to-top>
-<app-explore-projects
-  [firstProject]="'profiles'"
-  [secondProject]="'threats'"
-></app-explore-projects>
-<app-footer></app-footer>
-<app-scroll-to-top></app-scroll-to-top>
-} @placeholder {
-<app-loading></app-loading>
-}
+</app-abstract-case>

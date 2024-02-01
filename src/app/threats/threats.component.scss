@@ -13,28 +13,8 @@
   background-color: var(--dark-background-first);
   color: var(--dark-text-color);
 
-  ::ng-deep.link {
-    color: var(--dark-text-color);
-  }
-
   .title {
     color: var(--dark-title-color);
-  }
-
-  .header {
-    @extend .paragraph-gap-0;
-    @extend .full-width;
-
-    grid-column: span 3;
-
-    .header {
-      position: absolute;
-    }
-
-    .image {
-      width: 100%;
-      content: url("../../assets/threats/home.png");
-    }
   }
 
   .overview {
@@ -326,7 +306,7 @@
 }
 
 ::ng-deep.loading {
-  background-color: var(--dark-background-first) !important;
+  background-color: var(--dark-background-first);
 }
 
 @media (max-width: 600px) {
@@ -339,30 +319,6 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
-
-    ::ng-deep.link {
-      color: var(--text-color);
-    }
-
-    ::ng-deep.menu-btn,
-    ::ng-deep.close {
-      display: flex;
-      padding: 1.5rem;
-    }
-
-    .header {
-      .header {
-        height: 100%;
-
-        ::ng-deep.menu-btn {
-          content: url("../../assets/icons/menu-light.svg");
-        }
-      }
-
-      .image {
-        content: url("../../assets/threats/home-mobile.png");
-      }
-    }
 
     .user-story {
       padding: 2.5rem 1.5rem;

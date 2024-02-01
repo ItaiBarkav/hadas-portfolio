@@ -1,0 +1,40 @@
+@import "../../../styles.scss";
+
+:root {
+  --url: "";
+  --mobile-url: "";
+}
+
+.header {
+  @extend .paragraph-gap-0;
+  @extend .full-width;
+
+  grid-column: span 3;
+
+  .header {
+    position: absolute;
+  }
+
+  .image {
+    width: 100%;
+    content: var(--url);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    .header {
+      height: 100%;
+    }
+
+    .image {
+      content: var(--mobile-url);
+    }
+  }
+
+  ::ng-deep.menu-btn,
+  ::ng-deep.close {
+    display: flex;
+    padding: 1.5rem;
+  }
+}
