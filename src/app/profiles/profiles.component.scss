@@ -3,9 +3,385 @@
 .profiles {
   background-color: var(--dark-background-first);
   color: var(--dark-text-color);
+
+  .title {
+    color: var(--dark-title-color);
+  }
+
+  .overview {
+    @extend .section;
+
+    gap: 3rem;
+  }
+
+  .research {
+    @extend .section;
+
+    align-self: flex-start;
+
+    .questions {
+      @extend .text-bold;
+
+      color: var(--dark-title-color);
+    }
+
+    .question {
+      @include left-border(--dark-blue, 0.5rem);
+    }
+  }
+
+  .personas {
+    @extend .section;
+
+    .cards {
+      @extend .paragraph-gap-3;
+
+      width: 100%;
+
+      .two-cards {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        @extend .paragraph-gap-3;
+
+        background-color: var(--dark-card-background);
+        border: 1px var(--dark-border) solid;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        flex: 1;
+
+        .title {
+          display: flex;
+          gap: 1rem;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+
+        .chip-title-blue {
+          @include chip(--dark-blue);
+        }
+
+        .chip-title-red {
+          @include chip(--dark-red);
+        }
+      }
+    }
+  }
+
+  .first-filler {
+    grid-column-start: 1;
+    background-color: var(--dark-background-second);
+  }
+
+  .second-filler {
+    grid-column-start: 3;
+    background-color: var(--dark-background-second);
+  }
+
+  .concept {
+    @extend .section;
+
+    padding: 5rem 0;
+    background-color: var(--dark-background-second);
+
+    .cards {
+      @extend .paragraph-gap-3;
+
+      width: 100%;
+
+      .two-cards {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .card {
+        @extend .paragraph-gap-2;
+
+        background-color: var(--dark-card-background);
+        border: 1px var(--dark-border) solid;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        flex: 1;
+
+        .chip-title-blue {
+          @include chip(--dark-blue);
+        }
+
+        .chip-title-green {
+          @include chip(--dark-green);
+        }
+      }
+    }
+
+    .images {
+      @extend .paragraph-gap-0;
+
+      gap: 5rem;
+      padding-top: 3.5rem;
+      width: 100%;
+    }
+  }
+
+  .disadvantages {
+    @extend .section;
+
+    gap: 2.5rem;
+    align-items: center;
+
+    .title {
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+
+      .card {
+        @extend .paragraph-gap-2;
+
+        background-color: var(--dark-card-background);
+        border: 1px var(--dark-border) solid;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        flex: 1;
+
+        .card-header {
+          display: flex;
+          gap: 0.5rem;
+          padding: 0.25rem 0.25rem;
+          border-radius: 0.25rem;
+          background-color: var(--dark-border);
+
+          img {
+            display: flex;
+            align-self: start;
+            padding-top: 0.6rem;
+          }
+        }
+
+        .text-bold {
+          font-weight: 600;
+        }
+
+        .content::after {
+          content: "";
+          display: flex;
+          height: 1.6rem;
+        }
+
+        .disadvantage {
+          @include left-border(--dark-red, 0.5rem);
+
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .iteration {
+    @extend .section;
+
+    gap: 1.5rem;
+    padding: 5rem 0;
+    background-color: var(--dark-background-second);
+
+    .card {
+      @extend .paragraph-gap-2;
+
+      background-color: var(--dark-card-background);
+      border: 1px var(--dark-border) solid;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      flex: 1;
+
+      .chip-title-blue {
+        @include chip(--dark-blue);
+      }
+    }
+  }
+
+  .flow {
+    @extend .section;
+
+    grid-column: span 3;
+    padding: 0 10rem;
+  }
+
+  .clips {
+    @extend .section;
+
+    // display: grid;
+    grid-column: span 3;
+    padding: 5rem 0;
+    gap: 10rem;
+    align-items: center;
+    background-color: var(--dark-background-second);
+    // grid-template-columns: 1fr auto 1fr;
+    // grid-row-gap: 10rem;
+
+    .clip {
+      // grid-column: 2;
+      // width: auto;
+      display: flex;
+      gap: 5rem;
+
+      .step {
+        @extend .paragraph-gap-2;
+
+        align-self: center;
+      }
+
+      .colored-text {
+        color: var(--dark-blue);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .usability-testing {
+    @extend .section;
+
+    .cards {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+
+      .card {
+        @extend .paragraph-gap-2;
+
+        background-color: var(--dark-card-background);
+        border: 1px var(--dark-border) solid;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        flex: 1 1 auto;
+        width: min-content;
+
+        .chip-title-blue {
+          @include chip(--dark-blue);
+        }
+
+        .text-bold {
+          font-weight: 600;
+        }
+
+        .numbers-list {
+          display: list-item;
+          list-style: auto inside;
+        }
+      }
+    }
+  }
+
+  .visual-language {
+    @extend .section;
+
+    gap: 1.5rem;
+    padding-bottom: 8.25rem;
+
+    .text-bold {
+      font-weight: 600;
+    }
+
+    .images {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+
+      .visual1 {
+        content: url("../../assets/profiles/visual1.svg");
+      }
+    }
+  }
+
+  ul {
+    padding-left: 1rem;
+    margin: 0;
+  }
+}
+
+::ng-deep.loading {
+  background-color: var(--dark-background-first);
 }
 
 @media (max-width: 600px) {
   .profiles {
+    .personas {
+      .cards {
+        .card {
+          .title {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+
+    .concept {
+      width: -webkit-fill-available;
+      align-items: center;
+      padding: 4rem 1.5rem;
+
+      .images {
+        gap: 1.5rem;
+        padding-top: 0.5rem;
+      }
+    }
+
+    .iteration {
+      width: -webkit-fill-available;
+      align-items: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .flow {
+      width: 100%;
+
+      img {
+        padding: 0 1.5rem;
+      }
+    }
+
+    .clips {
+      gap: 6rem;
+      padding: 5rem 1.5rem;
+
+      .clip {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+    }
+
+    .usability-testing {
+      .cards {
+        .card {
+          width: auto;
+        }
+      }
+    }
+
+    .visual-language {
+      width: 100%;
+      padding-bottom: 4rem;
+
+      > div {
+        padding: 0 1.5rem;
+      }
+
+      .sub-title {
+        font-size: 1.25rem;
+      }
+
+      .images {
+        .visual1 {
+          content: url("../../assets/profiles/visual1-mobile.svg");
+        }
+      }
+    }
   }
 }

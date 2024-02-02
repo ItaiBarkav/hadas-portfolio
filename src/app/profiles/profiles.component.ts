@@ -1,12 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AnimationOptions, LottieModule } from 'ngx-lottie';
 import { AbstractCaseComponent } from '../case/abstract-case/abstract-case.component';
 import { CaseHeaderComponent } from '../case/case-header/case-header.component';
 
 @Component({
   selector: 'app-profiles',
   standalone: true,
-  imports: [CommonModule, AbstractCaseComponent, CaseHeaderComponent],
+  imports: [
+    CommonModule,
+    AbstractCaseComponent,
+    CaseHeaderComponent,
+    LottieModule,
+  ],
   templateUrl: './profiles.component.html',
   styleUrls: [
     './profiles.component.scss',
@@ -14,6 +20,9 @@ import { CaseHeaderComponent } from '../case/case-header/case-header.component';
   ],
 })
 export class ProfilesComponent {
-  headerImg = '../../assets/profiles/header.png';
+  headerImg = '../../assets/profiles/header.svg';
   mobileHeaderImg = '../../assets/profiles/header-mobile.png';
+  visual2: AnimationOptions = {
+    path: '../../assets/profiles/visual2.json',
+  };
 }

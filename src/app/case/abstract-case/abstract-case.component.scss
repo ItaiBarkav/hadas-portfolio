@@ -12,3 +12,11 @@
 .case-header {
   grid-column: span 3;
 }
+
+@media (max-width: 600px) {
+  .case-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}

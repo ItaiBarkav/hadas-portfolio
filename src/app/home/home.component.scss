@@ -61,6 +61,22 @@
     align-items: center;
     gap: 5rem;
 
+    .profiles {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      content: url("../../assets/profiles.svg");
+
+      &::after {
+        content: url("../../assets/profiles-hover.svg");
+        visibility: hidden;
+      }
+
+      &:hover {
+        content: url("../../assets/profiles-hover.svg");
+      }
+    }
+
     .threats {
       width: 100%;
       height: auto;
@@ -178,6 +194,10 @@
 
     .projects {
       gap: 2rem;
+
+      .profiles {
+        content: url("../../assets/profiles-mobile.svg");
+      }
 
       .threats {
         content: url("../../assets/threat-mobile.svg");

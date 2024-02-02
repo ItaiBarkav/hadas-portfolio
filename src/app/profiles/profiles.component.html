@@ -5,5 +5,372 @@
       [headerImg]="headerImg"
       [mobileHeaderImg]="mobileHeaderImg"
     ></app-case-header>
+
+    <div class="overview">
+      <div class="paragraph-gap-2">
+        <span class="title">Overview</span>
+        <span>
+          Zoharim is a command and control system used by many different
+          position holders in the Navy. <br class="hide-on-mobile" />
+          Ship users and shore users have completely different setups. <br />
+          The setup wasn't saved for future use, so every time they loaded it,
+          they had to redo it.
+        </span>
+      </div>
+      <div class="paragraph-gap-2">
+        <span class="title">The challenge</span>
+        <span>
+          Design a comprehensive infrastructure to support saving user settings
+          and enable broad use across various<br class="hide-on-mobile" />
+          computer stands, while simultaneously preventing: <br />
+          <ul>
+            <li>Accumulation of junk files.</li>
+            <li>User errors impacting different computer stands.</li>
+          </ul>
+        </span>
+      </div>
+    </div>
+
+    <div class="research">
+      <span class="title">Research</span>
+      <span>
+        To better understand the problem, I had interviews with operational
+        personnel.
+      </span>
+      <span class="questions">Some of the questions I asked were:</span>
+      <span class="question">Describe your setup process step by step.</span>
+      <span class="question">Is the setup dynamic?</span>
+      <span class="question"
+        >Is it common for some position holders to use the same settings?</span
+      >
+      <span class="questions">Insights:</span>
+      <span class="question">the setup is a long and tiring process.</span>
+      <span class="question"
+        >Since it isn't automatically saved, they have to redo it too
+        often.</span
+      >
+      <span class="question"
+        >They usually use the same settings, however operational events that
+        take place can alter those<br class="hide-on-mobile" />settings and
+        require a different setup.</span
+      >
+    </div>
+
+    <div class="personas">
+      <span class="title">Personas</span>
+      <span>
+        Users of all types can use this feature, from novices to admins, from
+        ship users to shore users.<br class="hide-on-mobile" />
+        This feature was born out of the same pain points for all types of
+        users.
+      </span>
+      <div class="cards">
+        <div class="two-cards">
+          <div class="card">
+            <div class="paragraph-gap-1">
+              <span class="title"
+                >Novices
+                <img src="../../assets/icons/star1.svg" />
+              </span>
+              <span>They have minimal interaction with the system.</span>
+            </div>
+            <div class="paragraph-gap-2">
+              <span class="chip-title-blue">needs</span>
+              <ul class="paragraph-gap-2">
+                <li>Easily understand which profile is used.</li>
+                <li>Be aware of profile content and consequences.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <div class="paragraph-gap-1">
+              <span class="title"
+                >mid level & admins
+                <img src="../../assets/icons/star2.svg" />
+              </span>
+              <span
+                >They are well-versed in the system and can assist other
+                users.</span
+              >
+            </div>
+            <div class="paragraph-gap-2">
+              <span class="chip-title-blue">needs</span>
+              <ul class="paragraph-gap-2">
+                <li>
+                  Save their settings into a profile which they can reuse.
+                </li>
+                <li>Easily understand which profile is used.</li>
+                <li>Be aware of profile content and consequences.</li>
+                <li>Manage profile list in their station.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="paragraph-gap-2">
+            <span class="chip-title-red">Mutual Pain Points</span>
+            <ul class="paragraph-gap-2">
+              <li>
+                Restarts reset settings, which makes setting up too repetitive.
+              </li>
+              <li>
+                Inability to use the same settings in different computer stands.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="first-filler hide-on-mobile hide-on-mobile"></div>
+    <div class="concept">
+      <span class="title">Creating the initial concept</span>
+      <div class="cards">
+        <div class="card">
+          <span class="chip-title-blue">Goals</span>
+          <ul class="paragraph-gap-2">
+            <li>Allow users in different stands to use the same settings.</li>
+            <li>Make it clear which settings can be saved for future use.</li>
+            <li>Make the setup process faster than it is today.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="chip-title-blue">Concept</span>
+          <ul class="paragraph-gap-2">
+            <li>
+              Create ready-to-use profiles that contain settings relevant to
+              each position holder.
+            </li>
+            <li>
+              Create a separate setup process for profile creation, containing
+              only page parts relevant To profiles,<br class="hide-on-mobile" />
+              In which users can skip steps and only adjust the settings they
+              want.
+            </li>
+          </ul>
+          <span class="chip-title-green">Advantages</span>
+          <ul class="paragraph-gap-2">
+            <li>
+              Creating a new profile always relies on an existing profile, so
+              you never start from scratch.
+            </li>
+            <li>
+              By creating a separate process to create a profile, it is clear
+              which settings can be saved,<br />
+              It also gives users 1 place to manage their profile.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="images">
+        <img src="../../assets/profiles/concept1.svg" />
+        <img src="../../assets/profiles/concept2.svg" />
+      </div>
+    </div>
+    <div class="second-filler hide-on-mobile"></div>
+
+    <div class="disadvantages">
+      <span class="title"
+        >After presenting my concept to field personnel,<br />I realized the
+        disadvantages:</span
+      >
+      <div class="cards">
+        <div class="card">
+          <span class="card-header"
+            ><img src="../../assets/icons/dot.svg" />Create a separate setup
+            process.</span
+          >
+          <span
+            ><span class="text-bold">This really means duplicating pages</span>
+            from the system into the<br class="hide-on-mobile" />profile
+            creation process.</span
+          >
+          <span class="disadvantage"
+            >This approach could have caused major confusion for users.</span
+          >
+          <span class="disadvantage"
+            >It would also extend development time.</span
+          >
+        </div>
+        <div class="card">
+          <span class="card-header"
+            ><img src="../../assets/icons/dot.svg" />
+            Create ready-to-use profiles relevant to each role.
+          </span>
+          <span class="content"
+            ><span class="text-bold">Unrealistic expectation.</span>
+          </span>
+          <span class="disadvantage"
+            >Defining each profile would have taken months of research.</span
+          >
+          <span class="disadvantage"
+            >Users would still want to make their own profiles.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="first-filler hide-on-mobile"></div>
+    <div class="iteration">
+      <span class="title">the 2nd (and final) iteration</span>
+      <div class="card">
+        <span class="chip-title-blue">Concept</span>
+        <ul class="paragraph-gap-2">
+          <li>
+            Create ready-to-use profiles for 2 main ship users and 1 for shore
+            users.
+          </li>
+          <li>
+            Incorporate the pages that already exist in the system to create a
+            profile.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="second-filler hide-on-mobile"></div>
+
+    <div class="flow">
+      <img src="../../assets/profiles/flow.svg" />
+    </div>
+
+    <div class="clips">
+      <div class="clip">
+        <div class="step">
+          <span class="paragraph-gap-1">
+            <span>Step 1</span>
+            <span class="title">Adjusting settings</span>
+          </span>
+          <span
+            >To create a profile there must be changes to<br />the settings.<br />(This
+            prevents junk profiles from<br />accumulating).</span
+          >
+        </div>
+        <img src="../../assets/profiles/concept1.svg" />
+      </div>
+      <div class="clip">
+        <div class="step">
+          <span class="paragraph-gap-1">
+            <span>Step 2</span>
+            <span class="title">choosing to create a profile</span>
+          </span>
+          <span
+            >An indication of changes to the current<br />profile is displayed.
+            In the profile menu,<br />
+            there are a few relevant options.
+          </span>
+          <span class="colored-text">
+            Users who want to create a profile click the
+            <br class="hide-on-mobile" />
+            + Create profile button.
+          </span>
+        </div>
+        <img src="../../assets/profiles/concept1.svg" />
+      </div>
+      <div class="clip">
+        <div class="step">
+          <span class="paragraph-gap-1">
+            <span>Step 3</span>
+            <span class="title">verifying & saving</span>
+          </span>
+          <span
+            >Once the profile is loaded, a summary is<br />displayed with all
+            its contents. This helps<br />verify the settings.</span
+          >
+          <span class="colored-text">
+            Modified settings are highlighted to help<br />draw attention to
+            them.
+          </span>
+        </div>
+        <img src="../../assets/profiles/concept1.svg" />
+      </div>
+    </div>
+
+    <div class="usability-testing">
+      <span class="title">Usability Testing</span>
+      <div class="cards">
+        <div class="card">
+          <span class="chip-title-blue">Goal</span>
+          <span
+            >Usability evaluation and measurement of user understanding.</span
+          >
+          <div class="paragraph-gap-1">
+            <span class="text-bold"> I prepared 2 tasks: </span>
+            <span class="numbers-list">Create a new profile.</span>
+            <span class="numbers-list">Edit a profile.</span>
+          </div>
+          <div class="paragraph-gap-1">
+            <span class="text-bold"
+              >Through these tasks, I aimed to gather insights about:</span
+            >
+            <ul class="paragraph-gap-1">
+              <li>
+                Can users understand the changes<br
+                  class="hide-on-mobile"
+                />shown in the summary?
+              </li>
+              <li>
+                Do users understand that their<br
+                  class="hide-on-mobile"
+                />editing affects other users?
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <span class="chip-title-blue">Method</span>
+          <span
+            >My teammate Heni Turkian visited a base with different types of
+            users. She tested 5 of them and returned with the results.</span
+          >
+        </div>
+        <div class="card">
+          <span class="chip-title-blue">Results</span>
+          <span class="text-bold"
+            >Users understood the contents and changes of their profiles, as
+            well as the effects of editing.</span
+          >
+          <span
+            >However, Heni discovered that the microcopy of some buttons wasn't
+            clear enough. Which made users fear clicking them. Those issues led
+            to modifications and retests.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="visual-language">
+      <div class="paragraph-gap-2">
+        <span class="title">Visual language</span>
+        <span
+          >Working with a design system in place,<br class="show-on-mobile" />I
+          had a lot of visuals ready for use.
+        </span>
+      </div>
+      <div class="paragraph-gap-2">
+        <span class="sub-title text-bold">So what have I added?</span>
+        <div class="paragraph-gap-1">
+          <span class="text-bold">Geometric shapes</span>
+          <span
+            >I used geometric shapes to give the design more visual interest and
+            dynamism.<br />
+            It prevented it from feeling flat and monotonous, adding a touch of
+            intrigue without being overwhelming.</span
+          >
+        </div>
+        <div class="paragraph-gap-1">
+          <span class="text-bold">Personalization via color </span>
+          <span
+            >The colors I picked for the profiles are balanced, muted enough for
+            dark mode,<br />
+            but noticeable enough to stand out.</span
+          >
+        </div>
+      </div>
+      <div class="images">
+        <img class="visual1" />
+        <ng-lottie [options]="visual2"></ng-lottie>
+      </div>
+    </div>
   </div>
 </app-abstract-case>
