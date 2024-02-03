@@ -50,6 +50,7 @@
       .sentence {
         @extend .sub-title;
 
+        padding-top: 0.5rem;
         color: var(--sub-title-color);
       }
     }
@@ -188,6 +189,8 @@
 
         .sentence {
           font-size: 1.25rem;
+          padding: 0;
+          line-height: 165%;
         }
       }
     }

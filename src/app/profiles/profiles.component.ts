@@ -21,7 +21,7 @@ import { CaseHeaderComponent } from '../case/case-header/case-header.component';
 })
 export class ProfilesComponent {
   headerImg = '../../assets/profiles/header.svg';
-  mobileHeaderImg = '../../assets/profiles/header-mobile.png';
+  mobileHeaderImg = '../../assets/profiles/header-mobile.svg';
   visual2: AnimationOptions = {
     path: '../../assets/profiles/visual2.json',
   };

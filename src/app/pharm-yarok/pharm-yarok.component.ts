@@ -25,7 +25,7 @@ import { Persona } from './personas/types';
 })
 export class PharmYarokComponent {
   headerImg = '../../assets/pharmYarok/header.png';
-  mobileHeaderImg = '../../assets/pharmYarok/header-mobile.png';
+  mobileHeaderImg = '../../assets/pharmYarok/header-mobile.svg';
   stories: Image[] = [
     {
       path: '../../assets/pharmYarok/userStory1.svg',
