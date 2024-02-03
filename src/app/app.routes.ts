@@ -5,9 +5,9 @@ import { ProfilesComponent } from './profiles/profiles.component';
 import { ThreatsComponent } from './threats/threats.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'pharm-yarok', component: PharmYarokComponent },
-  { path: 'threats', component: ThreatsComponent },
-  { path: 'profiles', component: ProfilesComponent },
+  { path: '', loadComponent: () => HomeComponent },
+  { path: 'pharm-yarok', loadComponent: () => PharmYarokComponent },
+  { path: 'threats', loadComponent: () => ThreatsComponent },
+  { path: 'profiles', loadComponent: () => ProfilesComponent },
   { path: '**', redirectTo: '' },
 ];

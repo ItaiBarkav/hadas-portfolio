@@ -11,9 +11,10 @@ import { MaterialModule } from '../material.module';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  @Input() selectedLink: string | null = null;
+
   homeUrl = '/';
   aboutUrl = '#about';
-  @Input() selectedLink: string | null = null;
   _toggleMenu = false;
 
   updateSelectedLink(selectedLink: string): void {

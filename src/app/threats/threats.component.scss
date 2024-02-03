@@ -89,8 +89,10 @@
           border-radius: 0.5rem;
           padding: 1.5rem;
           flex: 1;
+          max-width: 22.5rem;
 
           .header {
+            display: flex;
             flex-direction: row;
             gap: 1rem;
 
@@ -104,7 +106,6 @@
             content: "";
             display: flex;
             height: 1.6rem;
-            visibility: visible;
           }
 
           .chip-title-blue {
@@ -125,9 +126,8 @@
     grid-column: span 3;
     gap: 5rem;
     background-color: var(--dark-background-second);
-    padding: 5rem 0;
+    padding: 5rem 4rem;
     text-align: center;
-    width: 100%;
 
     .content {
       @extend .paragraph-gap-3;
@@ -178,8 +178,7 @@
     grid-column: span 3;
     flex-direction: row;
     justify-content: center;
-    padding-left: 0;
-    width: 100%;
+    padding: 0 4rem;
 
     .mobile-order {
       display: flex;
@@ -238,7 +237,7 @@
 
   .dashboard {
     direction: rtl;
-    padding: 8.25rem 0;
+    padding: 8.25rem 4rem;
     background-color: var(--dark-background-second);
   }
 
@@ -277,12 +276,13 @@
     gap: 2rem;
     grid-column: span 3;
     justify-content: center;
+    padding: 0 4rem;
     background-color: var(--dark-background-second);
 
     .overview-column {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
+      @extend .paragraph-gap-4;
+
+      min-width: 0;
     }
   }
 }
