@@ -172,6 +172,10 @@
       padding: 1.5rem;
       width: auto;
 
+      ::ng-deep.menu-position {
+        margin-top: -1.5rem;
+      }
+
       ::ng-deep.menu-btn {
         content: url("../../assets/icons/menu.svg") !important;
       }
