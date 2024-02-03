@@ -45,7 +45,7 @@
 
     .menu {
       width: 100%;
-      height: -webkit-fill-available;
+      height: 100%;
       position: absolute;
       left: 0;
       background: var(--card-background);
@@ -67,12 +67,11 @@
         gap: 1rem;
         align-items: center;
         position: absolute;
-        top: 20%;
+        top: 10%;
 
         .link {
           font-size: 1.125rem;
           font-weight: 500;
-          padding: 1rem 1.5rem;
         }
 
         .selected-link {

@@ -101,3 +101,10 @@ body {
     display: none !important;
   }
 }
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+    line-height: 160%;
+  }
+}

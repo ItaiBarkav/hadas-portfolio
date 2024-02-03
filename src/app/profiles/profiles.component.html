@@ -13,8 +13,8 @@
           Zoharim is a command and control system used by many different
           position holders in the Navy. <br class="hide-on-mobile" />
           Ship users and shore users have completely different setups. <br />
-          The setup wasn't saved for future use, so every time they loaded it,
-          they had to redo it.
+          The setup wasn't saved for future use, <br class="show-on-mobile" />so
+          every time they loaded it, they had to redo it.
         </span>
       </div>
       <div class="paragraph-gap-2">
@@ -126,28 +126,32 @@
     <div class="concept">
       <span class="title">Creating the initial concept</span>
       <div class="cards">
-        <div class="card">
-          <span class="chip-title-blue">Goals</span>
-          <ul class="paragraph-gap-2">
-            <li>Allow users in different stands to use the same settings.</li>
-            <li>Make it clear which settings can be saved for future use.</li>
-            <li>Make the setup process faster than it is today.</li>
-          </ul>
+        <div class="two-cards">
+          <div class="card">
+            <span class="chip-title-blue">Goals</span>
+            <ul class="paragraph-gap-2">
+              <li>Allow users in different stands to use the same settings.</li>
+              <li>Make it clear which settings can be saved for future use.</li>
+              <li>Make the setup process faster than it is today.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="chip-title-blue">Concept</span>
+            <ul class="paragraph-gap-2">
+              <li>
+                Create ready-to-use profiles that contain settings relevant to
+                <br class="hide-on-mobile" />each position holder.
+              </li>
+              <li>
+                Create a separate setup process for profile creation,
+                <br class="hide-on-mobile" />containing only page parts relevant
+                to profiles, <br class="hide-on-mobile" />in which users can
+                skip steps and only adjust the settings they want.
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="card">
-          <span class="chip-title-blue">Concept</span>
-          <ul class="paragraph-gap-2">
-            <li>
-              Create ready-to-use profiles that contain settings relevant to
-              each position holder.
-            </li>
-            <li>
-              Create a separate setup process for profile creation, containing
-              only page parts relevant To profiles,<br class="hide-on-mobile" />
-              In which users can skip steps and only adjust the settings they
-              want.
-            </li>
-          </ul>
           <span class="chip-title-green">Advantages</span>
           <ul class="paragraph-gap-2">
             <li>
@@ -238,51 +242,60 @@
       <div class="clip">
         <div class="step">
           <span class="paragraph-gap-1">
-            <span>Step 1</span>
+            <span class="sub-title">Step 1</span>
             <span class="title">Adjusting settings</span>
           </span>
-          <span
-            >To create a profile there must be changes to<br />the settings.<br />(This
-            prevents junk profiles from<br />accumulating).</span
+          <span class="content"
+            >To create a profile there must be changes to<br
+              class="hide-on-mobile"
+            />the settings.<br />(This prevents junk profiles from
+            accumulating).</span
           >
         </div>
-        <img src="../../assets/profiles/concept1.svg" />
+        <video [loop]="true" [autoplay]="true">
+          <source src="../../assets/profiles/step1.mp4" />
+        </video>
       </div>
       <div class="clip">
         <div class="step">
           <span class="paragraph-gap-1">
-            <span>Step 2</span>
+            <span class="sub-title">Step 2</span>
             <span class="title">choosing to create a profile</span>
           </span>
-          <span
-            >An indication of changes to the current<br />profile is displayed.
-            In the profile menu,<br />
+          <span class="content"
+            >An indication of changes to the current profile
+            <br class="hide-on-mobile" />is displayed. In the profile menu,<br />
             there are a few relevant options.
           </span>
-          <span class="colored-text">
+          <span class="colored-text content">
             Users who want to create a profile click the
             <br class="hide-on-mobile" />
             + Create profile button.
           </span>
         </div>
-        <img src="../../assets/profiles/concept1.svg" />
+        <video [loop]="true" [autoplay]="true">
+          <source src="../../assets/profiles/step2.mp4" />
+        </video>
       </div>
       <div class="clip">
         <div class="step">
           <span class="paragraph-gap-1">
-            <span>Step 3</span>
+            <span class="sub-title">Step 3</span>
             <span class="title">verifying & saving</span>
           </span>
-          <span
-            >Once the profile is loaded, a summary is<br />displayed with all
-            its contents. This helps<br />verify the settings.</span
+          <span class="content"
+            >Once the profile is loaded, a summary is displayed
+            <br class="hide-on-mobile" />with all its contents. This helps
+            verify the settings.</span
           >
-          <span class="colored-text">
-            Modified settings are highlighted to help<br />draw attention to
-            them.
+          <span class="colored-text content">
+            Modified settings are highlighted to help draw
+            <br class="hide-on-mobile" />attention to them.
           </span>
         </div>
-        <img src="../../assets/profiles/concept1.svg" />
+        <video [loop]="true" [autoplay]="true">
+          <source src="../../assets/profiles/step3.mp4" />
+        </video>
       </div>
     </div>
 
@@ -304,37 +317,37 @@
               >Through these tasks, I aimed to gather insights about:</span
             >
             <ul class="paragraph-gap-1">
+              <li>Can users understand the changes shown in the summary?</li>
               <li>
-                Can users understand the changes<br
-                  class="hide-on-mobile"
-                />shown in the summary?
-              </li>
-              <li>
-                Do users understand that their<br
-                  class="hide-on-mobile"
-                />editing affects other users?
+                Do users understand that their editing affects other users?
               </li>
             </ul>
           </div>
         </div>
-        <div class="card">
-          <span class="chip-title-blue">Method</span>
-          <span
-            >My teammate Heni Turkian visited a base with different types of
-            users. She tested 5 of them and returned with the results.</span
-          >
-        </div>
-        <div class="card">
-          <span class="chip-title-blue">Results</span>
-          <span class="text-bold"
-            >Users understood the contents and changes of their profiles, as
-            well as the effects of editing.</span
-          >
-          <span
-            >However, Heni discovered that the microcopy of some buttons wasn't
-            clear enough. Which made users fear clicking them. Those issues led
-            to modifications and retests.</span
-          >
+        <div class="two-cards">
+          <div class="card">
+            <span class="chip-title-blue">Method</span>
+            <span
+              >My teammate Heni Turkian visited a base with different
+              <br class="hide-on-mobile" />types of users. She tested 5 of them
+              and returned with the results.</span
+            >
+          </div>
+          <div class="card">
+            <span class="chip-title-blue">Results</span>
+            <span class="text-bold"
+              >Users understood the contents and changes of their profiles,
+              <br class="hide-on-mobile" />as well as the effects of
+              editing.</span
+            >
+            <span
+              >However, Heni discovered that the microcopy of some buttons
+              <br class="hide-on-mobile" />
+              wasn't clear enough. Which made users fear clicking them. Those
+              <br class="hide-on-mobile" />
+              issues led to modifications and retests.</span
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -344,11 +357,12 @@
         <span class="title">Visual language</span>
         <span
           >Working with a design system in place,<br class="show-on-mobile" />I
-          had a lot of visuals ready for use.
+          had a lot of visuals ready to use.<br />
+          To add character to the feature I added
+          <br class="show-on-mobile" />the following:
         </span>
       </div>
       <div class="paragraph-gap-2">
-        <span class="sub-title text-bold">So what have I added?</span>
         <div class="paragraph-gap-1">
           <span class="text-bold">Geometric shapes</span>
           <span
