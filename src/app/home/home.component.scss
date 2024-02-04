@@ -204,14 +204,26 @@
 
       .profiles {
         content: url("../../assets/profiles-mobile.svg");
+
+        &:hover {
+          content: url("../../assets/profiles-mobile.svg");
+        }
       }
 
       .threats {
         content: url("../../assets/threat-mobile.svg");
+
+        &:hover {
+          content: url("../../assets/threat-mobile.svg");
+        }
       }
 
       .pharm-yarok {
         content: url("../../assets/pharmYarok-mobile.svg");
+
+        &:hover {
+          content: url("../../assets/pharmYarok-mobile.svg");
+        }
       }
     }
 
