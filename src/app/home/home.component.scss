@@ -50,8 +50,8 @@
       .sentence {
         @extend .sub-title;
 
-        padding-top: 0.5rem;
-        color: var(--sub-title-color);
+        font-size: 2.5rem;
+        line-height: 160%;
       }
     }
   }
