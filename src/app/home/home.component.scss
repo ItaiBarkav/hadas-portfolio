@@ -195,6 +195,10 @@
           font-size: 1.25rem;
           padding: 0;
           line-height: 165%;
+
+          .hide-on-mobile {
+            display: none !important;
+          }
         }
       }
     }
