@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { inject } from '@vercel/analytics';
 import { register } from 'swiper/element/bundle';
 
 @Component({
@@ -14,5 +15,6 @@ export class AppComponent {
 
   constructor() {
     register();
+    inject();
   }
 }
