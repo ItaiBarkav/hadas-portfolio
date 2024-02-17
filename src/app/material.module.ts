@@ -6,6 +6,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
@@ -36,6 +37,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatDialogModule,
     MatCheckboxModule,
     ScrollingModule,
+    MatFormFieldModule,
   ],
   exports: [
     MatInputModule,
@@ -55,6 +57,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatDialogModule,
     MatCheckboxModule,
     ScrollingModule,
+    MatFormFieldModule,
   ],
 })
 export class MaterialModule {}
