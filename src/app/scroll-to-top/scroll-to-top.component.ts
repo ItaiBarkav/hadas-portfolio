@@ -29,6 +29,6 @@ export class ScrollToTopComponent {
   }
 
   scrollToTop(): void {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

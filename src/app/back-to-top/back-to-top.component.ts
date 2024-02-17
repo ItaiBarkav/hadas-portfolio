@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
 })
 export class BackToTopComponent {
   backToTop(): void {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
