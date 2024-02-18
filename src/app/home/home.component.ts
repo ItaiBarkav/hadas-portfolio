@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { AbstractCaseComponent } from '../case/abstract-case/abstract-case.component';
 import { HeaderComponent } from '../header/header.component';
+import { PROTECTED } from '../password-dialog/config';
 import { PasswordDialogComponent } from '../password-dialog/password-dialog.component';
 
 @Component({
@@ -32,7 +33,7 @@ export class HomeComponent implements AfterViewInit {
   }
 
   goto(path: string, isProtected?: boolean): void {
-    if (isProtected) {
+    if (isProtected && localStorage.getItem(PROTECTED) === null) {
       const passwordDialogRef = this.matDialog.open(PasswordDialogComponent);
       passwordDialogRef
         .afterClosed()

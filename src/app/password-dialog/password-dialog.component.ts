@@ -8,7 +8,7 @@ import {
 } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MaterialModule } from '../material.module';
-import { PASSWORD } from './config';
+import { PASSWORD, PROTECTED, TRUE } from './config';
 
 @Component({
   selector: 'app-password-dialog',
@@ -33,6 +33,7 @@ export class PasswordDialogComponent {
   submit(): boolean {
     if (this.password.value === PASSWORD) {
       this.mat.close(true);
+      localStorage.setItem(PROTECTED, TRUE);
       return true;
     }
 
