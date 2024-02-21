@@ -1,11 +1,11 @@
 {
   "hosting": {
-    "public": "dist/hadas-portfolio",
+    "public": "dist/hadas-portfolio/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
-        "destination": "/browser/index.html"
+        "destination": "index.html"
       }
     ]
   }
