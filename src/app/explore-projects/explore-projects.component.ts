@@ -21,7 +21,10 @@ export class ExploreProjectsComponent {
   constructor(private router: Router, private matDialog: MatDialog) {}
 
   goTo(project: string): void {
-    if (project !== 'pharm-yarok' && localStorage.getItem(PROTECTED) === null) {
+    if (
+      (project === 'threats' || project === 'profiles') &&
+      localStorage.getItem(PROTECTED) === null
+    ) {
       const passwordDialogRef = this.matDialog.open(PasswordDialogComponent);
       passwordDialogRef
         .afterClosed()
