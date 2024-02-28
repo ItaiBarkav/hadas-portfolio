@@ -83,15 +83,6 @@
       height: auto;
       cursor: pointer;
       content: url("../../assets/threat.svg");
-
-      &::after {
-        content: url("../../assets/threat-hover.svg");
-        visibility: hidden;
-      }
-
-      &:hover {
-        content: url("../../assets/threat-hover.svg");
-      }
     }
 
     .pharm-yarok {
