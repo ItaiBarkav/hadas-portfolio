@@ -1,22 +1,47 @@
 @import "../../styles.scss";
 
 .footer {
-  display: flex;
+  @extend .paragraph-gap-5;
+
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
-  font-size: 1rem;
-  font-weight: 500;
-  gap: 3.5rem;
+  padding: 3.5rem 0;
   border-top: 1px var(--border-color-first) solid;
-  flex-wrap: wrap;
 
-  .info {
+  .title {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    .colored {
+      color: var(--footer-color);
+    }
+  }
+
+  .infos {
     display: flex;
+    justify-content: center;
     align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 
-    .icon {
-      margin-right: 0.5rem;
+    .info {
+      display: flex;
+      align-items: center;
+      border: 1px var(--border-color-first) solid;
+      border-radius: 0.5rem;
+      padding: 0.938rem;
+      line-height: 0;
+
+      &:hover {
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+      }
+
+      .icon {
+        margin-right: 0.5rem;
+      }
     }
   }
 }
@@ -25,6 +50,18 @@
   .footer {
     flex-direction: column;
     align-items: baseline;
-    padding: 2rem 4.5rem;
+    padding: 2.5rem 1.5rem;
+
+    .title {
+      font-size: 1.5rem;
+      align-self: center;
+    }
+
+    .infos {
+      .info {
+        width: 100%;
+        justify-content: center;
+      }
+    }
   }
 }

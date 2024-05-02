@@ -1,85 +1,98 @@
 <app-abstract-case>
   <div class="home">
     <div class="mobile-padding">
-      <app-header [selectedLink]="'home'" class="full-width"></app-header>
+      <app-header class="full-width"></app-header>
       <div class="hadas">
         <img class="photo" src="../../assets/hadas.svg" />
         <div class="intro">
           <span class="header">Hi, I'm Hadas</span>
 
           <span class="sentence"
-            >Currently a product designer<br class="show-on-mobile" />
-            for the Israeli Navy, <br />Crafting user-centered solutions<br
-              class="show-on-mobile"
-            />
-            to simplify complex systems.</span
-          >
+            >I create clean user-centered
+            <br class="show-on-mobile" />solutions<br class="hide-on-mobile" />
+            that empower users and <br class="show-on-mobile" />streamline
+            complex processes
+          </span>
+          <div class="about-me">
+            <div class="about-section">
+              <img src="../../assets/icons/daimond.svg" />
+              <span>
+                A driven, passionate designer<br />with 3 years experience
+              </span>
+            </div>
+            <mat-divider class="hide-on-mobile" vertical></mat-divider>
+            <mat-divider class="show-on-mobile divider"></mat-divider>
+            <div class="about-section">
+              <img src="../../assets/icons/anchor.svg" />
+              <span
+                >Currently a product designer<br />for the Israeli Navy</span
+              >
+            </div>
+            <mat-divider class="hide-on-mobile" vertical></mat-divider>
+            <mat-divider class="show-on-mobile divider"></mat-divider>
+            <div class="about-section">
+              <img src="../../assets/icons/hat.svg" />
+              <span
+                >A 2nd year psychology student<br />at the Open University</span
+              >
+            </div>
+          </div>
         </div>
       </div>
       <div class="projects">
-        <img class="profiles" (click)="goto('profiles')" />
-        <img class="threats" (click)="goto('threats', true)" />
-        <img class="pharm-yarok" (click)="goto('pharm-yarok')" />
-      </div>
-      <div id="about" class="about">
-        <div class="card">
-          <span class="title">About me</span>
-          <span class="content content-padding">
-            <span>
-              I am a driven, passionate, and eager designer, with 3 years of
-              experience.
-            </span>
-            <span class="hide-on-mobile">
-              <span class="bold">I currently work for the Israeli Navy</span>
-              where I specialize in complex systems <br />
-              which is a true passion of mine. I enjoy collaborating with other
-              designers <br />
-              and developers and learning from them.</span
+        <div class="project" (click)="goto('threats', true)">
+          <img src="../../assets/threat.png" />
+          <div class="info">
+            <span class="title">Threat Control</span>
+            <span class="sub-title">Threat control suite for navy ships</span>
+            <span class="chips"
+              ><span class="chip-blue">Web App</span
+              ><span class="chip-orange">Classified</span></span
             >
-            <span class="show-on-mobile">
-              <span class="bold">I currently work for the Israeli Navy</span>
-              where I specialize in complex systems which is a true passion of
-              mine.<br />
-              I enjoy collaborating with other designers and developers and
-              learning from them.</span
-            >
-            <span
-              >I'm also a 2nd year
-              <span class="bold">
-                psychology student at the Open University.</span
-              ><br />
-              The knowledge I gain in my studies helps tremendously to
-              understand human <br class="hide-on-mobile" />
-              behavior and its flaws and allows me to create better user
-              experiences.</span
-            >
-          </span>
+          </div>
         </div>
-        <div class="card">
-          <span class="title"
-            >Fun Facts <img class="stars" src="../../assets/icons/stars.svg"
-          /></span>
-          <span class="content">
-            <span>Favorite food: <span class="text-bold">Pancakes.</span></span>
-            <span
-              >Hobbies:
-              <span class="text-bold"
-                >working out, baking & making textured art.</span
-              ></span
+        <div class="project" (click)="goto('profiles')">
+          <img src="../../assets/profiles.png" />
+          <div class="info">
+            <span class="title">User Profiles</span>
+            <span class="sub-title">Personalized control for every role</span>
+            <span class="chips"><span class="chip-blue">Web App</span></span>
+          </div>
+        </div>
+        <div class="project" (click)="goto('pharm-yarok')">
+          <img src="../../assets/pharm-yarok.png" />
+          <div class="info">
+            <span class="title">Pharm Yarok</span>
+            <span class="sub-title">Cannabis ordering simplified</span>
+            <span class="chips"
+              ><span class="chip-green">Mobile App</span
+              ><span class="chip-gray">Personal Project</span></span
             >
-            <span
-              >TV genres:
-              <span class="text-bold"
-                >sitcoms, fantasies and dramas.</span
-              ></span
-            >
-            <span
-              >Currently learning: <span class="text-bold">Spanish.</span></span
-            >
-          </span>
+          </div>
+        </div>
+      </div>
+      <div class="beyond">
+        <div class="title">
+          <span class="header"
+            >Beyond <br class="show-on-mobile" />The Portfolio</span
+          >
+          <img src="../../assets/icons/star.svg" />
+        </div>
+        <div class="cards">
+          <div class="card small-card pancakes">
+            <span class="text a">Favorite food</span>
+          </div>
+          <div class="card big-card workout">
+            <span class="text">I try to like</span>
+          </div>
+          <div class="card big-card movie">
+            <span class="text">Favorite movie</span>
+          </div>
+          <div class="card small-card baking">
+            <span class="text">My secret weapon</span>
+          </div>
         </div>
       </div>
     </div>
-    <div></div>
   </div>
 </app-abstract-case>

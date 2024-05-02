@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener, Input } from '@angular/core';
 import { MaterialModule } from '../material.module';
 
 @Component({
@@ -9,4 +9,17 @@ import { MaterialModule } from '../material.module';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {}
+export class FooterComponent implements AfterViewInit {
+  @Input() showTitle = true;
+
+  width = 0;
+
+  ngAfterViewInit(): void {
+    this.width = window.innerWidth;
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.width = window.innerWidth;
+  }
+}

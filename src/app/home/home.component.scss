@@ -50,99 +50,175 @@
       .sentence {
         @extend .sub-title;
 
-        font-size: 2rem;
+        font-size: 1.75rem;
         line-height: 160%;
+      }
+
+      .about-me {
+        display: flex;
+        background: var(--about-me-background);
+        border: 1px var(--border-color-first) solid;
+        border-radius: 1rem;
+        margin-top: 1.75rem;
+        padding: 2rem 1rem;
+
+        .about-section {
+          @extend .paragraph-gap-2;
+
+          font-size: 1.125rem;
+          font-weight: 600;
+          align-items: center;
+          padding: 0 3.5rem;
+
+          img {
+            width: fit-content;
+          }
+        }
       }
     }
   }
 
   .projects {
-    @extend .paragraph-gap-0;
+    display: flex;
+    width: -webkit-fill-available;
+    background-image: url("../../assets/background.png");
+    background-position: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    align-items: center;
-    gap: 5rem;
+    .project {
+      @extend .paragraph-gap-3;
 
-    .profiles {
-      width: 100%;
-      height: auto;
       cursor: pointer;
-      content: url("../../assets/profiles.svg");
+      border: 1px var(--border-color-first) solid;
+      border-radius: 1rem;
+      padding: 1rem 1rem 2rem 1rem;
+      background: var(--card-background);
 
-      &::after {
-        content: url("../../assets/profiles-hover.svg");
-        visibility: hidden;
+      img {
+        width: 100%;
       }
 
-      &:hover {
-        content: url("../../assets/profiles-hover.svg");
-      }
-    }
+      .info {
+        @extend .paragraph-gap-0;
 
-    .threats {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-      content: url("../../assets/threat.svg");
-    }
+        align-items: center;
 
-    .pharm-yarok {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-      content: url("../../assets/pharmYarok.svg");
+        .title {
+          font-size: 2rem;
+          font-weight: 700;
+          color: var(--sub-title-color);
+        }
 
-      &::after {
-        content: url("../../assets/pharmYarok-hover.svg");
-        visibility: hidden;
-      }
+        .sub-title {
+          font-size: 1.125rem;
+          font-weight: 500;
+          margin: 0.25rem 0 1rem 0;
+        }
 
-      &:hover {
-        content: url("../../assets/pharmYarok-hover.svg");
+        .chips {
+          display: flex;
+          gap: 0.75rem;
+
+          .chip-blue {
+            @include chip(--chip-blue);
+          }
+
+          .chip-orange {
+            @include chip(--chip-orange);
+          }
+
+          .chip-green {
+            @include chip(--chip-green);
+          }
+
+          .chip-gray {
+            @include chip(--chip-gray);
+          }
+        }
       }
     }
   }
 
-  .about {
-    display: flex;
-    width: -webkit-fill-available;
-    background-image: url("../../assets/background.svg");
-    background-position: center;
-    gap: 3.5rem;
-    padding: 10.125rem 5rem;
-    justify-content: center;
-    flex-wrap: wrap;
+  .beyond {
+    @extend .paragraph-gap-0;
 
-    .card {
-      @extend .paragraph-gap-3;
+    width: 100%;
+    padding: 10rem 0;
+    background: var(--sub-title-color);
+    gap: 3.75rem;
+    align-items: center;
 
-      max-width: fit-content;
-      border: 2px var(--border-color-first) solid;
-      border-radius: 0.5rem;
-      padding: 3.5rem;
-      background: var(--card-background);
-      flex: 1;
+    .title {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
 
-      .title {
-        display: flex;
-        gap: 1rem;
-        font-size: 2.5rem;
-        font-weight: 700;
+      .header {
+        color: var(--header-color);
       }
+    }
 
-      .content {
-        @extend .paragraph-gap-3;
+    .cards {
+      display: flex;
+      gap: 3.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
 
-        font-size: 1.125rem;
-        font-weight: 400;
-        line-height: 1.75rem;
+      .card {
+        @extend .paragraph-gap-0;
 
-        .bold {
+        background: var(--text-color);
+        border-radius: 1rem;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 100%;
+
+        background-image: url("../../assets/icons/question-mark.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 40%;
+        transition: ease-in-out 0.3s;
+
+        .text {
+          font-size: 1.125rem;
           font-weight: 600;
+          color: var(--dark-text-color);
+          margin-top: 5rem;
+        }
+
+        &:hover .text {
+          display: none;
         }
       }
 
-      .content-padding {
-        padding-right: 1.688rem;
+      .small-card {
+        max-width: 28.75rem;
+        height: 18.75rem;
+      }
+
+      .big-card {
+        max-width: 42.5rem;
+        height: 18.75rem;
+      }
+
+      .pancakes:hover {
+        background-image: url("../../assets/home/pancakes.png");
+      }
+
+      .workout:hover {
+        background-image: url("../../assets/home/workout.png");
+      }
+
+      .movie:hover {
+        background-image: url("../../assets/home/movie.png");
+      }
+
+      .baking:hover {
+        background-image: url("../../assets/home/baking.png");
       }
     }
   }
@@ -160,7 +236,7 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      padding: 1.5rem;
+      padding: 1.5rem 1.5rem 0 1.5rem;
       width: auto;
 
       ::ng-deep.menu-position {
@@ -191,70 +267,65 @@
             display: none !important;
           }
         }
+
+        .about-me {
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 0;
+
+          .about-section {
+            padding: 0;
+          }
+
+          .divider {
+            margin: 2rem 4rem;
+          }
+        }
       }
     }
 
     .projects {
-      gap: 2rem;
+      .project {
+        .info {
+          .title {
+            font-size: 1.25rem;
+          }
 
-      .profiles {
-        content: url("../../assets/profiles-mobile.svg");
-
-        &:hover {
-          content: url("../../assets/profiles-mobile.svg");
-        }
-      }
-
-      .threats {
-        content: url("../../assets/threat-mobile.svg");
-
-        &:hover {
-          content: url("../../assets/threat-mobile.svg");
-        }
-      }
-
-      .pharm-yarok {
-        content: url("../../assets/pharmYarok-mobile.svg");
-
-        &:hover {
-          content: url("../../assets/pharmYarok-mobile.svg");
+          .sub-title,
+          .chips {
+            font-size: 0.875rem;
+          }
         }
       }
     }
 
-    .about {
-      gap: 2rem;
-      padding: 0;
-      background-image: none;
+    .beyond {
+      gap: 2.5rem;
+      padding: 5rem 1.5rem;
 
-      .card {
-        padding: 1rem;
-        gap: 1rem;
-        max-width: none;
-        border-width: 1px;
-        flex: 1 1 auto;
+      .title {
+        .header {
+          font-size: 2.5rem;
+        }
+      }
 
-        .title {
-          font-size: 1.25rem;
-          gap: 0.5rem;
+      .cards {
+        gap: 2.5rem;
 
-          .stars {
-            width: 1.5rem;
-            height: 1.5rem;
-          }
+        .pancakes:hover {
+          background-image: url("../../assets/home/pancakes-mobile.png");
         }
 
-        .content {
-          font-size: 1rem;
-          gap: 1rem;
-
-          .hide-on-mobile {
-            display: none !important;
-          }
+        .workout:hover {
+          background-image: url("../../assets/home/workout-mobile.png");
         }
 
-        .content-padding {
-          padding: 0;
+        .movie:hover {
+          background-image: url("../../assets/home/movie-mobile.png");
+        }
+
+        .baking:hover {
+          background-image: url("../../assets/home/baking-mobile.png");
         }
       }
     }

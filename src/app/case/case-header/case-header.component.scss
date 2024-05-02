@@ -9,16 +9,40 @@
   @extend .paragraph-gap-0;
   @extend .full-width;
 
+  --border-header: #ffffff80;
+  --button-header: #ffffff1f;
+
   grid-column: span 3;
 
   .header {
     position: absolute;
+
+    ::ng-deep.phone {
+      content: url("../../../assets/icons/phone-light.svg") !important;
+    }
+
+    ::ng-deep.mail {
+      content: url("../../../assets/icons/mail-light.svg") !important;
+    }
+
+    ::ng-deep.linkedin {
+      content: url("../../../assets/icons/linkedin-light.svg") !important;
+    }
+
+    ::ng-deep.cv {
+      background: var(--button-header) !important;
+      border: 1px var(--border-header) solid !important;
+    }
   }
 
   .image {
     width: 100%;
     content: var(--url);
   }
+}
+
+::ng-deep.link {
+  color: var(--card-background) !important;
 }
 
 @media (max-width: 600px) {
@@ -35,7 +59,8 @@
   }
 
   ::ng-deep.menu-btn,
-  ::ng-deep.close {
+  ::ng-deep.close,
+  ::ng-deep.logo {
     display: flex;
     padding: 1.5rem;
   }

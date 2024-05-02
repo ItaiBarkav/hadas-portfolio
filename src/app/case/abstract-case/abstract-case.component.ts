@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { BackToTopComponent } from '../../back-to-top/back-to-top.component';
 import { ExploreProjectsComponent } from '../../explore-projects/explore-projects.component';
 import { FooterComponent } from '../../footer/footer.component';
@@ -22,7 +22,14 @@ import { ScrollToTopComponent } from '../../scroll-to-top/scroll-to-top.componen
   templateUrl: './abstract-case.component.html',
   styleUrl: './abstract-case.component.scss',
 })
-export class AbstractCaseComponent {
+export class AbstractCaseComponent implements AfterViewInit {
   @Input() firstProject: string = '';
   @Input() secondProject: string = '';
+
+  showExplore = true;
+
+  ngAfterViewInit(): void {
+    this.showExplore =
+      this.firstProject.length !== 0 && this.secondProject.length !== 0;
+  }
 }

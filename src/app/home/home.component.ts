@@ -5,13 +5,14 @@ import { Router } from '@angular/router';
 import { filter, map } from 'rxjs';
 import { AbstractCaseComponent } from '../case/abstract-case/abstract-case.component';
 import { HeaderComponent } from '../header/header.component';
+import { MaterialModule } from '../material.module';
 import { PROTECTED } from '../password-dialog/config';
 import { PasswordDialogComponent } from '../password-dialog/password-dialog.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, AbstractCaseComponent, PasswordDialogComponent],
+  imports: [HeaderComponent, AbstractCaseComponent, PasswordDialogComponent, MaterialModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

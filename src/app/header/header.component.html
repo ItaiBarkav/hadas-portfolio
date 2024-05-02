@@ -1,38 +1,37 @@
 <div class="header hide-on-mobile">
   <div class="logo">
-    <a
-      [href]="homeUrl"
-      class="link underline"
-      (click)="updateSelectedLink('home')"
-      >HY</a
-    >
+    <a [href]="homeUrl" class="link underline">HY</a>
   </div>
   <div class="links">
+    <a class="link underline" href="tel:+972506622002"
+      ><img class="icon phone"
+    /></a>
     <a
-      [href]="homeUrl"
       class="link underline"
-      [class.selected-link]="selectedLink === 'home'"
-      (click)="updateSelectedLink('home')"
-      >Case Studies</a
-    >
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=hadasyosef2@gmail.com"
+      target="_blank"
+      ><img class="icon mail"
+    /></a>
     <a
-      [href]="aboutUrl"
-      class="link underline"
-      [class.selected-link]="selectedLink === 'aboutMe'"
-      (click)="updateSelectedLink('aboutMe')"
-      >About Me</a
+      class="link"
+      href="https://www.linkedin.com/in/hadasyosef/"
+      target="_blank"
     >
+      <img class="icon linkedin" />
+    </a>
     <a
       [href]="'../../assets/Hadas Yosef CV.pdf'"
       target="_blank"
-      class="link underline"
-      [class.selected-link]="selectedLink === 'resume'"
-      >CV</a
+      class="link underline cv"
+      >Download CV</a
     >
   </div>
 </div>
 
 <div class="header-mobile show-on-mobile">
+  <div class="logo">
+    <a [href]="homeUrl" class="link underline">HY</a>
+  </div>
   <img class="menu-btn" (click)="toggleMenu()" />
   <div class="menu" [ngClass]="_toggleMenu ? 'show' : 'hide'">
     <img
@@ -41,29 +40,12 @@
       src="../../assets/icons/close.svg"
     />
     <div class="menu-position">
-      <div class="contact">
-        <app-footer></app-footer>
-      </div>
-      <a
-        [href]="homeUrl"
-        class="link underline"
-        [class.selected-link]="selectedLink === 'home'"
-        (click)="updateSelectedLink('home')"
-        >Case Studies</a
-      >
-      <a
-        [href]="aboutUrl"
-        class="link underline"
-        [class.selected-link]="selectedLink === 'aboutMe'"
-        (click)="updateSelectedLink('aboutMe')"
-        >About Me</a
-      >
+      <app-footer [showTitle]="false"></app-footer>
       <a
         [href]="'../../assets/Hadas Yosef CV.pdf'"
         target="_blank"
-        class="link underline"
-        [class.selected-link]="selectedLink === 'resume'"
-        >CV</a
+        class="link underline cv-mobile"
+        >Download CV</a
       >
     </div>
   </div>

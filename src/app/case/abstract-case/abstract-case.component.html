@@ -2,13 +2,13 @@
 <ng-content> </ng-content>
 
 <app-back-to-top></app-back-to-top>
-@if (firstProject && secondProject) {
+@if (showExplore) {
 <app-explore-projects
   [firstProject]="firstProject"
   [secondProject]="secondProject"
 ></app-explore-projects>
 }
-<app-footer></app-footer>
+<app-footer [showTitle]="!showExplore"></app-footer>
 <app-scroll-to-top></app-scroll-to-top>
 } @placeholder {
 <app-loading></app-loading>

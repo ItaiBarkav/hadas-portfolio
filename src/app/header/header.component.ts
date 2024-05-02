@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { MaterialModule } from '../material.module';
 
@@ -11,16 +11,8 @@ import { MaterialModule } from '../material.module';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  @Input() selectedLink: string | null = null;
-
   homeUrl = '/';
-  aboutUrl = '#about';
   _toggleMenu = false;
-
-  updateSelectedLink(selectedLink: string): void {
-    this.selectedLink = selectedLink;
-    this.toggleMenu();
-  }
 
   toggleMenu(): void {
     this._toggleMenu = !this._toggleMenu;
