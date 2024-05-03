@@ -312,6 +312,10 @@
       .cards {
         gap: 2.5rem;
 
+        .card {
+          width: 20.438rem;
+        }
+
         .pancakes:hover {
           background-image: url("../../assets/home/pancakes-mobile.svg");
         }
